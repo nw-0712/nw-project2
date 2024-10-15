@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match Game</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+   
+ <!-- Game screen has tile grid layout, basic timer and score counter on topside of tile grid,
+ with a restart button at the bottom of screen -->
+ <div class="game-container hidden">
+    <header class="game-header">
+        <button id="restart-game">Restart</button>
+        <div class="moves-counter">Moves Left: <span id="moves">30</span></div>
+        <div class="timer">Time Left: <span id="timer">03:00</span></div>
+      </header>
+  
+    </div>
+<!-- Gme tile grid is made up of 24 tiles, a mix of space, alien, robot graphics -->
+    <div class="game-grid" id="game-grid">
+
+<!-- 24 Tiles with graphics on both sides and will be dynamically created here -->
+      </div>
+<!--Adding two notifications, one 'you have won' and ' you have run out of moves'-->
+      <div id="notification" class="hidden"></div>
+</div>
+
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
+

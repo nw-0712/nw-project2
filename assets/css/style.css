@@ -5,4 +5,14 @@
     box-sizing: border-box;
 }
 
+/* Added google font styling*/
 
+<uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 700
+
+.signika-negative -<uniquifier> {
+  font-family: "Signika Negative", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
