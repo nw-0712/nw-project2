@@ -8,7 +8,7 @@
 </head>
 <body>
    
- <!-- Game screen has tile grid layout, basic timer and score counter on topside of tile grid,
+ <!-- Game screen has tile grid layout, basic timer and score counter on topside of tile grid layout,
  with a restart button at the bottom of screen -->
  <div class="game-container hidden">
     <header class="game-header">
@@ -20,9 +20,18 @@
     </div>
 <!-- Gme tile grid is made up of 24 tiles, a mix of space, alien, robot graphics -->
     <div class="game-grid" id="game-grid">
-
 <!-- 24 Tiles with graphics on both sides and will be dynamically created here -->
       </div>
+
+      <!-- Tile grid flip horizontal with two sided graphics -->
+      <div class="tile" onclick="this.classList.toggle('flipped')">
+        <div class="tile-inner">
+            <div class="tile-front">
+                <img src="front-image.png" alt="Front Side">
+            </div>
+            <div class="tile-back">
+                <img src="back-image.png" alt="Back Side">
+            </div>
 <!--Adding two notifications, one 'you have won' and ' you have run out of moves'-->
       <div id="notification" class="hidden"></div>
 </div>
