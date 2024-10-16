@@ -12,7 +12,6 @@
  with a restart button at the bottom of screen -->
  <div class="game-container hidden">
     <header class="game-header">
-        <button id="restart-game">Restart</button>
         <div class="moves-counter">Moves Left: <span id="moves">30</span></div>
         <div class="timer">Time Left: <span id="timer">03:00</span></div>
       </header>
@@ -23,7 +22,7 @@
 <!-- 24 Tiles with graphics on both sides and will be dynamically created here -->
       </div>
 
-      <!-- Tile grid flip horizontal with two sided graphics -->
+<!-- Tile grid flip horizontal with two sided graphics -->
       <div class="tile" onclick="this.classList.toggle('flipped')">
         <div class="tile-inner">
             <div class="tile-front">
@@ -32,12 +31,18 @@
             <div class="tile-back">
                 <img src="back-image.png" alt="Back Side">
             </div>
+
 <!--Adding two notifications, one 'you have won' and ' you have run out of moves'-->
       <div id="notification" class="hidden"></div>
 </div>
+</div>
+<div> 
 
+<!--Restart game button --->
+<div>
+    <button id="restart-game">Restart</button>
+</div>
 
-<script src="assets/js/script.js"></script>
 </body>
 </html>
 
