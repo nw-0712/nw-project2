@@ -1,32 +1,28 @@
-// Memory match logic section //
+
+// Variables for game logic
+let tiles = [];
+let movesLeft = 30;
+let timer;
+let secondsElapsed = 0;
+let hasWon = false;
 
 
-//Moves left section//
+// Timer logic//
+function startTimer() {
+    timer = setInterval(() => {
+        secondsElapsed++;
+        const minutes = Math.floor(secondsElapsed / 60);
+        const seconds = secondsElapsed % 60;
+        document.getElementById('timer').textContent = `Time: ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }, 1000);
+}
 
+function stopTimer() {
+    clearInterval(timer);
+}
 
-//Start game section//
-
-
-//Initialise game section//
-
-
-//Tile values//
-
-
-//Tile grid layout//
-
-
-//Flip tile section//
-
-
-//Tile match section//
-
-
-//Timer-counter section//
-
-
-//End game section//
-
-
-
-//Notification section//
+// Initialize game board
+function initializeGame() {
+    const gridContainer = document.getElementById('grid-container');
+    gridContainer.innerHTML = '';
+    

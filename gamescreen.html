@@ -3,40 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Match Game</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+
+<!-- Google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
    
- <!-- Game screen has tile grid layout, basic timer and score counter on topside of tile grid layout,
- with a restart button at the bottom of screen -->
- <div class="game-container hidden">
-    <header class="game-header">
-        <div class="moves-counter">Moves Left: <span id="moves">30</span></div>
-        <div class="timer">Time Left: <span id="timer">03:00</span></div>
-      </header>
-  
+ <!-- Game screen has tile grid layout, basic timer, moves counter-->
+ <div class="game-container">
+    <div class="game-info">
+        <p id="moves-left">Moves Left: 30</p>
+        <p id="timer">Time: 00:00</p>
     </div>
-<!-- Gme tile grid is made up of 24 tiles, a mix of space, alien, robot graphics -->
-    <div class="game-grid" id="game-grid">
-<!-- 24 Tiles with graphics on both sides and will be dynamically created here -->
-      </div>
 
-<!-- Tile grid flip horizontal with two sided graphics -->
-      <div class="tile" onclick="this.classList.toggle('flipped')">
-        <div class="tile-inner">
-            <div class="tile-front">
-                <img src="front-image.png" alt="Front Side">
-            </div>
-            <div class="tile-back">
-                <img src="back-image.png" alt="Back Side">
-            </div>
+    <div class="grid-container" id="grid-container">
+        <!-- Tiles will be injected here via JavaScript -->
+    </div>
 
-<!--Adding two notifications, one 'you have won' and ' you have run out of moves'-->
-      <div id="notification" class="hidden"></div>
-</div>
-</div>
-<div> 
+    <div class="notification" id="notification">
+        <!-- Notification messages will appear here -->
+         <p>You have no moves left</p> <!---End of state notification--> 
+         <p>You have won. Try again!</p> <!---Motivation notification--> 
+    </div>
 
 <!--Restart game button --->
 <div>
