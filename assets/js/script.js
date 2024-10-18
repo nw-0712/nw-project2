@@ -1,5 +1,5 @@
 
-// Variables for game logic
+// Variables for game logic//
 let tiles = [];
 let movesLeft = 30;
 let timer;
@@ -7,7 +7,7 @@ let secondsElapsed = 0;
 let hasWon = false;
 
 
-// Timer logic//
+// Timer logic section//
 function startTimer() {
     timer = setInterval(() => {
         secondsElapsed++;
@@ -21,8 +21,26 @@ function stopTimer() {
     clearInterval(timer);
 }
 
-// Initialize game board
+// Initialize game board section//
 function initializeGame() {
     const gridContainer = document.getElementById('grid-container');
     gridContainer.innerHTML = '';
     
+ // Shuffle tiles section//
+ const tileBacks = Array.from({ length: 25 }, (_, i) => `img/back${i + 1}.png`);
+ tileBacks.length = 12; // Only need 12 unique pairs
+ const allTiles = [...tileBacks, ...tileBacks];
+ shuffleArray(allTiles);
+
+ // Create tile elements//
+ for (let i = 0; i < allTiles.length; i++) {
+     const tile = document.createElement('div');
+     tile.classList.add('tile');
+     tile.dataset.tileId = i;
+     tile.dataset.flipped = 'false';
+     tile.style.backgroundImage = `url(${allTiles[i]})`;
+     tile.addEventListener('click', flipTile);
+     gridContainer.appendChild(tile);
+     tiles.push(tile);
+ }
+}
