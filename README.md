@@ -1,131 +1,196 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+Welcome Users,
 
-Welcome Niccola Winter,
+SPACE ALIENT MEMORY MATCH GAME
+Match the space alien tiles and improve your memory
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+OVERVIEW
+This is a memory match game is done in HTML, CSS, and JavaScript. It's a browser-based card matching game, that consists of space and alien cards and the user matching the various card pairs, to imrpove your memory and concentration. 
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+How It Works
+If you're unfamiliar with the game, the rules are very simple; flip over two hidden cards at a time to locate the ones that match!
 
-## Gitpod Reminders
+The game board consists of eighteen themed space and alien graphical cards that are arranged randonmy in a grid style layout. The deck is made up of eighteen different pairs of cards, each with different fun retor style graphics on the one side (back side) and one graphic on the frnt side of the card. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Each turn:
 
-`python3 -m http.server`
+A player flips one card over to reveal its underlying graphic
+The player then turns over a second card, trying to find the corresponding card with the same symbolgraphic
+If the cards match, both cards stay flipped over
+If the cards do not match, both cards are returned to their initial hidden state
+There is a timer that counts down on the intitation of the game when the user starts the game
+The game has a 'moves' counter that counts the amount of moves by the gamer, to try help with focus and
+Notifications are displayed in the notification section.
+The restart button button restarts the game.
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+CONTENTS:
+USER EXPERIENCE (ux)
+Project goals
+Epics & user stories
+Colours
+Typography (fonts)
+Wireframes
+FEATURES & FUNCTIONALITY
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+Home page
+Products & Services page
+Contact us page
+FRAMEWORKS, LIBRARIES AND PROGRAM USED
 
-A blue button should appear to click: _Make Public_,
+Languages
+Programs
+TESTING
 
-Another blue button should appear to click: _Open Browser_.
+User stories
+Forms
+Code validation
+Accessibility & scores</>
+DEPLOYMENT
+RESOURCES
+RESEARCH
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+FEATURES & FUNCTIONALITY
+Home Page
 
-To log into the Heroku toolbelt CLI:
+This page gives the users the ability to click on 'discover' button to learn more about the institute, contact them, and access the other pages through the top navigation menu.
+Topnavigation bar: is featured on all three website pages, that is fully responsive which includes links to the logo, home page, about us page, products & services page and the contact us page.
+image
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Products & Services page
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+This page the users learn more about some of the products & services that the institute offers. 
+Contact page
 
-### Connecting your Mongo database
+The users can fill out the contact form, to contact the company and has dropdown function to select country of choice.
+Contact form: users can fill in details and contact institute through this method.
+The users can also click on map and be directed to the Google maps application to get directions to the various offices.
+The users can input their email address to subscribe to the company newsletter. 
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+USER EXPERIENCE (UX)
+Project Goals
+a. Bring your own idea(s) to life, based on providing value to users to address a specific real or imagined need.
+b. Use the relevant project assessment criteria as a guide to the minimum required functionality.
+c. There is a clear rationale for the development of this project.
+d. A fully functioning, well-documented website.
+e. Well-defined purpose addressing a particular target/multiple audience.
+f. Its purpose would be immediately evident to a new user.
+g. The website’s design follows the principles of UX design and accessibility guidelines, and the site is fully responsive.
 
-------
 
-## Release History
+Epics & user stories
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+As a user I want the ability to click on all the social media icons and be redirected to the relevant social media sites.
+As a user I want the ability to move through the navigation of the site by clicking on the menu bar and be directed to the page of choice.
+As a user I want the ability to click on Google maps and be directed to the app, so that I can get directions form my location to company.
+As a user I want the ability to click on the 'call-to-action' discover button so that I can be directed to the products/service page and learn more about biohacking and institute.
+As a user I want the ability to get exact information on the products/services offered by the company.
+As a user I want the ability to fill out the contact form so that I can get in contact with the company.
+As a user I want the ability to enter my personalised message in the 'freetext' field, so I can give personalised message to the company.
+Colours
 
-**June 18, 2024,** Add Mongo back into template
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+Typography
+Headings and sub-headings: Font used - Libre
+Body copy: Font used - Lato sans serif
 
-**May 28 2024:** Fix Mongo and Links installs
+Wireframes
 
-**April 26 2024:** Update node version to 16
 
-**September 20 2023:** Update Python version to 3.9.17.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+Frameworks, Libraries and Programs Used
+a. Languages: HTML, CSS, Javascript
+HTML5
+https://en.wikipedia.org/wiki/HTML5
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+CSS
+https://en.wikipedia.org/wiki/CSS
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+Javascript
+https://www.javascript.com/
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+b. Programs:
+VS desktop
+https://code.visualstudio.com/download
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Github
+https://github.com/
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Gitpod
+https://www.gitpod.io/
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Visme
+https://www.visme.co/
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+W3C markup validator
+https://validator.w3.org/
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+Unsplash
+https://unsplash.com/
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+Favicon
+https://favicon.io/
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Unsplash images
+https://unsplash.com/
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Font Awesome
+https://fontawesome.com/
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+Freepix
+https://www.freepik.com/
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Chromedevtools
+https://developer.chrome.com/docs/devtools
 
-------
+Am I responsive
+https://ui.dev/amiresponsive
 
-## FAQ about the uptime script
+Google fonts
+https://fonts.google.com/
 
-**Why have you added this script?**
+TESTING
+User stories
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+As a user I clicked on ly.
+As a user I clicked on to
+As a user I clicked on
+As a user I want the
+As a user I want the ability t get exact information on the products/services offered by the company.
+As a user I want the ability to fill out the
+As a user I want the ability to enter my pe
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+Code valildation
+The W3C Html Markup Validator and W3C CSS Validator services were used to validate all pages of the project in order to ensure there were no syntax errors.
+https://validator.w3.org/detailed.html Some warnings found for the // in the CSS stylesheet. HTML 
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+Home page:
+image HTML Products: Page
+image Contact Page:
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+https://jigsaw.w3.org/css-validator/ Validating my CSS I got this error and corrected it. 
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
+Accessibility & scores
+Used Lighthouse in Chrome DevTools to confirm accessibility used in throughout the website are easy to read and accessible.
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+Home page
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+Game Page
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+DEPLOYMENT
+Github pages & Libraries
 
----
+RESOURCES
 
-Happy coding!
+Best practises
+https://stackoverflow.com/
+
+
+Image libraries
+Unsplash
+Freepix
+
+
