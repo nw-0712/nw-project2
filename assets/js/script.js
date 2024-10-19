@@ -29,8 +29,8 @@ function initializeGame() {
     
  // Shuffle tiles section//
  const tileBacks = Array.from({ length: 25 }, (_, i) => `img/back${i + 1}.png`);
- tileBacks.length = 12; // Only need 12 unique pairs
- const allTiles = [...tileBacks, ...tileBacks];
+ tileBacks.length = 18; // Using 18 unique space alien tile pairs//
+ const allTiles = [assets/images/tile1pair.png, assets/images/tile2pair.png, assets/images/tile3pair.jpg, assets/images/tile4pair.jpg, assets/images/tile5pair.jpeg, assets/images/tile6pair.png,assets/images/tile7pair.jpg,assets/images/tile8pair.jpeg, assets/images/tile9pair.jpg, assets/images/tile10pair.jpg,assets/images/tile11pair.png, assets/images/tile12pair.jpg, assets/images/tile13pair.jpg, assets/images/tile14pair.jpeg, assets/images/tile15pair.jpeg, assets/images/tile17pair.jpeg,assets/images/tile18pair.jpg];
  shuffleArray(allTiles);
 
 
