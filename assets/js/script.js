@@ -107,3 +107,17 @@ function checkForLoss() {
         document.getElementById('notification').textContent = 'You have run out of moves!';
     }
 }
+
+// Shuffle and restart game section//
+document.getElementById('shuffle-btn').addEventListener('click', () => {
+    movesLeft = 30;
+    secondsElapsed = 0;
+    document.getElementById('moves-left').textContent = `Moves Left: ${movesLeft}`;
+    document.getElementById('timer').textContent = 'Time: 00:00';
+    document.getElementById('notification').textContent = '';
+    hasWon = false;
+    tiles = [];
+    stopTimer();
+    startTimer();
+    initializeGame();
+});
