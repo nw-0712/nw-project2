@@ -1,7 +1,7 @@
 Welcome Users,
 
-SPACE ALIENT MEMORY MATCH GAME
-Match the space alien tiles and improve your memory
+SPACE ALIENT MEMORY MATCH GAME<br/>
+Match the space alien tiles and improve your memory<br/>
 
 OVERVIEW
 This is a memory match game is done in HTML, CSS, and JavaScript. It's a browser-based card matching game, that consists of space and alien cards and the user matching the various card pairs, to imrpove your memory and concentration. 
