@@ -3,10 +3,10 @@ Welcome Users,
 SPACE ALIENT MEMORY MATCH GAME<br/>
 Match the space alien tiles and improve your memory<br/>
 
-OVERVIEW
+OVERVIEW<br/>
 This is a memory match game is done in HTML, CSS, and JavaScript. It's a browser-based card matching game, that consists of space and alien cards and the user matching the various card pairs, to imrpove your memory and concentration. 
 
-How It Works
+How It Works<br/>
 If you're unfamiliar with the game, the rules are very simple; flip over two hidden cards at a time to locate the ones that match!
 
 The game board consists of eighteen themed space and alien graphical cards that are arranged randonmy in a grid style layout. The deck is made up of eighteen different pairs of cards, each with different fun retor style graphics on the one side (back side) and one graphic on the frnt side of the card. 
