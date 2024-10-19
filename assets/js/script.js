@@ -68,7 +68,7 @@ function flipTile() {
     }
 }
 
-//Check if tiles are matched//
+//Check if tiles are matched and flip//
 function checkForMatch(flippedTiles) {
     const [tile1, tile2] = flippedTiles;
     if (tile1.style.backgroundImage === tile2.style.backgroundImage) {
@@ -85,10 +85,25 @@ function checkForMatch(flippedTiles) {
             tile2.dataset.flipped = 'false';
         }, 1000);
     }
-
+//Moves left //
     movesLeft--;
     document.getElementById('moves-left').textContent = `Moves Left: ${movesLeft}`;
     checkForLoss();
 }
 
+//Check if win function section//
+function checkForWin() {
+    if (tiles.every(tile => tile.style.visibility === 'hidden')) {
+        hasWon = true;
+        stopTimer();
+        document.getElementById('notification').textContent = 'You have won!';
+    }
+}
 
+//Check if loss function section//
+function checkForLoss() {
+    if (movesLeft === 0 && !hasWon) {
+        stopTimer();
+        document.getElementById('notification').textContent = 'You have run out of moves!';
+    }
+}
