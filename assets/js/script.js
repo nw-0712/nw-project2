@@ -25,12 +25,14 @@ function stopTimer() {
 function initializeGame() {
     const gridContainer = document.getElementById('grid-container');
     gridContainer.innerHTML = '';
+
     
  // Shuffle tiles section//
  const tileBacks = Array.from({ length: 25 }, (_, i) => `img/back${i + 1}.png`);
  tileBacks.length = 12; // Only need 12 unique pairs
  const allTiles = [...tileBacks, ...tileBacks];
  shuffleArray(allTiles);
+
 
  // Create tile elements//
  for (let i = 0; i < allTiles.length; i++) {
@@ -44,3 +46,17 @@ function initializeGame() {
      tiles.push(tile);
  }
 }
+
+// Shuffle array tile section//
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+function flipTile() {
+    if (this.dataset.flipped === 'true') return;
+
+    this.classList.add('flip');
+    this.dataset.flipped = 'true';
