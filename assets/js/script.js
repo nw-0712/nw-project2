@@ -60,3 +60,35 @@ function flipTile() {
 
     this.classList.add('flip');
     this.dataset.flipped = 'true';
+
+// Check if two tiles are flipped//
+    const flippedTiles = tiles.filter(tile => tile.dataset.flipped === 'true');
+    if (flippedTiles.length === 2) {
+        checkForMatch(flippedTiles);
+    }
+}
+
+//Check if tiles are matched//
+function checkForMatch(flippedTiles) {
+    const [tile1, tile2] = flippedTiles;
+    if (tile1.style.backgroundImage === tile2.style.backgroundImage) {
+        setTimeout(() => {
+            tile1.style.visibility = 'hidden';
+            tile2.style.visibility = 'hidden';
+            checkForWin();
+        }, 1000);
+    } else {
+        setTimeout(() => {
+            tile1.classList.remove('flip');
+            tile2.classList.remove('flip');
+            tile1.dataset.flipped = 'false';
+            tile2.dataset.flipped = 'false';
+        }, 1000);
+    }
+
+    movesLeft--;
+    document.getElementById('moves-left').textContent = `Moves Left: ${movesLeft}`;
+    checkForLoss();
+}
+
+
