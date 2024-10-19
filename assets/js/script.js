@@ -121,3 +121,9 @@ document.getElementById('shuffle-btn').addEventListener('click', () => {
     startTimer();
     initializeGame();
 });
+
+// Start game on and timer//
+window.onload = () => {
+    initializeGame();
+    startTimer();
+};
