@@ -4,7 +4,7 @@ SPACE ALIENT MEMORY MATCH GAME<br/>
 Match the space alien tiles and improve your memory<br/>
 
 OVERVIEW<br/>
-This is a memory match game is done in HTML, CSS, and JavaScript. It's a browser-based card matching game, that consists of space and alien cards and the user matching the various card pairs, to imrpove your memory and concentration. 
+This is a memory match game is done in HTML, CSS, and JavaScript. It's a browser-based card matching game, that consists of space and alien cards and the user matching the various card pairs, to improve your memory and concentration. The objective is to try and match the pairs in a ceratin amount of time.
 
 How It Works<br/>
 If you're unfamiliar with the game, the rules are very simple; flip over two hidden cards at a time to locate the ones that match!
@@ -13,8 +13,8 @@ The game board consists of eighteen themed space and alien graphical cards that 
 
 Each turn:
 
-A player flips one card over to reveal its underlying graphic
-The player then turns over a second card, trying to find the corresponding card with the same symbolgraphic
+A player flips one card over to reveal its underlying graphic card
+The player then turns over a second card, trying to find the corresponding card with the same graphic card
 If the cards match, both cards stay flipped over
 If the cards do not match, both cards are returned to their initial hidden state
 There is a timer that counts down on the intitation of the game when the user starts the game
@@ -24,47 +24,38 @@ The restart button button restarts the game.
 
 
 CONTENTS:
-USER EXPERIENCE (ux)
+User experience (ux)
 Project goals
 Epics & user stories
 Colours
 Typography (fonts)
 Wireframes
-FEATURES & FUNCTIONALITY
-
 Home page
-Products & Services page
-Contact us page
-FRAMEWORKS, LIBRARIES AND PROGRAM USED
-
+Game page
+Frameworks and Libraries
+Programs 
 Languages
-Programs
-TESTING
-
+Testing<br/>
 User stories
-Forms
 Code validation
 Accessibility & scores</>
-DEPLOYMENT
-RESOURCES
-RESEARCH
+Delpoyment
 
 FEATURES & FUNCTIONALITY
 Home Page
 
-This page gives the users the ability to click on 'discover' button to learn more about the institute, contact them, and access the other pages through the top navigation menu.
-Topnavigation bar: is featured on all three website pages, that is fully responsive which includes links to the logo, home page, about us page, products & services page and the contact us page.
-image
 
-Products & Services page
 
-This page the users learn more about some of the products & services that the institute offers. 
-Contact page
+Game page
 
-The users can fill out the contact form, to contact the company and has dropdown function to select country of choice.
-Contact form: users can fill in details and contact institute through this method.
-The users can also click on map and be directed to the Google maps application to get directions to the various offices.
-The users can input their email address to subscribe to the company newsletter. 
+The game must offer the ability to be rendered with different sizes of the grid layout of 18 different pairs of graphoc cards
+The player has to be able to flip the tiles with the mouse or keyboard.
+The player must only be able to flip two tiles face up at a time.
+After a suitable time, matching tiles that face up must not have a visible representation in the grid.
+After an appropriate time, tiles facing up and not matching must be flipped face down.
+The positions, or rather the graphics, of the tiles in the grid must be randomized before each game round.
+The game must count how many attempts the player has made to find matching tiles and present the number of attempts when the game round is over.
+After a game round is over, the user must be allowed to restart the new game round without reloading the page.
 
 USER EXPERIENCE (UX)
 Project Goals
