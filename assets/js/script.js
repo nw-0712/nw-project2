@@ -21,17 +21,37 @@ function stopTimer() {
     clearInterval(timer);
 }
 
+
 // Initialize game board section//
 function initializeGame() {
     const gridContainer = document.getElementById('grid-container');
     gridContainer.innerHTML = '';
 
+ const tileBacks = [
+        'assets/images/tile1.png', 'assets/images/tile2.png', 'assets/images/tile3.jpg', 
+        'assets/images/tile4.jpg', 'assets/images/tile5.jpeg', 'assets/images/tile6.png', 
+        'assets/images/tile7.jpg', 'assets/images/tile8.jpeg', 'assets/images/tile9.jpg', 
+        'assets/images/tile10.jpg', 'assets/images/tile11.png', 'assets/images/tile12.jpg',
+        'assets/images/tile13.jpg', 'assets/images/tile14.jpeg', 'assets/images/tile15.jpeg',
+        'assets/images/tile16.jpeg', 'assets/images/tile17.jpg', 'assets/images/tile18.jpg',
+];
     
  // Shuffle tiles section//
  const tileBacks = Array.from({ length: 25 }, (_, i) => `img/back${i + 1}.png`);
  tileBacks.length = 18; // Using 18 unique space alien tile pairs//
- const allTiles = [assets/images/tile1pair.png, assets/images/tile2pair.png, assets/images/tile3pair.jpg, assets/images/tile4pair.jpg, assets/images/tile5pair.jpeg, assets/images/tile6pair.png,assets/images/tile7pair.jpg,assets/images/tile8pair.jpeg, assets/images/tile9pair.jpg, assets/images/tile10pair.jpg,assets/images/tile11pair.png, assets/images/tile12pair.jpg, assets/images/tile13pair.jpg, assets/images/tile14pair.jpeg, assets/images/tile15pair.jpeg, assets/images/tile17pair.jpeg,assets/images/tile18pair.jpg];
- shuffleArray(allTiles);
+
+  // Tile backs for matching pairs//
+  const allTiles = [ 'assets/images/tile1.png', 'assets/images/tile2.png', 'assets/images/tile3.jpg', 
+    'assets/images/tile4.jpg', 'assets/images/tile5.jpeg', 'assets/images/tile6.png', 
+    'assets/images/tile7.jpg', 'assets/images/tile8.jpeg', 'assets/images/tile9.jpg', 
+    'assets/images/tile10.jpg', 'assets/images/tile11.png', 'assets/images/tile12.jpg',
+    'assets/images/tile13.jpg', 'assets/images/tile14.jpeg', 'assets/images/tile15.jpeg',
+    'assets/images/tile16.jpeg', 'assets/images/tile17.jpg', 'assets/images/tile18.jpg',
+];
+  shuffleArray(allTiles);
+  
+  //Tile back (front graphic) //
+  tile.style.backgroundImage = `url('assets/images/back.jpg')`;
 
 
  // Create tile elements//
@@ -55,6 +75,7 @@ function shuffleArray(array) {
     }
 }
 
+//Flip tile section//
 function flipTile() {
     if (this.dataset.flipped === 'true') return;
 

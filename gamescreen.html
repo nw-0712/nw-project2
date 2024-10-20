@@ -12,8 +12,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-   
- <!-- Game screen has tile grid layout, basic timer, moves counter-->
+<link rel="stylesheet" href="assets/css/style.css">  
+
+</head>
+
+<!-- Game screen has tile grid layout, basic timer, moves counter-->
+ <body>
  <div class="game-container">
     <div class="game-info">
         <p id="moves-left">Moves Left: 30</p>
@@ -21,11 +25,11 @@
     </div>
 
     <div class="grid-container" id="grid-container">
-        <!-- Tiles will be injected here via JavaScript -->
+<!-- Tiles will be injected here via JavaScript -->
     </div>
 
     <div class="notification" id="notification">
-        <!-- Notification messages will appear here -->
+<!-- Notification messages will appear here -->
          <p>You have no moves left</p> <!---End of state notification--> 
          <p>You have won. Try again!</p> <!---Motivation notification--> 
     </div>
@@ -34,7 +38,7 @@
 <div>
     <button id="restart-game">Restart</button>
 </div>
-
+<script src="assets/js/script.js"></script>
 </body>
 </html>
 
