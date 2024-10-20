@@ -166,7 +166,11 @@ body {
   width: 90%;
   height: 680px;
   max-width: 660px;
+  justify-content: space-around;
+  margin: 0 auto;
+  font-size: 1.2rem;
 }
+
 
 .game-info {
   margin-bottom: 20px;
@@ -181,27 +185,35 @@ body {
   font-size: 1.2rem;
 }
 
-.grid-container {
+#grid-container, .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
   height: 880px;
   max-width: 660px;
+  margin: 0 auto;
+  z-index: -1;
 }
 
+#grid-container, .grid-container,.tile {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    transition: transform 0.5s;
+    cursor: pointer;
+  /* Background image fit tile size*/
+    background-size: cover;   
+    background-repeat: no-repeat;
+    object-fit: cover;   
+  
+} 
+  
 .tile {
-  width: 90px;
-  height: 90px;
-  background-color: white;
-  border-color: darkorange;
-  border-radius: 10px;
-  transition: transform 0.5s;
-  cursor: pointer;
-  z-index: 99;
-   /* Background image fit the tile */
-   background-size: cover;   /* You can use 'contain' instead of 'cover' if you want the entire image to fit */
-   background-repeat: no-repeat;   
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+  position: relative;
 }
 
 .tile.flip {
@@ -211,11 +223,11 @@ body {
 .notification {
   font-size: 1rem;
   color: darkgray;
-  margin-top: 20px;
+
 }
 
 #restart-btn {
-  padding: 12px 24px;
+  padding: 12px 43px;
   font-size: 16px;
   background-color: #F39211;
   color: #fff;
@@ -224,6 +236,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 99;
+  margin-top: 90%;
 }
 
 #restart-btn:hover {
@@ -235,8 +248,10 @@ body {
 /* Small phone screens media queries*/
 @media (min-width: 576px) {
 .tile {
-      width: 60px;
-      height: 60px;
+  width: 100px;
+  height: 100px;
+  background-size: cover;   
+
 }
 
 #restart-btn {
@@ -249,18 +264,21 @@ body {
 }
 .grid-container {
   grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  gap: 15px;  /* Increase gap for larger screens */
+  gap: 10px;  /* Increase gap for larger screens */
 }
 .game-container {
   width: 80%;
 }
+#grid-container, .grid-container {
+  width: 80%;
 }
-
+}
 /* Phone screens media queries*/
 @media (min-width: 768px) {
   .tile {
-    width: 100px;
-    height: 100px;
+    width: 108px;
+    height: 108px;
+    background-size: cover;   
 }
 
 #restart-btn {
@@ -273,18 +291,22 @@ body {
 }
 .grid-container {
   grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  gap: 20px;
+  gap: 15px;
 }
 .game-container {
   width: 75%;
+}
+#grid-container, .grid-container {
+  width: 80%;
 }
 }
 
 /* Ipad and laptop screens media queries*/
 @media (min-width: 992px) {
 .tile {
-  width: 100px;
-  height: 100px;
+  width: 114px;
+  height: 114px;
+  background-size: cover;   
 }
 
 #restart-btn {
@@ -297,10 +319,13 @@ body {
 }
 .grid-container {
   grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  gap: 25px;
+  gap: 19px;
 }
 .game-container {
   width: 70%;
+}
+#grid-container, .grid-container {
+  width: 80%;
 }
 }
 
@@ -309,6 +334,7 @@ body {
   .tile {
     width: 120px;
     height: 120px;
+    background-size: cover;   
 }
 
 #restart-btn {
@@ -321,9 +347,12 @@ body {
 }
 .grid-container {
   grid-template-columns: repeat(5, 1fr); /* 5 columns for large screens */
-  gap: 30px;
+  gap: 21px;
 }
 .game-container {
   width: 65%;
+}
+#grid-container, .grid-container {
+  width: 80%;
 }
 }

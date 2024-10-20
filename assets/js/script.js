@@ -46,7 +46,7 @@ function initializeGame() {
     startTimer();
 
 //Shuffle tiles section//
- const tileBacks = [
+ const tilefront = [
         'assets/images/tile1.png', 'assets/images/tile2.png', 'assets/images/tile3.jpg', 
         'assets/images/tile4.jpg', 'assets/images/tile5.jpeg', 'assets/images/tile6.png', 
         'assets/images/tile7.jpg', 'assets/images/tile8.jpeg', 'assets/images/tile9.jpg', 
@@ -61,6 +61,9 @@ function initializeGame() {
   const allTiles = ['assets/images/tilefront.jpg'];
   shuffleArray(allTiles);
  
+  const tiles = document.querySelectorAll('.tile');
+
+
 
  // Create tile elements dynamically//
  for (let i = 0; i < allTiles.length; i++) {
@@ -73,8 +76,8 @@ function initializeGame() {
      gridContainer.appendChild(tile);
      tiles.push(tile);
  
-//Tile back - the front of the tile before it is flipped, will be smae for all tiles//
-tile.style.backgroundImage = `url('assets/images/back.jpg')`;
+//Tile back - the front of the tile before it is flipped, will be same for all tiles//
+tile.style.backgroundImage = `url('assets/images/tileBacks.jpg')`;
 
 
 // Tile click listener//
@@ -83,6 +86,12 @@ tile.addEventListener('click', () => {
         tile.style.backgroundImage = `url(${allTiles[i]})`;
         flipTile(tile, allTiles[i]);
     }
+});
+
+tiles.forEach(tile => {
+    tile.addEventListener('click', () => {
+        tile.classList.toggle('flipped');
+    });
 });
 
  // Tile to the grid layout//
@@ -129,6 +138,7 @@ function checkForMatch(flippedTiles) {
             tile2.dataset.flipped = 'false';
         }, 1000);
 }
+
 
 // Update moves left//
 movesLeft--;
