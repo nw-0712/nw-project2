@@ -46,7 +46,7 @@ function initializeGame() {
     startTimer();
 
 //Shuffle tiles section//
- const tilefront = [
+ const tileFront = [
         'assets/images/tile1.png', 'assets/images/tile2.png', 'assets/images/tile3.jpg', 
         'assets/images/tile4.jpg', 'assets/images/tile5.jpeg', 'assets/images/tile6.png', 
         'assets/images/tile7.jpg', 'assets/images/tile8.jpeg', 'assets/images/tile9.jpg', 
@@ -55,11 +55,12 @@ function initializeGame() {
         'assets/images/tile16.jpeg', 'assets/images/tile17.jpg', 'assets/images/tile18.jpg',
         'assets/images/tile19.jpg', 'assets/images/tile20.jpg',
 ];
-    
- 
-// Tile backs for matching pairs//
-  const allTiles = ['assets/images/tilefront.jpg'];
-  shuffleArray(allTiles);
+
+//Shuffle front cards//  
+shuffle(tileFront);
+
+// Generate the tiles in the grid-container//
+const gridContainer = document.getElementById('grid-container');
  
   const tiles = document.querySelectorAll('.tile');
 
@@ -79,6 +80,9 @@ function initializeGame() {
 //Tile back - the front of the tile before it is flipped, will be same for all tiles//
 tile.style.backgroundImage = `url('assets/images/tileBacks.jpg')`;
 
+// Tile back //
+const allTiles = ['assets/images/tileBacks.jpg'];
+shuffleArray(allTiles);
 
 // Tile click listener//
 tile.addEventListener('click', () => {
