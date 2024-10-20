@@ -24,8 +24,8 @@ The restart button restarts the game.
 
 
 CONTENTS:
-User experience (ux)<br/>
-Project goals<br/>
+* User experience (ux)<br/>
+* Project goals<br/>
 Epics & user stories<br/>
 Colours<br/>
 Typography (fonts)<br/>
@@ -88,7 +88,7 @@ Wireframes<br/>
 
 
 Frameworks, Libraries and Programs Used<br/>
-a. Languages: HTML, CSS, Javascript<br/>
+Languages: HTML, CSS, Javascript<br/>
 
 HTML5<br/>
 https://en.wikipedia.org/wiki/HTML5
@@ -99,35 +99,32 @@ https://en.wikipedia.org/wiki/CSS
 Javascript<br/>
 https://www.javascript.com/
 
-b. Programs:<br/>
-VS desktop
+Programs:<br/>
+VS desktop<br/>
 https://code.visualstudio.com/download
 
-Github
+Github<br/>
 https://github.com/
 
 Gitpod
 https://www.gitpod.io/
 
-Visme
+Visme<br/>
 https://www.visme.co/
 
-W3C markup validator
+W3C markup validator<br/>
 https://validator.w3.org/
 
-Unsplash
+Unsplash<br/>
 https://unsplash.com/
 
-Favicon
-https://favicon.io/
-
-Unsplash images
+Unsplash images<br/>
 https://unsplash.com/
 
-Font Awesome
+Font Awesome<br/>
 https://fontawesome.com/
 
-Freepix
+Freepix<br/>
 https://www.freepik.com/
 
 Chromedevtools<br/>
@@ -142,9 +139,7 @@ https://fonts.google.com/
 Testing<br/>
 User stories<br/>
 
-
-<br/>
-Code valildation
+Code valildation<br/>
 The W3C Html Markup Validator and W3C CSS Validator services were used to validate all pages of the project in order to ensure there were no syntax errors.
 
 
