@@ -186,20 +186,22 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   justify-content: center;
-  height: 680px;
+  height: 880px;
   max-width: 660px;
-  background-color: #999;
 }
 
 .tile {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   background-color: white;
   border-color: darkorange;
   border-radius: 10px;
   transition: transform 0.5s;
   cursor: pointer;
   z-index: 99;
+   /* Background image fit the tile */
+   background-size: cover;   /* You can use 'contain' instead of 'cover' if you want the entire image to fit */
+   background-repeat: no-repeat;   
 }
 
 .tile.flip {
@@ -232,10 +234,11 @@ body {
 
 /* Small phone screens media queries*/
 @media (min-width: 576px) {
-  .tile {
-      width: 120px;
-      height: 120px;
+.tile {
+      width: 60px;
+      height: 60px;
 }
+
 #restart-btn {
   font-size: 16px;
   padding: 8px 16px;
@@ -244,13 +247,20 @@ body {
   font-size: 2.2rem;
   width: 100%;
 }
+.grid-container {
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 15px;  /* Increase gap for larger screens */
+}
+.game-container {
+  width: 80%;
+}
 }
 
 /* Phone screens media queries*/
 @media (min-width: 768px) {
   .tile {
-      width: 150px;
-      height: 150px;
+    width: 100px;
+    height: 100px;
 }
 
 #restart-btn {
@@ -261,13 +271,20 @@ body {
   font-size: 2.4rem;
   width: 100%;
 }
+.grid-container {
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px;
+}
+.game-container {
+  width: 75%;
+}
 }
 
 /* Ipad and laptop screens media queries*/
 @media (min-width: 992px) {
-  .tile {
-  width: 180px;
-  height: 180px;
+.tile {
+  width: 100px;
+  height: 100px;
 }
 
 #restart-btn {
@@ -278,12 +295,20 @@ body {
   font-size: 2.6rem;
   width: 100%;
 }
+.grid-container {
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 25px;
 }
+.game-container {
+  width: 70%;
+}
+}
+
 /* Large laptop screens media queries*/
 @media (min-width: 1200px) {
-.tile {
-      width: 200px;
-      height: 200px;
+  .tile {
+    width: 120px;
+    height: 120px;
 }
 
 #restart-btn {
@@ -293,5 +318,12 @@ body {
 .game-info h1 {
   font-size: 3.8rem;
   width: 100%;
+}
+.grid-container {
+  grid-template-columns: repeat(5, 1fr); /* 5 columns for large screens */
+  gap: 30px;
+}
+.game-container {
+  width: 65%;
 }
 }

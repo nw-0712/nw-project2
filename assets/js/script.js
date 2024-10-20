@@ -53,6 +53,7 @@ function initializeGame() {
         'assets/images/tile10.jpg', 'assets/images/tile11.png', 'assets/images/tile12.jpg',
         'assets/images/tile13.jpg', 'assets/images/tile14.jpeg', 'assets/images/tile15.jpeg',
         'assets/images/tile16.jpeg', 'assets/images/tile17.jpg', 'assets/images/tile18.jpg',
+        'assets/images/tile19.jpg', 'assets/images/tile20.jpg',
 ];
     
  
