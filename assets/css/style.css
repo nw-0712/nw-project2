@@ -164,6 +164,8 @@ body {
 .game-container {
   text-align: center;
   width: 90%;
+  height: 680px;
+  max-width: 660px;
 }
 
 .game-info {
