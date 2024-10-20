@@ -1,10 +1,10 @@
 Welcome Users,
 
-SPACE ALIENT MEMORY MATCH GAME<br/>
+SPACE ALIEN MEMORY MATCH GAME<br/>
 Match the space alien tiles and improve your memory<br/>
 
 OVERVIEW<br/>
-This is a memory match game is done in HTML, CSS, and JavaScript. It's a browser-based card matching game, that consists of space and alien cards and the user matching the various card pairs, to improve your memory and concentration. The objective is to try and match the pairs in a ceratin amount of time.
+This is a memory match game is done in HTML, CSS, and JavaScript. It's a browser-based card matching game, that consists of space-alien cards and the user matching the various 18 card pairs, to improve memory and concentration. The objective is to try and match the pairs in a ceratin amount of time.
 
 How It Works<br/>
 If you're unfamiliar with the game, the rules are very simple; flip over two hidden cards at a time to locate the ones that match!
@@ -20,7 +20,7 @@ If the cards do not match, both cards are returned to their initial hidden state
 There is a timer that counts down on the intitation of the game when the user starts the game
 The game has a 'moves' counter that counts the amount of moves by the gamer, to try help with focus and
 Notifications are displayed in the notification section.
-The restart button button restarts the game.
+The restart button restarts the game.
 
 
 CONTENTS:
@@ -41,14 +41,15 @@ Code validation
 Accessibility & scores</>
 Delpoyment
 
-FEATURES & FUNCTIONALITY
 Home Page
-
+![image](https://github.com/user-attachments/assets/39b6b372-83bf-4dfe-889b-01e3ada3d7ca)
 
 
 Game page
+![image](https://github.com/user-attachments/assets/e6a00470-16a4-4682-aad3-b43fac4cb1d3)
 
-The game must offer the ability to be rendered with different sizes of the grid layout of 18 different pairs of graphoc cards
+User experience (ux)
+The game must offer the ability to be rendered with different sizes of the grid layout of 18 different pairs of graphic cards
 The player has to be able to flip the tiles with the mouse or keyboard.
 The player must only be able to flip two tiles face up at a time.
 After a suitable time, matching tiles that face up must not have a visible representation in the grid.
@@ -57,35 +58,33 @@ The positions, or rather the graphics, of the tiles in the grid must be randomiz
 The game must count how many attempts the player has made to find matching tiles and present the number of attempts when the game round is over.
 After a game round is over, the user must be allowed to restart the new game round without reloading the page.
 
-USER EXPERIENCE (UX)
 Project Goals
 a. Bring your own idea(s) to life, based on providing value to users to address a specific real or imagined need.
 b. Use the relevant project assessment criteria as a guide to the minimum required functionality.
-c. There is a clear rationale for the development of this project.
-d. A fully functioning, well-documented website.
-e. Well-defined purpose addressing a particular target/multiple audience.
-f. Its purpose would be immediately evident to a new user.
-g. The website’s design follows the principles of UX design and accessibility guidelines, and the site is fully responsive.
+c. Test a front-end web application through the development, implementation and deployment stages
+d. A fully functioning, well-documented game.
+e. Deploy a Front-End web application to a Cloud platform.
+f. Demonstrate and document the development process through a version control system such as GitHub.
+g. Implement Front-End interactivity, using core JavaScript, JavaScript libraries or frameworks.
 
 
 Epics & user stories
-
-As a user I want the ability to click on all the social media icons and be redirected to the relevant social media sites.
-As a user I want the ability to move through the navigation of the site by clicking on the menu bar and be directed to the page of choice.
-As a user I want the ability to click on Google maps and be directed to the app, so that I can get directions form my location to company.
-As a user I want the ability to click on the 'call-to-action' discover button so that I can be directed to the products/service page and learn more about biohacking and institute.
-As a user I want the ability to get exact information on the products/services offered by the company.
-As a user I want the ability to fill out the contact form so that I can get in contact with the company.
-As a user I want the ability to enter my personalised message in the 'freetext' field, so I can give personalised message to the company.
-Colours
+As a user I want the ability to click the 'Start Game' button and be tkaen to the game page
+As a user I want the ability to interact with the tiles in the grid layout and be able to click on tiles to see if there is a mtach or no match
+As a user I want the ability to to see how many moves I have left in the game 
+As a user I want the ability to see the amount of time left via the timer on the tiop of the grid layout
+As a user I want the ability to restart the game if I run out of time or run out of moves
+As a user I want the ability to clcik the 'Restart' button and have the game layout refesh
 
 
 Typography
-Headings and sub-headings: Font used - Libre
-Body copy: Font used - Lato sans serif
+Headings: Font used: Agdasima
+Subheading & body copy: Font used: Montserrat
 
 Wireframes
 
+![image](https://github.com/user-attachments/assets/a20f4cb8-8f22-4989-bdca-d21979362be5)
+![image](https://github.com/user-attachments/assets/aaff5a67-f1a2-46b1-8a80-caf550dd5f9f)
 
 
 Frameworks, Libraries and Programs Used
