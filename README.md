@@ -26,20 +26,20 @@ The restart button restarts the game.
 CONTENTS:
 * User experience (ux)<br/>
 * Project goals<br/>
-Epics & user stories<br/>
-Colours<br/>
-Typography (fonts)<br/>
-Wireframes<br/>
-Home page<br/>
-Game page<br/>
-Frameworks and Libraries<br/>
-Programs<br/>
-Languages<br/>
-Testing<br/>
-User stories<br/>
-Code validation<br/>
-Accessibility & scores<br/>
-Delpoyment<br/>
+* Epics & user stories<br/>
+* Colours<br/>
+* Typography (fonts)<br/>
+* Wireframes<br/>
+* Home page<br/>
+* Game page<br/>
+* Frameworks and Libraries<br/>
+* Programs<br/>
+* Languages<br/>
+* Testing<br/>
+* User stories<br/>
+* Code validation<br/>
+* Accessibility & scores<br/>
+* Delpoyment<br/>
 
 Home Page<br/>
 ![image](https://github.com/user-attachments/assets/39b6b372-83bf-4dfe-889b-01e3ada3d7ca)
@@ -59,22 +59,22 @@ The game must count how many attempts the player has made to find matching tiles
 After a game round is over, the user must be allowed to restart the new game round without reloading the page.
 
 Project Goals
-a. Bring your own idea(s) to life, based on providing value to users to address a specific real or imagined need.<br/>
-b. Use the relevant project assessment criteria as a guide to the minimum required functionality.<br/>
-c. Test a front-end web application through the development, implementation and deployment stages<br/>
-d. A fully functioning, well-documented game.<br/>
-e. Deploy a Front-End web application to a Cloud platform.<br/>
-f. Demonstrate and document the development process through a version control system such as GitHub.<br/>
-g. Implement Front-End interactivity, using core JavaScript, JavaScript libraries or frameworks.<br/>
+* Bring your own idea(s) to life, based on providing value to users to address a specific real or imagined need.<br/>
+* Use the relevant project assessment criteria as a guide to the minimum required functionality.<br/>
+* Test a front-end web application through the development, implementation and deployment stages<br/>
+* A fully functioning, well-documented game.<br/>
+* Deploy a Front-End web application to a Cloud platform.<br/>
+* Demonstrate and document the development process through a version control system such as GitHub.<br/>
+* Implement Front-End interactivity, using core JavaScript, JavaScript libraries or frameworks.<br/>
 
 
 Epics & user stories<br/>
-As a user I want the ability to click the 'Start Game' button and be tkaen to the game page<br/>
-As a user I want the ability to interact with the tiles in the grid layout and be able to click on tiles to see if there is a mtach or no match<br/>
-As a user I want the ability to to see how many moves I have left in the game<br/> 
-As a user I want the ability to see the amount of time left via the timer on the tiop of the grid layout<br/>
-As a user I want the ability to restart the game if I run out of time or run out of moves<br/>
-As a user I want the ability to clcik the 'Restart' button and have the game layout refesh<br/>
+* As a user I want the ability to click the 'Start Game' button and be tkaen to the game page<br/>
+* As a user I want the ability to interact with the tiles in the grid layout and be able to click on tiles to see if there is a mtach or no match<br/>
+* As a user I want the ability to to see how many moves I have left in the game<br/> 
+* As a user I want the ability to see the amount of time left via the timer on the tiop of the grid layout<br/>
+* As a user I want the ability to restart the game if I run out of time or run out of moves<br/>
+* As a user I want the ability to clcik the 'Restart' button and have the game layout refesh<br/>
 
 
 Typography<br/>
