@@ -172,6 +172,11 @@ body {
   margin-bottom: 20px;
 }
 
+.game-info h1 {
+  font-size: 2.1rem;
+  width: 100%;
+}
+
 #timer, #moves-left {
   font-size: 1.2rem;
 }
@@ -183,15 +188,18 @@ body {
   justify-content: center;
   height: 680px;
   max-width: 660px;
+  background-color: #999;
 }
 
 .tile {
   width: 100px;
   height: 100px;
-  background-color: #999;
+  background-color: white;
+  border-color: darkorange;
   border-radius: 10px;
   transition: transform 0.5s;
   cursor: pointer;
+  z-index: 99;
 }
 
 .tile.flip {
@@ -199,16 +207,25 @@ body {
 }
 
 .notification {
-  font-size: 1.5rem;
-  color: green;
+  font-size: 1rem;
+  color: darkgray;
   margin-top: 20px;
 }
 
-#restart-game .button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
+#restart-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #F39211;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+
+#restart-btn:hover {
+  background-color: #F39211;
 }
 
 /* -----------Game Screen Media Queries for responsiveness---------- */
@@ -219,6 +236,14 @@ body {
       width: 120px;
       height: 120px;
 }
+#restart-btn {
+  font-size: 16px;
+  padding: 8px 16px;
+}
+.game-info h1 {
+  font-size: 2.2rem;
+  width: 100%;
+}
 }
 
 /* Phone screens media queries*/
@@ -227,19 +252,46 @@ body {
       width: 150px;
       height: 150px;
 }
+
+#restart-btn {
+  font-size: 18px;
+  padding: 11px 20px;
+}
+.game-info h1 {
+  font-size: 2.4rem;
+  width: 100%;
+}
 }
 
 /* Ipad and laptop screens media queries*/
 @media (min-width: 992px) {
   .tile {
-      width: 180px;
-      height: 180px;
+  width: 180px;
+  height: 180px;
+}
+
+#restart-btn {
+  font-size: 20px;
+  padding: 14px 24px;
+}
+.game-info h1 {
+  font-size: 2.6rem;
+  width: 100%;
 }
 }
 /* Large laptop screens media queries*/
 @media (min-width: 1200px) {
-  .tile {
+.tile {
       width: 200px;
       height: 200px;
-  }
+}
+
+#restart-btn {
+  font-size: 24px;
+  padding: 17px 32px;
+}
+.game-info h1 {
+  font-size: 3.8rem;
+  width: 100%;
+}
 }
