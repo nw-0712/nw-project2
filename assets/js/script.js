@@ -2,16 +2,18 @@
 // Variables for game logic//
 let tiles = [];
 let movesLeft = 30;
+let moves = 0;
+let lockBoard = false;
+let matchedTiles = 0;
 let timer;
 let secondsElapsed = 0;
-let hasWon = false;
 
 // DOM elements//
 const gridContainer = document.getElementById('grid-container');
 const movesLeftElement = document.getElementById('moves-left');
 const timerElement = document.getElementById('timer');
-const notificationElement = document.getElementById('notification');
-const shuffleButton = document.getElementById('shuffle-btn');
+const shuffleElement = document.getElementById('tile');
+const restartButton = document.querySelector('.restart');
 
 // Timer logic section//
 function startTimer() {
@@ -28,25 +30,22 @@ function stopTimer() {
 }
 
 
+ // Tile to the grid layout//
+ gridContainer.appendChild(tile);
+ tiles.push(tile);
+
 // Initialize game board section//
 function initializeGame() {
-    const gridContainer = document.getElementById('grid-container');
+    gridContainer = document.getElementById('grid-container');
     gridContainer.innerHTML = '';
     tiles = [];
 
-// Reset moves, timer, and notifications//
-    movesLeft = maxMoves;
-    secondsElapsed = 0;
-    movesLeftElement.textContent = `Moves Left: ${movesLeft}`;
-    timerElement.textContent = `Time: 00:00`;
-    notificationElement.textContent = '';
-    hasWon = false;
 
-// Start timer//
-    startTimer();
-
+// Shuffle tiles//
+    const tileBacks = Array.from({ length: 25 }, (_, i) => `img/back${i + 1}.png`);
+    tileBacks.length = 20; // Only need 20 unique pairs
 //Shuffle tiles section//
- const tileFront = [
+ const allTiles = [
         'assets/images/tile1.png', 'assets/images/tile2.png', 'assets/images/tile3.jpg', 
         'assets/images/tile4.jpg', 'assets/images/tile5.jpeg', 'assets/images/tile6.png', 
         'assets/images/tile7.jpg', 'assets/images/tile8.jpeg', 'assets/images/tile9.jpg', 
@@ -56,14 +55,11 @@ function initializeGame() {
         'assets/images/tile19.jpg', 'assets/images/tile20.jpg',
 ];
 
-//Shuffle front cards//  
-shuffle(tileFront);
+shuffleArray(allTiles);
 
 // Generate the tiles in the grid-container//
 const gridContainer = document.getElementById('grid-container');
- 
-  const tiles = document.querySelectorAll('.tile');
-
+const tiles = document.querySelectorAll('tile');
 
 
  // Create tile elements dynamically//
@@ -76,6 +72,8 @@ const gridContainer = document.getElementById('grid-container');
      tile.addEventListener('click', flipTile);
      gridContainer.appendChild(tile);
      tiles.push(tile);
+ }
+}
  
 //Tile back - the front of the tile before it is flipped, will be same for all tiles//
 tile.style.backgroundImage = `url('assets/images/tileBacks.jpg')`;
@@ -83,26 +81,6 @@ tile.style.backgroundImage = `url('assets/images/tileBacks.jpg')`;
 // Tile back //
 const allTiles = ['assets/images/tileBacks.jpg'];
 shuffleArray(allTiles);
-
-// Tile click listener//
-tile.addEventListener('click', () => {
-    if (tile.dataset.flipped === 'false' && movesLeft > 0 && !hasWon) {
-        tile.style.backgroundImage = `url(${allTiles[i]})`;
-        flipTile(tile, allTiles[i]);
-    }
-});
-
-tiles.forEach(tile => {
-    tile.addEventListener('click', () => {
-        tile.classList.toggle('flipped');
-    });
-});
-
- // Tile to the grid layout//
- gridContainer.appendChild(tile);
- tiles.push(tile);
-}
-}
 
 // Shuffle array for tiles//
 function shuffleArray(array) {
@@ -112,16 +90,15 @@ function shuffleArray(array) {
     }
 }
 
-
 //Flip tile logic section//
 function flipTile(tile, imagePath) {
     tile.classList.add('flip');
     tile.dataset.flipped = 'true';
 
-// Check for a tile match//
-    const flippedTiles = tiles.filter(t => t.dataset.flipped === 'true' && t.style.visibility !== 'hidden');
-    if (flippedTiles.length === 2) {
-        checkForMatch(flippedTiles);
+// Check if two tiles are flipped
+const flippedTiles = tiles.filter(tile => tile.dataset.flipped === 'true');
+if (flippedTiles.length === 2) {
+    checkForMatch(flippedTiles);
 }
 }
 
@@ -143,32 +120,69 @@ function checkForMatch(flippedTiles) {
         }, 1000);
 }
 
-
 // Update moves left//
 movesLeft--;
 movesLeftElement.textContent = `Moves Left: ${movesLeft}`;
 checkForLoss();
 }
 
+
 // Check if the player has won//
 function checkForWin() {
     if (tiles.every(tile => tile.style.visibility === 'hidden')) {
         hasWon = true;
         stopTimer();
-        notificationElement.textContent = 'You have won!';
-    }
-}
-
-// Check if the player has run out of moves//
-function checkForLoss() {
-    if (movesLeft === 0 && !hasWon) {
-        stopTimer();
-        notificationElement.textContent = 'You have run out of moves!';
     }
 }
 
 // Shuffle and restart game//
-shuffleButton.addEventListener('click', () => {
+document.getElementById('restart-btn').addEventListener('click', () => {
+    movesLeft = 30;
+    secondsElapsed = 0;
+    document.getElementById('moves-left').textContent = `Moves Left: ${movesLeft}`;
+    document.getElementById('timer').textContent = 'Time: 00:00';
+    hasWon = false;
+    tiles = [];
+    stopTimer();
+    startTimer();
+    initializeGame();
+});
+
+// Reset moves and timer //
+movesLeft = maxMoves;
+secondsElapsed = 0;
+movesLeftElement.textContent = `Moves Left: ${movesLeft}`;
+timerElement.textContent = `Time: 00:00`;
+hasWon = false;
+
+
+// Tile click listener//
+tile.addEventListener('click', () => {
+    if (tile.dataset.flipped === 'false' && movesLeft > 0 && !hasWon) {
+        tile.style.backgroundImage = `url(${allTiles[i]})`;
+        flipTile(tile, allTiles[i]);
+    }
+});
+
+tiles.forEach(tile => {
+    tile.addEventListener('click', () => {
+        tile.classList.toggle('flipped');
+    });
+});
+
+// Start timer//
+startTimer();
+
+
+// Check if the player has run out of moves//
+function checkForLoss() {
+    if (movesLeft === 0 && !hasWon) {
+        stopTimer();    
+    }
+}
+
+// Shuffle and restart game//
+restart-button.addEventListener('click', () => {
     initializeGame();
 });
 
