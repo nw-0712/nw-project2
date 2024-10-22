@@ -4,62 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="assets/css/style.css"> 
-<title>Memory Match Game</title>
-
+    <link rel="stylesheet" href="assets/css/style.css"> 
+    <title>Memory Match Game</title>
 </head>
 
- <!-- <btn class="restart-game" onclick=restartGame()>Restart</btn> -->
-
 <body>
- <div class="game-container">
-    <div class="game-info">
-        <h1>Click & Match Memory Game</h1>
-        <span class="moves">Moves: 0</span>
-        <span class="timer">Time: 0:00</span>
+    <div class="game-container">
+        <div class="game-info">
+            <h1>Space Memory Game</h1>
+            <h4>Click & Match To Improve Your Memory</h4>
+            <span class="moves">Moves: 0</span>
+            <span class="timer">Time: 0:00</span>
+        </div>
+
+        <div id="grid-container" class="grid-container">
+            <!-- Each tile will be created dynamically with JavaScript, but you can leave them here for a static display -->
+            <div class="tile" style="background-image: url('assets/images/tile1.png');" aria-label="Two living capsules in space"></div>
+            <div class="tile" style="background-image: url('assets/images/tile2.png');" aria-label="two space ships"></div>
+            <div class="tile" style="background-image: url('assets/images/tile3.jpg');" aria-label="black & white astronaut badge"></div>
+            <div class="tile" style="background-image: url('assets/images/tile4.jpg');" aria-label="space poster"></div>
+            <div class="tile" style="background-image: url('assets/images/tile5.jpeg');" aria-label="space mission badge"></div>
+            <div class="tile" style="background-image: url('assets/images/tile6.png');" aria-label="space poster"></div>
+            <div class="tile" style="background-image: url('assets/images/tile7.jpg');" aria-label="take me with you logo"></div>
+            <div class="tile" style="background-image: url('assets/images/tile8.jpeg');" aria-label="space exploration badge"></div>
+            <div class="tile" style="background-image: url('assets/images/tile9.jpg');" aria-label="alien peace badge"></div>
+            <div class="tile" style="background-image: url('assets/images/tile10.jpg');" aria-label="image of retro robot"></div>
+            <div class="tile" style="background-image: url('assets/images/tile11.png');" aria-label="illustration of two space capsules"></div>
+            <div class="tile" style="background-image: url('assets/images/tile12.jpg');" aria-label="image of retro robot 2"></div>
+            <div class="tile" style="background-image: url('assets/images/tile13.jpg');" aria-label="image of retro robot 3"></div>
+            <div class="tile" style="background-image: url('assets/images/tile14.jpeg');" aria-label="moon exploration badge"></div>
+            <div class="tile" style="background-image: url('assets/images/tile15.jpeg');" aria-label="space academy badge"></div>
+            <div class="tile" style="background-image: url('assets/images/tile16.jpeg');" aria-label="space exploration badge 2"></div>
+            <div class="tile" style="background-image: url('assets/images/tile17.jpg');" aria-label="black & white image of galaxy spaceship"></div>
+            <div class="tile" style="background-image: url('assets/images/tile18.jpg');" aria-label="rock in space poster"></div>
+            <div class="tile" style="background-image: url('assets/images/tile19.jpg');" aria-label="space journey poster"></div>
+            <div class="tile" style="background-image: url('assets/images/tile20.jpg');" aria-label="space exploration poster"></div>
+        </div>
+
+        <!-- Restart game button -->
+        <div>
+            <button id="restart-btn">Restart</button>
+        </div>
     </div>
 
-    <div id="grid-container" class="grid-container">
-        <div class="tile" style="background-image: url('assets/images/tile1.png');" aria-label="Two living capsules in space"></div>
-        <div class="tile" style="background-image: url('assets/images/tile2.png');" aria-label="two space ships"></div>
-        <div class="tile" style="background-image: url('assets/images/tile3.jpg');" aria-label="black & white astronaut badge"></div>
-        <div class="tile" style="background-image: url('assets/images/tile4.jpg');" aria-label="space poster"></div>
-        <div class="tile" style="background-image: url('assets/images/tile5.jpeg');" aria-label="space mission badge"></div>
-        <div class="tile" style="background-image: url('assets/images/tile6.png');" aria-label="space poster"></div>
-        <div class="tile" style="background-image: url('assets/images/tile7.jpg');" aria-label="take me with you logo"></div>
-        <div class="tile" style="background-image: url('assets/images/tile8.jpeg');" aria-label="space exploration badge"></div>
-        <div class="tile" style="background-image: url('assets/images/tile9.jpg');" aria-label="alien peace badge"></div>
-        <div class="tile" style="background-image: url('assets/images/tile10.jpg');" aria-label="image of retro robot"></div>
-        <div class="tile" style="background-image: url('assets/images/tile11.png');" aria-label="illustration of two space capsules"></div>
-        <div class="tile" style="background-image: url('assets/images/tile12.jpg');" aria-label="image of retro robot 2"></div>
-        <div class="tile" style="background-image: url('assets/images/tile13.jpg');" aria-label="image of retro robot 3"></div>
-        <div class="tile" style="background-image: url('assets/images/tile14.jpeg');" aria-label="moon exploration badge"></div>
-        <div class="tile" style="background-image: url('assets/images/tile15.jpeg');" aria-label="space academy badge"></div>
-        <div class="tile" style="background-image: url('assets/images/tile16.jpeg');" aria-label="space exploration badge 2"></div>
-        <div class="tile" style="background-image: url('assets/images/tile17.jpg');" aria-label="black & whote image of galaxy spaceship"></div>
-        <div class="tile" style="background-image: url('assets/images/tile18.jpg');" aria-label="rock in space poster"></div>
-        <div class="tile" style="background-image: url('assets/images/tile19.jpg');" aria-label="space journey poster"></div>
-        <div class="tile" style="background-image: url('assets/images/tile20.jpg');" aria-label="space explore poster"></div>
-
-    </div>
-    <div class="tileFront" style="background-image: url('assets/images/tileFront.jpg');" aria-label="black & white spacecraft image"></div>
-
-
-<!--Restart game button --->
-<div>
-    <div class="restart" onclick=startGame()>
-    <button id="restart-btn" onclick="restart-btn">Restart</button>
-
-</div>
- </div>
-<script src="/assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

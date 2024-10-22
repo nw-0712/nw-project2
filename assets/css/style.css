@@ -12,20 +12,19 @@
 }
 
 .montserrat {
-    font-family: "Montserrat", 
-    font-optical-sizing: auto;
+    font-family: "Montserrat"; 
+    font-size: auto;
     font-style: thin;
 }
   
 /* General Styles */
 body {
-  padding: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f0f0f0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  align-items: flex-start;
 }
 
 /* ------------------Home screen----------------*/
@@ -161,24 +160,32 @@ body {
 
 /* ----------------------Game screen-------------------- */
 
+/* Game Container */
 .game-container {
   text-align: center;
   width: 90%;
-  height: 680px;
-  max-width: 660px;
-  justify-content: space-around;
+  max-width: 800px; /* Increased max width for larger screens */
   margin: 0 auto;
-  font-size: 1.2rem;
-  margin-top: 10%;
+  margin-top: 5%; /* Adjusted for better spacing */
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Game Info */
 .game-info {
   margin-bottom: 20px;
 }
 
 .game-info h1 {
-  font-size: 2.1rem;
+  font-size: 2rem;
+  width: 100%;
+}
+
+
+.game-info h4 {
+  font-size: 1rem;
   width: 100%;
 }
 
@@ -186,35 +193,26 @@ body {
   font-size: 1.2rem;
 }
 
-#grid-container, .grid-container {
+/* Grid Container */
+.grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjusted min size for tiles */
+  gap: 20px; /* Increased gap between tiles */
   justify-content: center;
-  height: 880px;
-  max-width: 1200px;
   margin: 0 auto;
-  z-index: -1;
   padding: 10px;
 }
 
-#grid-container, .grid-container,.tile {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
-    transition: transform 0.5s;
-    cursor: pointer;
-  /* Background image fit tile size*/
-    background-size: cover;   
-    background-repeat: no-repeat;
-    object-fit: cover;   
-  
-} 
-  
-.tile img {
-  width: 100px;
-  height: 100px;
-  perspective: 1000px;
+/* Tile Styles */
+.tile {
+  width: 120px; /* Increased size for better visibility */
+  height: 120px;
+  border-radius: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  perspective: 1000px; /* For 3D flip */
+  cursor: pointer;
+  transition: transform 0.5s;
   position: relative;
 }
 
@@ -244,10 +242,11 @@ body {
   background-position: center;
 }
 
-.tile.flip {
+.tile.flip .tile-inner {
   transform: rotateY(180deg);
 }
 
+/* Restart Button */
 #restart-btn {
   padding: 12px 43px;
   font-size: 16px;
@@ -256,124 +255,56 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 99;
-  margin-top: 90%;
+  transition: background-color 0.3s ease;
+  margin-top: 22px; /* Check margin to space from grid */
 }
 
 #restart-btn:hover {
-  background-color: #F39211;
+  background-color: #D6800C;
 }
+/* -----------Game Screen Media Queries for Responsiveness---------- */
 
-/* -----------Game Screen Media Queries for responsiveness---------- */
-
-/* Small phone screens media queries*/
-@media (min-width: 576px) {
-.tile {
-  width: 100px;
-  height: 100px;
-  background-size: cover;   
-}
-
-#restart-btn {
-  font-size: 16px;
-  padding: 8px 16px;
-}
-.game-info h1 {
-  font-size: 2.2rem;
-  width: 100%;
-}
-.grid-container {
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  gap: 10px;  /* Increase gap for larger screens */
-}
-.game-container {
-  width: 80%;
-}
-#grid-container, .grid-container {
-  width: 80%;
-}
-}
-
-/* Phone screens media queries*/
+/* Phone screens */
 @media (min-width: 768px) {
-.tile {
-  width: 108px;
-  height: 108px;
-  background-size: cover;   
+  .tile {
+      width: 120px;
+      height: 120px;
+  }
+  #restart-btn {
+      font-size: 18px;
+      padding: 11px 20px;
+  }
+  .game-info h1 {
+      font-size: 2.4rem;
+  }
 }
 
-#restart-btn {
-  font-size: 18px;
-  padding: 11px 20px;
-}
-.game-info h1 {
-  font-size: 2.4rem;
-  width: 100%;
-}
-.grid-container {
-  grid-template-columns: repeat(5, 1fr); 
-  gap: 15px;
-}
-
-.game-container {
-  width: 75%;
-}
-#grid-container, .grid-container {
-  width: 80%;
-}
-}
-
-/* Ipad and laptop screens media queries*/
+/* iPad and laptop screens */
 @media (min-width: 992px) {
-.tile {
-  width: 114px;
-  height: 114px;
-  background-size: cover;   
+  .tile {
+      width: 120px;
+      height: 120px;
+  }
+  #restart-btn {
+      font-size: 20px;
+      padding: 14px 24px;
+  }
+  .game-info h1 {
+      font-size: 2.6rem;
+  }
 }
 
-#restart-btn {
-  font-size: 20px;
-  padding: 14px 24px;
-}
-.game-info h1 {
-  font-size: 2.6rem;
-  width: 100%;
-}
-.grid-container {
-  grid-template-columns: repeat(6, 1fr);  gap: 19px;
-}
-.game-container {
-  width: 70%;
-}
-#grid-container, .grid-container {
-  width: 80%;
-}
-}
-
-/* Large laptop screens media queries*/
+/* Large laptop screens */
 @media (min-width: 1200px) {
-.tile {
-  width: 120px;
-  height: 120px;
-  background-size: cover;   
-}
-
-#restart-btn {
-  font-size: 24px;
-  padding: 17px 32px;
-}
-.game-info h1 {
-  font-size: 3.8rem;
-  width: 100%;
-}
-.grid-container {
-  grid-template-columns: repeat(8, 1fr);  gap: 21px;
-}
-.game-container {
-  width: 65%;
-}
-#grid-container, .grid-container {
-  width: 80%;
-}
+  .tile {
+      width: 150px;
+      height: 150px;
+  }
+  #restart-btn {
+      font-size: 24px;
+      padding: 17px 32px;
+  }
+  .game-info h1 {
+      font-size: 3.8rem;
+  }
 }
