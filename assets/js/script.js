@@ -54,39 +54,34 @@ function initializeGame() {
         'assets/images/tile1.png', 'assets/images/tile2.png', 'assets/images/tile3.jpg', 
         'assets/images/tile4.jpg', 'assets/images/tile5.jpeg', 'assets/images/tile6.png', 
         'assets/images/tile7.jpg', 'assets/images/tile8.jpeg', 'assets/images/tile9.jpg', 
-        'assets/images/tile10.jpg', 'assets/images/tile11.png', 'assets/images/tile12.jpg',
-        'assets/images/tile13.jpg', 'assets/images/tile14.jpeg', 'assets/images/tile15.jpeg',
-        'assets/images/tile16.jpeg', 'assets/images/tile17.jpg', 'assets/images/tile18.jpg',
-        'assets/images/tile19.jpg', 'assets/images/tile20.jpg',
+        'assets/images/tile10.jpg', 'assets/images/tile11.png', 
 ];
     
 shuffleArray(allTiles);
 
 // Create tile elements//
-    for (let i = 0; i < allTiles.length; i++) {
-        const tile = document.createElement('div');
-        tile.classList.add('tile');
-        tile.dataset.tileId = i;
-        tile.dataset.flipped = 'false';
-        
-// Back image//
-    const backImage = document.createElement('div');
-        backImage.classList.add('tileBack');
-        backImage.style.backgroundImage = `url('assets/images/tileBacks.jpg')`; // Setting back tile image//
-        
-// Front image//
-    const frontImage = document.createElement('div');
-        frontImage.classList.add('tileFront');
-        frontImage.style.backgroundImage = `url(${allTiles[i]})`; // Set front tile images (20)//
-        
-        tile.appendChild(backImage);
-        tile.appendChild(frontImage);
-        
-        tile.addEventListener('click', () => flipTile(tile, allTiles[i]));
-        gridContainer.appendChild(tile);
-        tiles.push(tile);
+for (let i = 0; i < allTiles.length; i++) {
+    const tile = document.createElement('div');
+    tile.classList.add('tile');
+    
+// Front and back tiles//
+    const tileFront = document.createElement('div');
+    tileFront.classList.add('tileFront');
+    tileFront.style.backgroundImage = `url(${allTiles[i]})`;
+
+    const tileBack = document.createElement('div');
+    tileBack.classList.add('tileBack');
+    tileBack.style.backgroundImage = `url('assets/images/tileBacks.jpg')`; // Your back image
+
+    tile.appendChild(tileFront);
+    tile.appendChild(tileBack);
+
+    tile.addEventListener('click', () => flipTile(tile)); // Use the flipTile function
+    gridContainer.appendChild(tile);
+    tiles.push(tile);
 }
 }
+
 
 // Tile flip logic//
 function flipTile(tile) {
@@ -98,7 +93,7 @@ function flipTile(tile) {
 // Check for matches//
     const flippedTiles = tiles.filter(t => t.dataset.flipped === 'true');
     if (flippedTiles.length === 2) {
-        lockBoard = true; // Lock the board during checking
+        lockBoard = true; // Lock the board during checking//
         checkForMatch(flippedTiles);
     }
 }
