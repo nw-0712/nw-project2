@@ -23,28 +23,149 @@
             <span class="timer">Time: 0:00</span>
         </div>
 
+
         <div id="grid-container" class="grid-container">
-            <!-- Each tile will be created dynamically with JavaScript, but you can leave them here for a static display -->
-            <div class="tile" style="background-image: url('assets/images/tile1.png');" aria-label="Two living capsules in space"></div>
-            <div class="tile" style="background-image: url('assets/images/tile2.png');" aria-label="two space ships"></div>
-            <div class="tile" style="background-image: url('assets/images/tile3.jpg');" aria-label="black & white astronaut badge"></div>
-            <div class="tile" style="background-image: url('assets/images/tile4.jpg');" aria-label="space poster"></div>
-            <div class="tile" style="background-image: url('assets/images/tile5.jpeg');" aria-label="space mission badge"></div>
-            <div class="tile" style="background-image: url('assets/images/tile6.png');" aria-label="space poster"></div>
-            <div class="tile" style="background-image: url('assets/images/tile7.jpg');" aria-label="take me with you logo"></div>
-            <div class="tile" style="background-image: url('assets/images/tile8.jpeg');" aria-label="space exploration badge"></div>
-            <div class="tile" style="background-image: url('assets/images/tile9.jpg');" aria-label="alien peace badge"></div>
-            <div class="tile" style="background-image: url('assets/images/tile10.jpg');" aria-label="image of retro robot"></div>
-            <div class="tile" style="background-image: url('assets/images/tile11.png');" aria-label="illustration of two space capsules"></div>
-            <div class="tile" style="background-image: url('assets/images/tile12.jpg');" aria-label="image of retro robot 2"></div>
-            <div class="tile" style="background-image: url('assets/images/tile13.jpg');" aria-label="image of retro robot 3"></div>
-            <div class="tile" style="background-image: url('assets/images/tile14.jpeg');" aria-label="moon exploration badge"></div>
-            <div class="tile" style="background-image: url('assets/images/tile15.jpeg');" aria-label="space academy badge"></div>
-            <div class="tile" style="background-image: url('assets/images/tile16.jpeg');" aria-label="space exploration badge 2"></div>
-            <div class="tile" style="background-image: url('assets/images/tile17.jpg');" aria-label="black & white image of galaxy spaceship"></div>
-            <div class="tile" style="background-image: url('assets/images/tile18.jpg');" aria-label="rock in space poster"></div>
-            <div class="tile" style="background-image: url('assets/images/tile19.jpg');" aria-label="space journey poster"></div>
-            <div class="tile" style="background-image: url('assets/images/tile20.jpg');" aria-label="space exploration poster"></div>
+            <!-- Tile structure for flipping -->
+            <div class="tile" aria-label="Two living capsules in space">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile1.png');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="two space ships">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile2.png');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+           
+            <div class="tile" aria-label="black & white astronaut badge">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile3.jpg');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="space poster">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile4.jpg');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="space mission badge">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile5.jpeg');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="space ship poster">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile6.png');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="space take me with you logo">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile7.jpg');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="space exploration">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile8.jpeg');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="space exploration">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile9.jpg');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="retro styled robot illustration">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile10.jpg');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="illustration of two space capsules">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile11.png');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="illustration of retro robot 2">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile12.jpg');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="illustration of retro robot 3">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile13.jpg');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="moon exploration badge">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile14.jpeg');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="space academy badge">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile15.jpeg');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="space academy badge 2">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile16.jpeg');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="black & white illustration of galaxy spaceship">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile17.jpg');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="astronaut rock in space poster">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile18.jpg');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="space journey poster">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile19.jpg');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+
+            <div class="tile" aria-label="exploration poster">
+                <div class="tile-inner">
+                    <div class="tileFront" style="background-image: url('assets/images/tile20.jpg');"></div>
+                    <div class="tileBack" style="background-image: url('assets/images/tileBacks.jpg');"></div>
+                </div>
+            </div>
+            
         </div>
 
         <!-- Restart game button -->
@@ -56,3 +177,5 @@
     <script src="assets/js/script.js"></script>
 </body>
 </html>
+
+

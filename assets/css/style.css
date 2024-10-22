@@ -163,8 +163,8 @@ body {
 /* Game Container */
 .game-container {
   text-align: center;
-  width: 90%;
-  max-width: 800px; /* Adjusted max width */
+  width: 100%;
+  max-width: 880px; /* Adjusted max width */
   margin: 0 auto;
   margin-top: 5%; 
   padding: 20px; /* Added padding for aesthetics */
@@ -195,7 +195,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Increased min size for tiles */
-  gap: 30px; /* Increased default gap */
+  gap: 18px; /* Increased default tile gap */
   justify-content: center;
   margin: 0 auto;
   padding: 10px;
@@ -294,8 +294,9 @@ body {
       height: 150px;
   }
   .grid-container {
-      gap: 40px; /* Increased gap for larger screens */
-  }
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+    gap: 40px; /* Increased gap */
+}
   #restart-btn {
       font-size: 20px;
       padding: 14px 24px;

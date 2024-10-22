@@ -1,5 +1,4 @@
 
-
 // DOM elements//
 const startGameBtn = document.getElementById('start-game');
 const homeScreen = document.getElementById('home-screen');
