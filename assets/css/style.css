@@ -164,10 +164,10 @@ body {
 .game-container {
   text-align: center;
   width: 90%;
-  max-width: 800px; /* Increased max width for larger screens */
+  max-width: 800px; /* Adjusted max width */
   margin: 0 auto;
-  margin-top: 5%; /* Adjusted for better spacing */
-  padding: 20px;
+  margin-top: 5%; 
+  padding: 20px; /* Added padding for aesthetics */
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -179,13 +179,11 @@ body {
 }
 
 .game-info h1 {
-  font-size: 2rem;
+  font-size: 2.1rem;
   width: 100%;
 }
-
-
 .game-info h4 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   width: 100%;
 }
 
@@ -196,8 +194,8 @@ body {
 /* Grid Container */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjusted min size for tiles */
-  gap: 20px; /* Increased gap between tiles */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Increased min size for tiles */
+  gap: 30px; /* Increased default gap */
   justify-content: center;
   margin: 0 auto;
   padding: 10px;
@@ -205,8 +203,8 @@ body {
 
 /* Tile Styles */
 .tile {
-  width: 120px; /* Increased size for better visibility */
-  height: 120px;
+  width: 150px; /* Increased size for better visibility */
+  height: 150px;
   border-radius: 8px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -256,13 +254,26 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 22px; /* Check margin to space from grid */
+  margin-top: 20px; /* Need to adjust margin to space from grid */
 }
 
 #restart-btn:hover {
   background-color: #D6800C;
 }
+
 /* -----------Game Screen Media Queries for Responsiveness---------- */
+
+/* Small phone screens */
+@media (min-width: 576px) {
+  .tile {
+      width: 100px;
+      height: 100px;
+  }
+  #restart-btn {
+      font-size: 16px;
+      padding: 8px 16px;
+  }
+}
 
 /* Phone screens */
 @media (min-width: 768px) {
@@ -274,37 +285,36 @@ body {
       font-size: 18px;
       padding: 11px 20px;
   }
-  .game-info h1 {
-      font-size: 2.4rem;
-  }
 }
 
 /* iPad and laptop screens */
 @media (min-width: 992px) {
   .tile {
-      width: 120px;
-      height: 120px;
+      width: 150px; /* Increased for visibility */
+      height: 150px;
+  }
+  .grid-container {
+      gap: 40px; /* Increased gap for larger screens */
   }
   #restart-btn {
       font-size: 20px;
       padding: 14px 24px;
-  }
-  .game-info h1 {
-      font-size: 2.6rem;
   }
 }
 
 /* Large laptop screens */
 @media (min-width: 1200px) {
   .tile {
-      width: 150px;
-      height: 150px;
+      width: 180px; /* Larger tile size */
+      height: 180px; /* Larger tile size */
+  }
+  .grid-container {
+      grid-template-columns: repeat(4, 1fr); /* Adjusting to 4 columns for large screens */
+      gap: 50px; /* Increased gap for larger screens */
   }
   #restart-btn {
       font-size: 24px;
       padding: 17px 32px;
   }
-  .game-info h1 {
-      font-size: 3.8rem;
-  }
 }
+
