@@ -6,7 +6,6 @@ const movesLeftElement = document.getElementById('moves-left');
 const timerElement = document.getElementById('timer');
 const gridContainer = document.getElementById('grid-container');
 const restartButton = document.getElementById('restart-btn');
-const tile =  document.getElementById('tile');
 
 // Variables for game logic//
 let tiles = [];
@@ -14,6 +13,8 @@ let movesLeft = 30;
 let moves = 0;
 let lockBoard = false;
 let matchedTiles = 0;
+let firstTile = null;
+let secondTile = null;
 let timer;
 let secondsElapsed = 0;
 let hasWon = false;
@@ -68,18 +69,22 @@ for (let i = 0; i < allTiles.length; i++) {
     tile.classList.add('tile');
     
 // Front and back tiles//
+    const tileInner = document.createElement('div');
+    tileInner.classList.add('tile-inner');
+
     const tileFront = document.createElement('div');
     tileFront.classList.add('tileFront');
     tileFront.style.backgroundImage = `url(${allTiles[i]})`;
 
     const tileBack = document.createElement('div');
     tileBack.classList.add('tileBack');
-    tileBack.style.backgroundImage = `url('assets/images/tileBacks.jpg')`; // back image//
+    tileBack.style.backgroundImage = `url('assets/images/tileBacks.jpg')`;
 
-    tile.appendChild(tileFront);
-    tile.appendChild(tileBack);
+    tileInner.appendChild(tileFront);
+    tileInner.appendChild(tileBack);
+    tile.appendChild(tileInner);
 
-    tile.addEventListener('click', () => flipTile(gameTile)); // Update to gameTile
+    tile.addEventListener('click', () => flipTile(tile)); 
 
     gridContainer.appendChild(tile);
     tiles.push(tile);
@@ -94,82 +99,81 @@ tile.dataset.flipped = 'false';
 
 // Tile flip logic//
 function flipTile(tile) {
-    if (tile.dataset.flipped === 'true' || hasWon || movesLeft <= 0 || lockBoard) return;
+    if (lockBoard || tile === firstTile || tile.classList.contains('flip')) return;
 
-    tile.querySelector('.tile-inner').classList.add('flip'); // flip to inner//
-    tile.dataset.flipped = 'true'; // Mark as flipped//
+    tile.querySelector('.tile-inner').classList.add('flip');
 
-    tile.classList.add('flip'); // Added flip class to trigger CSS//
-    tile.dataset.flipped = 'true'; // Mark as flipped//
-
-
-
-// Check for matches//
-    const flippedTiles = tiles.filter(t => t.dataset.flipped === 'true');
-    if (flippedTiles.length === 2) {
-        lockBoard = true; // Lock the board during checking//
-        checkForMatch(flippedTiles);
-}
-}
-
-// Check for matches//
-function checkForMatch(flippedTiles) {
-    const [tile1, tile2] = flippedTiles;
-    movesLeft--;
-    movesLeftElement.textContent = `Moves Left: ${movesLeft}`;
-
-    // Compare the background images of both tiles//
-    if (tile1.querySelector('.tileFront').style.backgroundImage === tile2.querySelector('.tileFront').style.backgroundImage) {
-        setTimeout(() => {
-            tile1.style.visibility = 'hidden'; // Hide matched tiles//
-            tile2.style.visibility = 'hidden';
-            checkForWin();
-            lockBoard = false; // Unlock the board//
-        }, 1000);
+    if (!firstTile) {
+        // First tile flip
+        firstTile = tile;
     } else {
-        setTimeout(() => {
-            tile1.classList.remove('flip');
-            tile2.classList.remove('flip');
-            tile1.dataset.flipped = 'false';
-            tile2.dataset.flipped = 'false';
-            lockBoard = false; // Unlock the board//
-        }, 1000);
+        // Second tile flip
+        secondTile = tile;
+        lockBoard = true;
+
+        checkForMatch();
+    }
 }
 
-    checkForLoss();
+// Check for matches//
+function checkForMatch() {
+    const isMatch = firstTile.querySelector('.tileFront').style.backgroundImage === 
+                    secondTile.querySelector('.tileFront').style.backgroundImage;
+
+    if (isMatch) {
+        disableTiles();
+        checkForWin();
+    } else {
+        unflipTiles();
+    }
+    
+    moves++;
+    movesLeftElement.textContent = `Moves: ${moves}`;
 }
 
-// Check win condition section//
+// Disable matched tiles//
+function disableTiles() {
+    setTimeout(() => {
+        firstTile.style.visibility = 'hidden';
+        secondTile.style.visibility = 'hidden';
+        resetBoard();
+    }, 1000);
+}
+
+// Unflip non-matching tiles//
+function unflipTiles() {
+    setTimeout(() => {
+        firstTile.querySelector('.tile-inner').classList.remove('flip');
+        secondTile.querySelector('.tile-inner').classList.remove('flip');
+        resetBoard();
+    }, 1000);
+}
+
+// Reset the board for the next move//
+function resetBoard() {
+    [firstTile, secondTile] = [null, null];
+    lockBoard = false;
+}
+
+// Check win condition//
 function checkForWin() {
     if (tiles.every(tile => tile.style.visibility === 'hidden')) {
         hasWon = true;
         stopTimer();
         alert("You've won!");
-}
-}
-
-// Check loss condition//
-function checkForLoss() {
-    if (movesLeft <= 0 && !hasWon) {
-        stopTimer();
-        alert("Game Over! You've run out of moves.");
-}
+    }
 }
 
 // Start game section//
 function startGame() {
-    homeScreen.style.display = 'none';
-    gameScreen.style.display = 'block';
     initializeGame();
     startTimer();
 }
 
-startGameBtn.addEventListener('click', startGame);
-
-// Restart game section//
 restartButton.addEventListener('click', () => {
-    hasWon = false;
     stopTimer();
-    initializeGame();
-    startTimer();
+    startGame();
 });
+
+// Start the game initially
+startGame();
