@@ -6,6 +6,7 @@ const movesLeftElement = document.getElementById('moves-left');
 const timerElement = document.getElementById('timer');
 const gridContainer = document.getElementById('grid-container');
 const restartButton = document.getElementById('restart-btn');
+const tile =  document.getElementById('tile');
 
 // Variables for game logic//
 let tiles = [];
@@ -54,7 +55,9 @@ function initializeGame() {
         'assets/images/tile1.png', 'assets/images/tile2.png', 'assets/images/tile3.jpg', 
         'assets/images/tile4.jpg', 'assets/images/tile5.jpeg', 'assets/images/tile6.png', 
         'assets/images/tile7.jpg', 'assets/images/tile8.jpeg', 'assets/images/tile9.jpg', 
-        'assets/images/tile10.jpg', 'assets/images/tile11.png', 
+        'assets/images/tile10.jpg', 'assets/images/tile11.png', 'assets/images/tile1.png',
+        'assets/images/tile4.jpg',  'assets/images/tile5.jpeg', 'assets/images/tile9.jpg',
+        'assets/images/tile6.png', 'assets/images/tile12.jpg',  'assets/images/tile7.jpg',
 ];
     
 shuffleArray(allTiles);
@@ -71,31 +74,42 @@ for (let i = 0; i < allTiles.length; i++) {
 
     const tileBack = document.createElement('div');
     tileBack.classList.add('tileBack');
-    tileBack.style.backgroundImage = `url('assets/images/tileBacks.jpg')`; // Your back image
+    tileBack.style.backgroundImage = `url('assets/images/tileBacks.jpg')`; // back image//
 
     tile.appendChild(tileFront);
     tile.appendChild(tileBack);
 
-    tile.addEventListener('click', () => flipTile(tile)); // Use the flipTile function
+    tile.addEventListener('click', () => flipTile(gameTile)); // Update to gameTile
+
     gridContainer.appendChild(tile);
     tiles.push(tile);
 }
 }
+
+// Initialize the tile with data attributes//
+const tile = document.createElement('div');
+tile.classList.add('tile');
+tile.dataset.flipped = 'false'; 
 
 
 // Tile flip logic//
 function flipTile(tile) {
     if (tile.dataset.flipped === 'true' || hasWon || movesLeft <= 0 || lockBoard) return;
 
+    tile.querySelector('.tile-inner').classList.add('flip'); // flip to inner//
+    tile.dataset.flipped = 'true'; // Mark as flipped//
+
     tile.classList.add('flip'); // Added flip class to trigger CSS//
     tile.dataset.flipped = 'true'; // Mark as flipped//
+
+
 
 // Check for matches//
     const flippedTiles = tiles.filter(t => t.dataset.flipped === 'true');
     if (flippedTiles.length === 2) {
         lockBoard = true; // Lock the board during checking//
         checkForMatch(flippedTiles);
-    }
+}
 }
 
 // Check for matches//

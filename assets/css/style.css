@@ -164,13 +164,14 @@ body {
 .game-container {
   text-align: center;
   width: 100%;
-  max-width: 880px; /* Adjusted max width */
+  max-width: 888px; /* Adjusted max width */
   margin: 0 auto;
   margin-top: 5%; 
   padding: 20px; /* Added padding for aesthetics */
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px auto; 
 }
 
 /* Game Info */
@@ -179,7 +180,7 @@ body {
 }
 
 .game-info h1 {
-  font-size: 2.1rem;
+  font-size: 2.4rem;
   width: 100%;
 }
 .game-info h4 {
@@ -187,8 +188,8 @@ body {
   width: 100%;
 }
 
-#timer, #moves-left {
-  font-size: 1.2rem;
+.timer, .moves-left, .moves {
+  font-size: 1.6rem;
 }
 
 /* Grid Container */
@@ -224,7 +225,7 @@ body {
 
 .tileFront, .tileBack {
   position: absolute;
-  width: 100%;
+  width: 110%;
   height: 100%;
   backface-visibility: hidden;
   transition: transform 0.6s; /* Smooth transition */
@@ -235,27 +236,31 @@ body {
   background-image: url('assets/images/tileBacks.jpg');
   background-size: cover;
   transform: rotateY(180deg);
+  position: absolute;
 }
 
 .tileFront {
   background-size: cover;
   background-position: center;
+  position: absolute;
 }
 
 .tile.flip .tile-inner {
   transform: rotateY(180deg);
+  transition: transform .2s; /*added to support tile flip*/
+
 }
 .tile.flip .tileFront {
-  transform: rotateY(180deg); /* Flip front */
+  transform: rotateY(180deg); /* Flip front of tile*/
 }
 
 .tile.flip .tileBack {
-  transform: rotateY(0deg); /* Show back */
+  transform: rotateY(0deg); /* Show back of tile */
 }
 
 /* Restart Button */
 #restart-btn {
-  padding: 12px 43px;
+  padding: 12px 20px;
   font-size: 16px;
   background-color: #F39211;
   color: #fff;
@@ -264,23 +269,86 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 20px; /* Need to adjust margin to space from grid */
+  align-items: center;
+  display: block;
+  margin: 20px auto;
 }
 
 #restart-btn:hover {
   background-color: #D6800C;
 }
 
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center; /* Center button */
+  margin-top: 20px; /* Space above the button */
+}
+
+
 /* -----------Game Screen Media Queries for Responsiveness---------- */
 
-/* Small phone screens */
+/* Small phone screens*/
+@media (min-width: 360px) and (max-width: 575px) {
+
+/* Tiles: size adjustment for small screens */
+  .tile {
+  width: 100px;  /* Smaller tile size for small screens */
+  height: 80px; /* Ensure the tiles fit well */
+}
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Maintain 2 columns on small screens */
+    gap: 8px; /* Slightly reducing gap for compact display */
+}
+ 
+  .game-info h1 {
+    font-size: 1.5rem; 
+    margin: 10px 0; 
+}
+
+/* h4 font size and margins */
+  .game-info h4 {
+    font-size: 1rem; 
+    margin: 5px 0; 
+}
+
+  .game-info {
+    padding: 10px; /* padding to ensure visibility */
+}
+
+/* Adjusted grid to show only 10 tiles on small screens */
+  .grid-container .tile:nth-child(n+11) {
+    display: none; /* Hide all tiles after the 10th one */
+}
+ /* Grid layout for small screens */
+ .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns to fit on small screens */
+  gap: 10px; /* Smaller gap to save space */
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Ensure the restart button adjusts well on small screens */
+#restart-btn {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+}
+
+
+/* Medium sized hone screens */
 @media (min-width: 576px) {
   .tile {
-      width: 100px;
+      width: 110px;
       height: 100px;
   }
   #restart-btn {
-      font-size: 16px;
-      padding: 8px 16px;
+    font-size: 18px;
+    padding: 14px 30px;
+    align-items: center;
   }
 }
 
@@ -291,40 +359,43 @@ body {
       height: 120px;
   }
   #restart-btn {
-      font-size: 18px;
-      padding: 11px 20px;
+    font-size: 20px;
+    padding: 16px 32px;
+      align-items: center;
   }
 }
 
 /* iPad and laptop screens */
 @media (min-width: 992px) {
   .tile {
-      width: 150px; /* Increased for visibility */
+      width: 155px; /* Increased for visibility */
       height: 150px;
   }
   .grid-container {
     grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
-    gap: 40px; /* Increased gap */
+    gap: 30px; /* Increased gap */
 }
   #restart-btn {
-      font-size: 20px;
-      padding: 14px 24px;
+    font-size: 24px;
+    padding: 18px 36px;
+      align-items: center;
   }
 }
 
 /* Large laptop screens */
 @media (min-width: 1200px) {
   .tile {
-      width: 180px; /* Larger tile size */
+      width: 184px; /* Larger tile size */
       height: 180px; /* Larger tile size */
   }
   .grid-container {
       grid-template-columns: repeat(4, 1fr); /* Adjusting to 4 columns for large screens */
-      gap: 50px; /* Increased gap for larger screens */
+      gap: 40px; /* Increased gap for larger screens */
   }
   #restart-btn {
-      font-size: 24px;
-      padding: 17px 32px;
+    font-size: 28px;
+    padding: 21px 40px;
+      align-items: center;
   }
 }
 
