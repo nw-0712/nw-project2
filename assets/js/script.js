@@ -69,7 +69,7 @@ function initializeGame() {
     for (let i = 0; i < allTiles.length; i++) {
         const tile = document.createElement('div');
         tile.classList.add('tile');
-    }
+    
 // Front and back tiles//
         const tileInner = document.createElement('div');
         tileInner.classList.add('tile-inner');
