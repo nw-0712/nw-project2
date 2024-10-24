@@ -247,7 +247,7 @@ body {
 
 .tile.flip .tile-inner {
   transform: rotateY(180deg);
-  transition: transform .2s; /*added to support tile flip*/
+  transition: transform 0.6s; /*added to support tile flip*/
 
 }
 .tile.flip .tileFront {
@@ -294,7 +294,7 @@ body {
 /* Tiles: size adjustment for small screens */
   .tile {
   width: 100px;  /* Smaller tile size for small screens */
-  height: 80px; /* Ensure the tiles fit well */
+  height: 80px; /* Ensure that tiles fit well */
 }
 
   .grid-container {
@@ -321,6 +321,7 @@ body {
   .grid-container .tile:nth-child(n+11) {
     display: none; /* Hide all tiles after the 10th one */
 }
+
  /* Grid layout for small screens */
  .grid-container {
   display: grid;

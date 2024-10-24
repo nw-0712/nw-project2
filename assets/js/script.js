@@ -7,6 +7,7 @@ const timerElement = document.getElementById('timer');
 const gridContainer = document.getElementById('grid-container');
 const restartButton = document.getElementById('restart-btn');
 
+
 // Variables for game logic
 let tiles = [];
 let movesLeft = 30;
@@ -16,6 +17,8 @@ let matchedTiles = 0;
 let timer;
 let secondsElapsed = 0;
 let hasWon = false;
+let hasFlippedTile = false;
+
 
 // Timer logic section//
 function startTimer() {
@@ -54,9 +57,10 @@ function initializeGame() {
         'assets/images/tile1.png', 'assets/images/tile2.png', 'assets/images/tile3.jpg', 
         'assets/images/tile4.jpg', 'assets/images/tile5.jpeg', 'assets/images/tile6.png', 
         'assets/images/tile7.jpg', 'assets/images/tile8.jpeg', 'assets/images/tile9.jpg', 
-        'assets/images/tile10.jpg', 'assets/images/tile11.png', 'assets/images/tile1.png',
-        'assets/images/tile4.jpg',  'assets/images/tile5.jpeg', 'assets/images/tile9.jpg',
-        'assets/images/tile6.png', 'assets/images/tile12.jpg',  'assets/images/tile7.jpg',
+        'assets/images/tile10.jpg', 'assets/images/tile1.png', 'assets/images/tile5.jpeg',
+        'assets/images/tile3.jpg',  'assets/images/tile8.jpeg', 'assets/images/tile9.jpg',
+        'assets/images/tile6.png', 'assets/images/tile10.jpg',  'assets/images/tile7.jpg',
+        'assets/images/tile3.jpg', 'assets/images/tile4.jpg',
     ];
 
     shuffleArray(allTiles);
@@ -115,10 +119,12 @@ function checkForMatch(flippedTiles) {
         setTimeout(() => {
             tile1.classList.add('matched'); // Mark as matched//
             tile2.classList.add('matched');
-            tile1.style.visibility = 'hidden'; // Hide matched tiles//
-            tile2.style.visibility = 'hidden';
-            checkForWin();
-            lockBoard = false; // Unlock the board//
+            tile1.querySelector('.tile-inner').classList.remove('flip');
+            tile2.querySelector('.tile-inner').classList.remove('flip');
+            tile1.dataset.flipped = 'false';
+            tile2.dataset.flipped = 'false';
+            lockBoard = false;// Unlock the board//
+            checkForWin(); 
         }, 1000);
     } else {
         setTimeout(() => {
