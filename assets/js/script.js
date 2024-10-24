@@ -76,7 +76,7 @@ function initializeGame() {
 
         const tileBack = document.createElement('div');
         tileBack.classList.add('tile-back');
-        tileBack.style.backgroundImage = `url('assets/images/tileBacks.jpg')`; // back image
+        tileBack.style.backgroundImage = `url('assets/images/tileBacks.jpg')`; // back image//
 
         tileInner.appendChild(tileFront);
         tileInner.appendChild(tileBack);
