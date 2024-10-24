@@ -1,4 +1,4 @@
-// DOM elements
+// DOM elements//
 const startGameBtn = document.getElementById('start-game');
 const homeScreen = document.getElementById('home-screen');
 const gameScreen = document.getElementById('game-screen');
@@ -69,7 +69,7 @@ function initializeGame() {
     for (let i = 0; i < allTiles.length; i++) {
         const tile = document.createElement('div');
         tile.classList.add('tile');
-
+    }
 // Front and back tiles//
         const tileInner = document.createElement('div');
         tileInner.classList.add('tile-inner');
@@ -93,6 +93,7 @@ function initializeGame() {
         tiles.push(tile);
     }
 }
+
 
 // Tile flip logic section//
 function flipTile(tile) {

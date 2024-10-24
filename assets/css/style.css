@@ -13,7 +13,6 @@
 
 .montserrat {
     font-family: "Montserrat"; 
-    font-size: auto;
     font-style: thin;
 }
   
@@ -72,8 +71,7 @@ body {
 #home-screen #start-btn {
   background-color: #F39211;
   padding: 15px 30px;
-  text-decoration: bold;
-  font-size: 1.25rem;
+   font-size: 1.25rem;
   border-radius: 5px;
   margin-top:20%;
   z-index: 99;
@@ -88,7 +86,6 @@ body {
   background-color: #F39211;
   border-radius: 5px;
   color: white;
-  text-decoration: bold;
 }
 
 #start-game:hover {
@@ -108,8 +105,8 @@ body {
 }
 
 #home-screen #start-btn {
-  font-size: 14px;
-  padding: 8px 16px;
+  font-size: 16px;
+  padding: 10px 18px;
 }
 }
 
@@ -123,8 +120,8 @@ body {
   font-size: 1.8rem;
 }
 #home-screen #start-btn {
-  font-size: 17px;
-  padding: 10px 20px;
+  font-size: 20px;
+  padding: 13px 24px;
 }
 }
 
@@ -138,8 +135,8 @@ body {
 }
 
 #home-screen #start-btn {
-  font-size: 18px;
-  padding: 12px 24px;
+  font-size: 25px;
+  padding: 18px 30px;
 }
 }
 
@@ -152,8 +149,8 @@ body {
   font-size: 3rem;
 }
 #home-screen #start-btn {
-  font-size: 20px;
-  padding: 15px 28px;
+  font-size: 35px;
+  padding: 25px 40px;
 }
 }
 
