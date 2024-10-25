@@ -56,7 +56,7 @@ body {
 }
 
 #home-screen h1 {
-  font-size: 3rem;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
   font-family: "Agdasima", sans-serif;
 }
@@ -95,19 +95,20 @@ body {
 /* -----------Home Screen Media Queries for responsiveness---------- */
 
 /* Small phone screens media queries*/
-@media (min-width: 425px) {
-#home-screen h1 {
-  font-size: 3.5rem;
-}
+@media (min-width: 360px) and (max-width: 575px) {
+  #home-screen h1 {
+    font-size: 2rem; /* Reduced to fit better on smaller screens */
+    margin: 10px 0; /* Margin for spacing */
+  }
+  #home-screen h4 {
+    font-size: 1.2rem; /* Slightly smaller for clarity */
+    margin: 5px 0; /* Extra margin for readability */
+  }
 
-#home-screen h4 {
-  font-size: 1.5rem;
-}
-
-#home-screen #start-btn {
-  font-size: 16px;
-  padding: 10px 18px;
-}
+  #home-screen #start-btn {
+    font-size: 14px; /* Adjusted button font size */
+    padding: 8px 16px; /* Padding to suit small screen buttons */
+  }
 }
 
 /* Large phone screens media queries*/
@@ -141,7 +142,7 @@ body {
 }
 
 /* Large laptop screens media queries*/
-@media (min-width: 1220px) { 
+@media (min-width: 1200px) { 
 #home-screen h1 {
   font-size: 7rem;
 }
@@ -293,21 +294,20 @@ body {
 
 /* Adjust heading font size and margin for visibility */
 .game-info h1 {
-  font-size: 1.6rem;  /* Smaller font size */
-  margin: 10px 0;     /* Reduced margin to avoid overlap */
-  padding: 5px 0;     /* Added padding for spacing */
+  font-size: 1.4rem;  /* Smaller font size */
+  margin: 8px 0;     /* Reduced margin to avoid overlap */
 }
 
 /* Adjust subheading font size and margin */
 .game-info h4 {
   font-size: 1.1rem;  /* Smaller font size for subheading */
   margin: 5px 0;      /* Reduced margin to fit within view */
-  padding: 3px 0;     /* Added padding for spacing */
 }
 
 /* Container padding adjustment for smaller screens */
 .game-info {
   padding: 10px; /* Additional padding to ensure layout fits */
+  text-align: center; /* Center-align for small screens */
 }
 
 /* Grid container adjustments for tile layout */
