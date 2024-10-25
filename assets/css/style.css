@@ -179,14 +179,17 @@ body {
 .game-info h1 {
   font-size: 2.4rem;
   width: 100%;
+  color: #031155;
 }
 .game-info h4 {
   font-size: 1.5rem;
   width: 100%;
+  color: #031155;
 }
 
 .timer, .moves-left, .moves {
   font-size: 1.6rem;
+  color: #031155;
 }
 
 /* Grid Container */
