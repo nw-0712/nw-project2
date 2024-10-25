@@ -76,10 +76,12 @@ Epics & user stories<br/>
 * As a user I want the ability to restart the game if I run out of time or run out of moves<br/>
 * As a user I want the ability to clcik the 'Restart' button and have the game layout refesh<br/>
 
+Colours<br/>
+![image](https://github.com/user-attachments/assets/1665923a-a440-41da-8f09-25209eaaa519)
 
 Typography<br/>
 Headings: Font used: Agdasima<br/>
-Subheading & body copy: Font used: Montserrat<br/>
+Subheading & body copy: Font used: Roboto<br/>
 
 Wireframes<br/>
 
