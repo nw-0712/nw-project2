@@ -56,13 +56,13 @@ body {
 }
 
 #home-screen h1 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   font-family: "Agdasima", sans-serif;
 }
 
 #home-screen h4 {
-  font-size: 0.5rem;
+  font-size: 1rem;
   margin-bottom: 20px;
   font-family: "Roboto", sans-serif;
 }
@@ -78,9 +78,9 @@ body {
 }
 
 #start-game {
-  margin-top: 20%;
-  padding: 10px 20px;
-  font-size: 18px;
+  margin-top: 45%;
+  padding: 10px 18px;
+  font-size: 16px;
   cursor: pointer;
   border: none;
   background-color: #F39211;
@@ -95,21 +95,24 @@ body {
 /* -----------Home Screen Media Queries for responsiveness---------- */
 
 /* Small phone screens media queries*/
-/* Small phone screens media queries*/
 @media (min-width: 360px) and (max-width: 575px) {
-  #home-screen h1 {
-    font-size: 2rem; /* Increased size for better visibility */
-    margin: 10px 0;
-  }
+
+#home-screen h1 {
+  font-size: 2rem; /* Font size for small screens */
+  margin: 10px 0; /* Margin for spacing */
+  max-width: 60%; /* Set maximum width to allow for line break */
+  word-wrap: break-word; /* Allow words to wrap to the next line */
+}
 
   #home-screen h4 {
-    font-size: 1rem; /* Increased for clarity */
+    font-size: 1.3rem; /* Increased for clarity */
     margin: 5px 0;
   }
 
   #home-screen #start-btn {
-    font-size: 16px; /* Adjusted button font size */
+    font-size: 14px; /* Adjusted button font size */
     padding: 10px 20px; /* Adjusted padding for smaller screens */
+    margin-top: 50%;
   }
 }
 
@@ -207,7 +210,7 @@ body {
 }
 
 .game-info h1 {
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   width: 100%;
   color: #031155;
 }
@@ -218,15 +221,15 @@ body {
 }
 
 .timer, .moves-left, .moves {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: #031155;
 }
 
 /* Grid Container */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Increased min size for tiles */
-  gap: 15px; /* Increased default tile gap */
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); /* Increased min size for tiles */
+  gap: 10px; /* Increased default tile gap */
   justify-content: center;
   margin: 0 auto;
   padding: 10px;
@@ -235,7 +238,7 @@ body {
 /* Tile Styles */
 .tile {
   width: 100px; /* Increased size for better visibility */
-  height: 120px;
+  height: 100px;
   border-radius: 15px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -323,14 +326,17 @@ body {
 
 /* Adjust heading font size and margin for visibility */
 .game-info h1 {
-  font-size: 1.4rem;  /* Smaller font size */
-  margin: 8px 0;     /* Reduced margin to avoid overlap */
+  font-size: 1.4;  /* Smaller font size */
+  margin-top: 20%;
 }
 
 /* Adjust subheading font size and margin */
 .game-info h4 {
-  font-size: 1.1rem;  /* Smaller font size for subheading */
+  font-size: 1.2rem;  /* Smaller font size for subheading */
   margin: 5px 0;      /* Reduced margin to fit within view */
+}
+.timer, .moves-left, .moves {
+  font-size: 1.2rem; /* Smaller font size */
 }
 
 /* Container padding adjustment for smaller screens */
@@ -341,20 +347,23 @@ body {
 
 /* Grid container adjustments for tile layout */
 .grid-container {
-  grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
-  gap: 8px;  /* Compact tile gap */
+  grid-template-columns: repeat(2, 1fr); /* columns for small screens */
+  gap: 5px;  /* Compact tile gap */
+}
+.game-container {
+  padding: 10px; /* Adjusted padding for small screens */
 }
 
 /* Tile size adjustments for small screens */
 .tile {
-  width: 90px;
-  height: 90px;
+  height: 50px;
+  width: 50px;
 }
 
 /* Restart button adjustments */
 #restart-btn {
   font-size: 12px;
-  padding: 10px 16px;
+  padding: 7px 12px;
 }
 }
 
@@ -365,14 +374,17 @@ body {
   }
 
   .game-info h4 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .grid-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 12px;
   }
 
+  .game-container {
+    padding: 15px; /* Adjust padding */
+  }
   .tile {
     width: 100px;
     height: 100px;
@@ -397,6 +409,10 @@ body {
   .grid-container {
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
+  }
+
+  .game-container {
+    padding: 20px; /* Default padding for tablets */
   }
 
   .tile {
@@ -424,7 +440,10 @@ body {
     grid-template-columns: repeat(5, 1fr);
     gap: 25px;
   }
-
+  .game-container {
+    padding: 20px; /* Consistent padding for desktops */
+  }
+  
   .tile {
     width: 150px;
     height: 150px;
@@ -451,9 +470,13 @@ body {
       height: 150px; /* Larger tile size */
   }
   .grid-container {
-      grid-template-columns: repeat(5, 1fr); /* Adjusting to 4 columns for large screens */
+      grid-template-columns: repeat(6, 1fr); /* Adjusting for large screens */
       gap: 25px; /* Increased gap for larger screens */
   }
+  .game-container {
+    padding: 30px; /* Increased padding for large laptops */
+  }
+
   #restart-btn {
     font-size: 20px;
     padding: 18px 32px;
