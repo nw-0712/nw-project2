@@ -95,66 +95,95 @@ body {
 /* -----------Home Screen Media Queries for responsiveness---------- */
 
 /* Small phone screens media queries*/
+/* Small phone screens media queries*/
 @media (min-width: 360px) and (max-width: 575px) {
   #home-screen h1 {
-    font-size: 2rem; /* Reduced to fit better on smaller screens */
-    margin: 10px 0; /* Margin for spacing */
+    font-size: 2rem; /* Increased size for better visibility */
+    margin: 10px 0;
   }
+
   #home-screen h4 {
-    font-size: 1.2rem; /* Slightly smaller for clarity */
-    margin: 5px 0; /* Extra margin for readability */
+    font-size: 1rem; /* Increased for clarity */
+    margin: 5px 0;
   }
 
   #home-screen #start-btn {
-    font-size: 14px; /* Adjusted button font size */
-    padding: 8px 16px; /* Padding to suit small screen buttons */
+    font-size: 16px; /* Adjusted button font size */
+    padding: 10px 20px; /* Adjusted padding for smaller screens */
   }
 }
 
 /* Large phone screens media queries*/
-@media (min-width: 768px) {
-#home-screen h1 {
-  font-size: 4rem;
-}
+@media (min-width: 576px) and (max-width: 767px) {
+  #home-screen h1 {
+    font-size: 2.5rem; /* Increased for better visibility */
+    margin: 15px 0;
+  }
 
-#home-screen h4 {
-  font-size: 1.8rem;
-}
-#home-screen #start-btn {
-  font-size: 20px;
-  padding: 13px 24px;
-}
+  #home-screen h4 {
+    font-size: 1.2rem; /* Increased for clarity */
+    margin: 10px 0;
+  }
+
+  #home-screen #start-btn {
+    font-size: 18px; /* Adjusted button font size */
+    padding: 12px 24px; /* Adjusted padding for medium screens */
+  }
 }
 
 /* Medium ipad and laptop screens media queries */
+@media (min-width: 768px) and (max-width: 991px) {
+  #home-screen h1 {
+    font-size: 3rem; /* Increased for visibility */
+    margin: 20px 0;
+  }
+
+  #home-screen h4 {
+    font-size: 1.5rem; /* Increased for clarity */
+    margin: 15px 0;
+  }
+
+  #home-screen #start-btn {
+    font-size: 22px; /* Adjusted button font size */
+    padding: 15px 30px; /* Adjusted padding for medium screens */
+  }
+}
+
+/* Medium iPad and laptop screens media queries */
 @media (min-width: 992px) {
-#home-screen h1 {
-  font-size: 5rem;
-}
-#home-screen h4 {
-  font-size: 2rem;
+  #home-screen h1 {
+    font-size: 4.5rem; /* Adjusted for larger screens */
+    margin: 25px 0;
+  }
+
+  #home-screen h4 {
+    font-size: 2rem; /* Increased for clarity */
+    margin: 20px 0;
+  }
+
+  #home-screen #start-btn {
+    font-size: 26px; /* Adjusted button font size */
+    padding: 18px 30px; /* Adjusted padding for larger screens */
+  }
 }
 
-#home-screen #start-btn {
-  font-size: 25px;
-  padding: 18px 30px;
-}
-}
-
-/* Large laptop screens media queries*/
+/* Large laptop screens media queries */
 @media (min-width: 1200px) { 
-#home-screen h1 {
-  font-size: 7rem;
-}
-#home-screen h4 {
-  font-size: 3rem;
-}
-#home-screen #start-btn {
-  font-size: 35px;
-  padding: 25px 40px;
-}
-}
+  #home-screen h1 {
+    font-size: 7rem; /* Larger size for bigger screens */
+    margin: 30px 0;
+  }
 
+  #home-screen h4 {
+    font-size: 3rem; /* Increased for visibility */
+    margin: 25px 0;
+  }
+
+  #home-screen #start-btn {
+    font-size: 35px; /* Larger button size */
+    padding: 25px 40px; /* Adjusted padding for larger buttons */
+  }
+}
 
 /* ----------------------Game screen-------------------- */
 
