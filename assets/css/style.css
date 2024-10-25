@@ -12,13 +12,13 @@
 }
 
 .montserrat {
-    font-family: "Montserrat"; 
-    font-style: thin;
+  font-family: "Agdasima", sans-serif;
+  font-style: normal;
 }
   
 /* General Styles */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Agdasima", sans-serif;
   background-color: #f0f0f0;
   display: flex;
   justify-content: center;
