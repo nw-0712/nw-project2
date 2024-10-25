@@ -32,7 +32,7 @@ body {
 #home-screen {
   background-size: cover;
   background-position: center;
-  background-image: url('assets/images/homeScreenFullBleed.jpg');
+  background-image: url('../images/homeScreenFullBleed.jpg');
   height: 100vh;
   width: 100%;
   display: flex;
