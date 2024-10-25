@@ -195,7 +195,7 @@ body {
 /* Grid Container */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Increased min size for tiles */
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Increased min size for tiles */
   gap: 15px; /* Increased default tile gap */
   justify-content: center;
   margin: 0 auto;
@@ -204,8 +204,8 @@ body {
 
 /* Tile Styles */
 .tile {
-  width: 150px; /* Increased size for better visibility */
-  height: 150px;
+  width: 100px; /* Increased size for better visibility */
+  height: 120px;
   border-radius: 15px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -291,112 +291,143 @@ body {
 /* Small phone screens*/
 @media (min-width: 360px) and (max-width: 575px) {
 
-/* Tiles: size adjustment for small screens */
-  .tile {
-  width: 100px;  /* Smaller tile size for small screens */
-  height: 80px; /* Ensure that tiles fit well */
+/* Adjust heading font size and margin for visibility */
+.game-info h1 {
+  font-size: 1.6rem;  /* Smaller font size */
+  margin: 10px 0;     /* Reduced margin to avoid overlap */
+  padding: 5px 0;     /* Added padding for spacing */
 }
 
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr); /* Maintain 2 columns on small screens */
-    gap: 8px; /* Slightly reducing gap for compact display */
-}
- 
-  .game-info h1 {
-    font-size: 1.5rem; 
-    margin: 10px 0; 
+/* Adjust subheading font size and margin */
+.game-info h4 {
+  font-size: 1.1rem;  /* Smaller font size for subheading */
+  margin: 5px 0;      /* Reduced margin to fit within view */
+  padding: 3px 0;     /* Added padding for spacing */
 }
 
-/* h4 font size and margins */
-  .game-info h4 {
-    font-size: 1rem; 
-    margin: 5px 0; 
+/* Container padding adjustment for smaller screens */
+.game-info {
+  padding: 10px; /* Additional padding to ensure layout fits */
 }
 
-  .game-info {
-    padding: 10px; /* padding to ensure visibility */
+/* Grid container adjustments for tile layout */
+.grid-container {
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+  gap: 8px;  /* Compact tile gap */
 }
 
-/* Adjusted grid to show only 10 tiles on small screens */
-  .grid-container .tile:nth-child(n+11) {
-    display: none; /* Hide all tiles after the 10th one */
+/* Tile size adjustments for small screens */
+.tile {
+  width: 90px;
+  height: 90px;
 }
 
- /* Grid layout for small screens */
- .grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns to fit on small screens */
-  gap: 10px; /* Smaller gap to save space */
-  justify-content: center;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-/* Ensure the restart button adjusts well on small screens */
+/* Restart button adjustments */
 #restart-btn {
   font-size: 12px;
   padding: 10px 16px;
 }
 }
 
-
 /* Medium sized hone screens */
 @media (min-width: 576px) {
-  .tile {
-      width: 110px;
-      height: 100px;
+  .game-info h1 {
+    font-size: 2rem;
   }
+
+  .game-info h4 {
+    font-size: 1.2rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .tile {
+    width: 100px;
+    height: 100px;
+  }
+
   #restart-btn {
-    font-size: 18px;
-    padding: 14px 30px;
-    align-items: center;
+    font-size: 14px;
+    padding: 12px 18px;
   }
 }
 
 /* Phone screens */
-@media (min-width: 768px) {
-  .tile {
-      width: 120px;
-      height: 120px;
+@media (min-width: 769px) {
+  .game-info h1 {
+    font-size: 2.2rem;
   }
+
+  .game-info h4 {
+    font-size: 1.5rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  .tile {
+    width: 120px;
+    height: 120px;
+  }
+
   #restart-btn {
-    font-size: 20px;
-    padding: 16px 32px;
-      align-items: center;
+    font-size: 16px;
+    padding: 14px 24px;
   }
 }
 
 /* iPad and laptop screens */
 @media (min-width: 992px) {
-  .tile {
-      width: 155px; /* Increased for visibility */
-      height: 150px;
+  .game-info h1 {
+    font-size: 2.6rem;
   }
+
+  .game-info h4 {
+    font-size: 1.7rem;
+  }
+
   .grid-container {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
-    gap: 30px; /* Increased gap */
-}
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+  }
+
+  .tile {
+    width: 150px;
+    height: 150px;
+  }
+
   #restart-btn {
-    font-size: 24px;
-    padding: 18px 36px;
-      align-items: center;
+    font-size: 18px;
+    padding: 16px 28px;
   }
 }
 
 /* Large laptop screens */
 @media (min-width: 1200px) {
+  .game-info h1 {
+    font-size: 2.8rem;
+  }
+  
+  .game-info h4 {
+    font-size: 1.8rem;
+  }
+
   .tile {
-      width: 184px; /* Larger tile size */
-      height: 180px; /* Larger tile size */
+      width: 150px; /* Larger tile size */
+      height: 150px; /* Larger tile size */
   }
   .grid-container {
-      grid-template-columns: repeat(4, 1fr); /* Adjusting to 4 columns for large screens */
-      gap: 40px; /* Increased gap for larger screens */
+      grid-template-columns: repeat(5, 1fr); /* Adjusting to 4 columns for large screens */
+      gap: 25px; /* Increased gap for larger screens */
   }
   #restart-btn {
-    font-size: 28px;
-    padding: 21px 40px;
-      align-items: center;
+    font-size: 20px;
+    padding: 18px 32px;
   }
 }
 
