@@ -100,7 +100,6 @@ body {
 #home-screen h1 {
   font-size: 2rem; /* Font size for small screens */
   margin: 10px 0; /* Margin for spacing */
-  max-width: 60%; /* Set maximum width to allow for line break */
   word-wrap: break-word; /* Allow words to wrap to the next line */
 }
 
@@ -196,12 +195,12 @@ body {
   width: 100%;
   max-width: 888px; /* Adjusted max width */
   margin: 0 auto;
-  margin-top: 5%; 
   padding: 20px; /* Added padding for aesthetics */
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   margin: 20px auto; 
+  overflow: hidden;
 }
 
 /* Game Info */
@@ -213,11 +212,13 @@ body {
   font-size: 2.1rem;
   width: 100%;
   color: #031155;
+  margin: 0; /* Reset margin */
 }
 .game-info h4 {
   font-size: 1.5rem;
   width: 100%;
   color: #031155;
+  margin: 5px 0; /* Maintain a small margin */
 }
 
 .timer, .moves-left, .moves {
@@ -228,8 +229,8 @@ body {
 /* Grid Container */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); /* Increased min size for tiles */
-  gap: 10px; /* Increased default tile gap */
+  grid-template-columns: repeat(4, 1fr); /* Default 4 columns */
+  gap: 8px; /* Increased default tile gap */
   justify-content: center;
   margin: 0 auto;
   padding: 10px;
@@ -326,8 +327,8 @@ body {
 
 /* Adjust heading font size and margin for visibility */
 .game-info h1 {
-  font-size: 1.4;  /* Smaller font size */
-  margin-top: 20%;
+  font-size: 1.6rem;  /* Smaller font size */
+  margin-top: 10%;
 }
 
 /* Adjust subheading font size and margin */
@@ -347,8 +348,8 @@ body {
 
 /* Grid container adjustments for tile layout */
 .grid-container {
-  grid-template-columns: repeat(2, 1fr); /* columns for small screens */
-  gap: 5px;  /* Compact tile gap */
+  grid-template-columns: repeat(4, 1fr); /* columns for small screens */
+  gap: 6px;  /* Compact tile gap */
 }
 .game-container {
   padding: 10px; /* Adjusted padding for small screens */
@@ -356,8 +357,8 @@ body {
 
 /* Tile size adjustments for small screens */
 .tile {
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
 }
 
 /* Restart button adjustments */
@@ -367,27 +368,27 @@ body {
 }
 }
 
-/* Medium sized hone screens */
+/* -----Medium sized hone screens -----*/
 @media (min-width: 576px) {
   .game-info h1 {
-    font-size: 2rem;
+    font-size: 2rem; 
   }
 
   .game-info h4 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .grid-container {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .game-container {
-    padding: 15px; /* Adjust padding */
+    padding: 10px; /* Adjust padding */
   }
+
   .tile {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
   }
 
   #restart-btn {
@@ -408,7 +409,6 @@ body {
 
   .grid-container {
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
   }
 
   .game-container {
@@ -466,12 +466,12 @@ body {
   }
 
   .tile {
-      width: 150px; /* Larger tile size */
-      height: 150px; /* Larger tile size */
+      width: 120px; /* Larger tile size */
+      height: 120px; /* Larger tile size */
   }
   .grid-container {
-      grid-template-columns: repeat(6, 1fr); /* Adjusting for large screens */
-      gap: 25px; /* Increased gap for larger screens */
+      grid-template-columns: repeat(5, 1fr); /* Adjusting for large screens */
+      gap: 20px; /* Increased gap for larger screens */
   }
   .game-container {
     padding: 30px; /* Increased padding for large laptops */
