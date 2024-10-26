@@ -7,8 +7,7 @@ const timerElement = document.getElementById('timer');
 const gridContainer = document.getElementById('grid-container');
 const restartButton = document.getElementById('restart-btn');
 
-
-// Variables for game logic
+// Variables for game logic//
 let tiles = [];
 let movesLeft = 30;
 let moves = 0;
@@ -19,8 +18,7 @@ let secondsElapsed = 0;
 let hasWon = false;
 let hasFlippedTile = false;
 
-
-// Timer logic section//
+// Timer logic//
 function startTimer() {
     timer = setInterval(() => {
         secondsElapsed++;
@@ -42,7 +40,7 @@ function shuffleArray(array) {
     }
 }
 
-// Initialize game section//
+// Initialize game//
 function initializeGame() {
     gridContainer.innerHTML = '';
     tiles = [];
@@ -65,21 +63,21 @@ function initializeGame() {
 
     shuffleArray(allTiles);
 
-// To create tile elements//
+// Create tile elements//
     for (let i = 0; i < allTiles.length; i++) {
         const tile = document.createElement('div');
         tile.classList.add('tile');
-    
+
 // Front and back tiles//
         const tileInner = document.createElement('div');
         tileInner.classList.add('tile-inner');
 
         const tileFront = document.createElement('div');
-        tileFront.classList.add('tile-front');
+        tileFront.classList.add('tile-Front');
         tileFront.style.backgroundImage = `url(${allTiles[i]})`;
 
         const tileBack = document.createElement('div');
-        tileBack.classList.add('tile-back');
+        tileBack.classList.add('tile-Back');
         tileBack.style.backgroundImage = `url('assets/images/tileBacks.jpg')`; // back image//
 
         tileInner.appendChild(tileFront);
@@ -94,17 +92,16 @@ function initializeGame() {
     }
 }
 
-
-// Tile flip logic section//
+// Tile flip logic//
 function flipTile(tile) {
     if (tile.dataset.flipped === 'true' || hasWon || movesLeft <= 0 || lockBoard) return;
 
-    tile.querySelector('.tile-inner').classList.add('flip'); // Adding flip class to inner element//
-    tile.dataset.flipped = 'true'; // Mark as flipped//
+    tile.querySelector('.tile-inner').classList.add('flip');
+    tile.dataset.flipped = 'true';
 
     const flippedTiles = tiles.filter(t => t.dataset.flipped === 'true' && !t.classList.contains('matched'));
     if (flippedTiles.length === 2) {
-        lockBoard = true; // Lock the board during checking//
+        lockBoard = true;
         checkForMatch(flippedTiles);
     }
 }
@@ -115,41 +112,38 @@ function checkForMatch(flippedTiles) {
     movesLeft--;
     movesLeftElement.textContent = `Moves Left: ${movesLeft}`;
 
-// Compare the background images of both tiles//
-    if (tile1.querySelector('.tile-front').style.backgroundImage === tile2.querySelector('.tile-front').style.backgroundImage) {
+    if (tile1.querySelector('.tile-Front').style.backgroundImage === tile2.querySelector('.tile-Front').style.backgroundImage) {
         setTimeout(() => {
-            tile1.classList.add('matched'); // Mark as matched//
+            tile1.classList.add('matched');
             tile2.classList.add('matched');
-            tile1.querySelector('.tile-inner').classList.remove('flip');
-            tile2.querySelector('.tile-inner').classList.remove('flip');
-            tile1.dataset.flipped = 'false';
-            tile2.dataset.flipped = 'false';
-            lockBoard = false;// Unlock the board//
-            checkForWin(); 
-        }, 1000);
+            tile1.style.visibility = 'hidden';
+            tile2.style.visibility = 'hidden';
+            lockBoard = false;
+            checkForWin();
+        }, 800);
     } else {
         setTimeout(() => {
             tile1.querySelector('.tile-inner').classList.remove('flip');
             tile2.querySelector('.tile-inner').classList.remove('flip');
             tile1.dataset.flipped = 'false';
             tile2.dataset.flipped = 'false';
-            lockBoard = false; // Unlock the board//
+            lockBoard = false;
         }, 1000);
-}
+    }
 
     checkForLoss();
 }
 
 // Check win condition//
 function checkForWin() {
-    if (tiles.every(tile => tile.style.visibility === 'hidden')) {
+    if (tiles.every(tile => tile.classList.contains('matched'))) {
         hasWon = true;
         stopTimer();
         alert("You've won!");
     }
 }
 
-// Check loss condition section//
+// Check loss condition//
 function checkForLoss() {
     if (movesLeft <= 0 && !hasWon) {
         stopTimer();
@@ -157,10 +151,8 @@ function checkForLoss() {
     }
 }
 
-// Start game section//
+// Start and restart game//
 function startGame() {
-    homeScreen.style.display = 'none';
-    gameScreen.style.display = 'block';
     initializeGame();
     startTimer();
 }
@@ -174,3 +166,5 @@ restartButton.addEventListener('click', () => {
     initializeGame();
     startTimer();
 });
+
+startGame();

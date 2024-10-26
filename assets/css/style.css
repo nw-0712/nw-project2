@@ -71,10 +71,11 @@ body {
 #home-screen #start-btn {
   background-color: #F39211;
   padding: 15px 30px;
-   font-size: 1.25rem;
+  font-size: 1.25rem;
   border-radius: 5px;
   margin-top:20%;
   z-index: 99;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 #start-game {
@@ -86,6 +87,7 @@ body {
   background-color: #F39211;
   border-radius: 5px;
   color: white;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 #start-game:hover {
@@ -185,6 +187,11 @@ body {
     font-size: 35px; /* Larger button size */
     padding: 25px 40px; /* Adjusted padding for larger buttons */
   }
+  #start-game {
+    padding: 15px 30px; /* Increased padding for larger screens */
+    font-size: 1.5rem;   /* Increased font size for better readability */
+    margin-top: 30%;     /* Adjusted margin to center the button better */
+  }
 }
 
 /* ----------------------Game screen-------------------- */
@@ -257,7 +264,7 @@ body {
   transform-style: preserve-3d;
 }
 
-.tileFront, .tileBack {
+.tile-Front, .tile-Back {
   position: absolute;
   width: 110%;
   height: 100%;
@@ -266,14 +273,14 @@ body {
   border-radius: 15px;
 }
 
-.tileBack {
+.tile-Back {
   background-image: url('assets/images/tileBacks.jpg');
   background-size: cover;
   transform: rotateY(180deg);
   position: absolute;
 }
 
-.tileFront {
+.tile-Front {
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -284,11 +291,11 @@ body {
   transition: transform 0.6s; /*added to support tile flip*/
 
 }
-.tile.flip .tileFront {
+.tile.flip .tile-Front {
   transform: rotateY(180deg); /* Flip front of tile*/
 }
 
-.tile.flip .tileBack {
+.tile.flip .tile-Back {
   transform: rotateY(0deg); /* Show back of tile */
 }
 
@@ -467,8 +474,9 @@ body {
 
   .tile {
       width: 130px; /* Larger tile size */
-      height: 130px; /* Larger tile size */
+      height: 130px; 
   }
+
   .grid-container {
       grid-template-columns: repeat(5, 1fr); /* Adjusting for large screens */
       gap: 20px; /* Increased gap for larger screens */
