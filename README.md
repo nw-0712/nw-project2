@@ -42,11 +42,11 @@ CONTENTS:
 * Delpoyment<br/>
 
 Home Page<br/>
-![image](https://github.com/user-attachments/assets/39b6b372-83bf-4dfe-889b-01e3ada3d7ca)
 
+![image](https://github.com/user-attachments/assets/80926149-0e57-4247-a67a-35a42c53de91)
 
 Game page<br/>
-![image](https://github.com/user-attachments/assets/e6a00470-16a4-4682-aad3-b43fac4cb1d3)
+![image](https://github.com/user-attachments/assets/fcb66478-f346-41c3-9f58-cee4b83016b2)
 
 User experience (ux)<br/>
 The game must offer the ability to be rendered with different sizes of the grid layout of 18 different pairs of graphic cards<br/>
@@ -147,7 +147,10 @@ The W3C Html Markup Validator and W3C CSS Validator services were used to valida
 
 Home page:<br/>
 
+![image](https://github.com/user-attachments/assets/494ccd30-d297-457f-8342-1d407b87357b)
 
+Game page<br/>
+![image](https://github.com/user-attachments/assets/c3cbc780-d223-4c10-abeb-e31c07eba5b9)
 
 Accessibility & scores<br/>
 Used Lighthouse in Chrome DevTools to confirm accessibility used in throughout the website are easy to read and accessible.
