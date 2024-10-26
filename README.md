@@ -1,6 +1,10 @@
+![image](https://github.com/user-attachments/assets/6a65e2a8-fcd5-4659-a4f8-681535c5f86f)
+
+
+
 Welcome Users,
 
-SPACE ALIEN MEMORY MATCH GAME<br/>
+**SPACE ALIEN MEMORY MATCH GAME**<br/>
 Match the space alien tiles and improve your memory<br/>
 
 OVERVIEW<br/>
@@ -42,14 +46,14 @@ CONTENTS:
 * Delpoyment<br/>
 
 Home Page<br/>
-
 ![image](https://github.com/user-attachments/assets/80926149-0e57-4247-a67a-35a42c53de91)
 
 Game page<br/>
-![image](https://github.com/user-attachments/assets/fcb66478-f346-41c3-9f58-cee4b83016b2)
+![image](https://github.com/user-attachments/assets/3ce84aa5-5b67-4091-963f-a8e2edbb10a0)
+
 
 User experience (ux)<br/>
-The game must offer the ability to be rendered with different sizes of the grid layout of 18 different pairs of graphic cards<br/>
+The game must offer the ability to be rendered with different sizes of the grid layout of 10 different pairs of graphic game tiles<br/>
 The player has to be able to flip the tiles with the mouse or keyboard.<br/>
 The player must only be able to flip two tiles face up at a time.<br/>
 After a suitable time, matching tiles that face up must not have a visible representation in the grid.<br/>
@@ -57,6 +61,8 @@ After an appropriate time, tiles facing up and not matching must be flipped face
 The positions, or rather the graphics, of the tiles in the grid must be randomized before each game round.<br/>
 The game must count how many attempts the player has made to find matching tiles and present the number of attempts when the game round is over.<br/>
 After a game round is over, the user must be allowed to restart the new game round without reloading the page.
+
+
 
 Project Goals
 * Bring your own idea(s) to life, based on providing value to users to address a specific real or imagined need.<br/>
@@ -74,7 +80,7 @@ Epics & user stories<br/>
 * As a user I want the ability to to see how many moves I have left in the game<br/> 
 * As a user I want the ability to see the amount of time left via the timer on the tiop of the grid layout<br/>
 * As a user I want the ability to restart the game if I run out of time or run out of moves<br/>
-* As a user I want the ability to clcik the 'Restart' button and have the game layout refesh<br/>
+* As a user I want the ability to clcik the 'Restart' button and have the game refesh<br/>
 
 Colours<br/>
 ![image](https://github.com/user-attachments/assets/1665923a-a440-41da-8f09-25209eaaa519)
@@ -117,12 +123,6 @@ https://www.visme.co/
 W3C markup validator<br/>
 https://validator.w3.org/
 
-Unsplash<br/>
-https://unsplash.com/
-
-Unsplash images<br/>
-https://unsplash.com/
-
 Font Awesome<br/>
 https://fontawesome.com/
 
@@ -139,29 +139,35 @@ Google fonts<br/>
 https://fonts.google.com/
 
 Testing<br/>
-User stories<br/>
 
 Code valildation<br/>
 The W3C Html Markup Validator and W3C CSS Validator services were used to validate all pages of the project in order to ensure there were no syntax errors.
 
-
 Home page:<br/>
-
+HTML<br/>
 ![image](https://github.com/user-attachments/assets/494ccd30-d297-457f-8342-1d407b87357b)
 
 Game page<br/>
+HTML<br/>
 ![image](https://github.com/user-attachments/assets/c3cbc780-d223-4c10-abeb-e31c07eba5b9)
+
+CSS<br/>
+![image](https://github.com/user-attachments/assets/4358a52f-d349-4767-96a5-5b92879d910c)
 
 Accessibility & scores<br/>
 Used Lighthouse in Chrome DevTools to confirm accessibility used in throughout the website are easy to read and accessible.
 
 Home page<br/>
+![image](https://github.com/user-attachments/assets/f31b539d-8599-4c8d-91e1-c8d4bb09d5c5)
+
 
 Game Page<br/>
+![image](https://github.com/user-attachments/assets/c9e04a79-be1b-4c66-8a8a-a828b6bbaea1)
 
 
 Deployment<br/>
 Github pages & Libraries<br/>
+https://nw-0712.github.io/nw-project2/
 
 Resources<br/>
 https://stackoverflow.com/
