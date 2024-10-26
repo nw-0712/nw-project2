@@ -49,7 +49,7 @@ Home Page<br/>
 ![image](https://github.com/user-attachments/assets/80926149-0e57-4247-a67a-35a42c53de91)
 
 Game page<br/>
-![image](https://github.com/user-attachments/assets/fcb66478-f346-41c3-9f58-cee4b83016b2)
+
 
 User experience (ux)<br/>
 The game must offer the ability to be rendered with different sizes of the grid layout of 10 different pairs of graphic game tiles<br/>
