@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/47d67995-220c-4f24-919c-99caeae90518)
+![image](https://github.com/user-attachments/assets/6a65e2a8-fcd5-4659-a4f8-681535c5f86f)
 
 
 
@@ -163,10 +163,12 @@ Accessibility & scores<br/>
 Used Lighthouse in Chrome DevTools to confirm accessibility used in throughout the website are easy to read and accessible.
 
 Home page<br/>
-![image](https://github.com/user-attachments/assets/2cfdc463-bb6a-4f01-a571-b05c16482623)
+![image](https://github.com/user-attachments/assets/f31b539d-8599-4c8d-91e1-c8d4bb09d5c5)
+
 
 Game Page<br/>
-![image](https://github.com/user-attachments/assets/4fead7f3-44dd-47aa-a90c-dd3e2ed23e17)
+![image](https://github.com/user-attachments/assets/c9e04a79-be1b-4c66-8a8a-a828b6bbaea1)
+
 
 Deployment<br/>
 Github pages & Libraries<br/>
