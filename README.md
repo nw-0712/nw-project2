@@ -49,6 +49,7 @@ Home Page<br/>
 ![image](https://github.com/user-attachments/assets/80926149-0e57-4247-a67a-35a42c53de91)
 
 Game page<br/>
+![image](https://github.com/user-attachments/assets/3ce84aa5-5b67-4091-963f-a8e2edbb10a0)
 
 
 User experience (ux)<br/>
@@ -121,12 +122,6 @@ https://www.visme.co/
 
 W3C markup validator<br/>
 https://validator.w3.org/
-
-Unsplash<br/>
-https://unsplash.com/
-
-Unsplash images<br/>
-https://unsplash.com/
 
 Font Awesome<br/>
 https://fontawesome.com/
