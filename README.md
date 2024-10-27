@@ -49,6 +49,8 @@ Home Page<br/>
 
 
 Game page<br/>
+![image](https://github.com/user-attachments/assets/57694752-afc3-43e1-9f68-1c6e354f236c)
+
 ![image](https://github.com/user-attachments/assets/3ce84aa5-5b67-4091-963f-a8e2edbb10a0)
 
 
