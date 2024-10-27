@@ -32,7 +32,7 @@ body {
 #home-screen {
   background-size: cover;
   background-position: center;
-  background-image: url('../images/homeScreenFullBleed.jpg');
+  background-image: url('assets/images/homeScreenFullBleed.jpg');
   height: 100vh;
   width: 100%;
   display: flex;
@@ -276,12 +276,12 @@ body {
 .tile-Back {
   background-image: url('assets/images/tileBacks.jpg');
   background-size: cover;
-  transform: rotateY(180deg);
 }
 
 .tile-Front {
   background-size: cover;
   background-position: center;
+  transform: rotateY(180deg); /* rotate front tile */
 }
 
 .tile.flip .tile-inner {
