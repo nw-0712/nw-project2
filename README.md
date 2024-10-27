@@ -27,7 +27,7 @@ Each turn:
 
 
 CONTENTS:
-*User experience (ux)*<br/>
+User experience (ux)*<br/>
 * Project goals<br/>
 * Epics & user stories<br/>
 * Colours<br/>
