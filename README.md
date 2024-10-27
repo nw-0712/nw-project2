@@ -26,33 +26,33 @@ Each turn:
 * The restart button restarts the game.
 
 
-CONTENTS:
-User experience (ux)*<br/>
+CONTENTS:<br/>
+User experience (ux)<br/>
 * Project goals<br/>
 * Epics & user stories<br/>
 * Colours<br/>
 * Typography (fonts)<br/>
 * Wireframes<br/>
 
-*Features*<br/>
+Features<br/>
 * Home page<br/>
 * Game page<br/>
 
-*Technologies used*<br/>
+Technologies used<br/>
 * Frameworks and Libraries<br/>
 * Programs<br/>
 * Languages<br/>
 
-*Testing*<br/>
+Testing<br/>
 * User stories<br/>
 * Code validation<br/>
 * Accessibility & scores<br/>
 * Delpoyment<br/>
 
-*Credits*<br/>
+Credits<br/>
+
 
 User Experience<br/>
-
 Home Page<br/>
 ![image](https://github.com/user-attachments/assets/0a02b6f4-6905-4ea4-863c-80b306414977)
 
