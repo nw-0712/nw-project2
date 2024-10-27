@@ -93,8 +93,8 @@ Subheading & body copy: Font used: Roboto<br/>
 
 Wireframes<br/>
 ![image](https://github.com/user-attachments/assets/a311a1ec-d0fc-4044-bfb5-9ee120787fa4)
+![image](https://github.com/user-attachments/assets/c7b6ca2f-c8fb-458c-92ee-ddc8fc0477bf)
 
-![image](https://github.com/user-attachments/assets/aaff5a67-f1a2-46b1-8a80-caf550dd5f9f)
 
 
 Frameworks, Libraries and Programs Used<br/>
