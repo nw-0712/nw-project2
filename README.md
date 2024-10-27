@@ -173,6 +173,15 @@ https://fonts.google.com/
 Testing<br/>
 User stories<br/>
 
+Chrome DevTools<br/>
+https://developer.chrome.com/docs/devtools/<br/>
+Chrome DevTools was used during the development process to test, explore and modify HTML elements and CSS styles used in the project.<br/>
+
+Responsiveness<br/>
+https://ui.dev/amiresponsive<br/>
+Am I Responsive? was used to check responsiveness of the site pages across different devices.<br/>
+Responsive Design Checker was used to check responsiveness of the site pages on different screen sizes.
+
 Code valildation<br/>
 The W3C Html Markup Validator and W3C CSS Validator services were used to validate all pages of the project in order to ensure there were no syntax errors.
 
@@ -204,6 +213,8 @@ Game Page<br/>
 Deployment<br/>
 Github pages & Libraries<br/>
 https://nw-0712.github.io/nw-project2/
+
+Chrome DevTools was used to test responsiveness in different screen sizes during the development process.
 
 Credits<br/>
 https://stackoverflow.com/<br/>
