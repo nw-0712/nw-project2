@@ -14,6 +14,7 @@ How It Works<br/>
 If you're unfamiliar with the game, the rules are very simple; flip over two hidden cards at a time to locate the ones that match!
 
 The game board consists of ten themed space and alien graphical cards that are arranged randonmy in a grid style layout. The deck is made up of ten different pairs of cards, each with different fun vector and AI geneated style graphics on the one side (back side) and one default spaceship graphic on the front side of the card. 
+![resp-removebg-preview](https://github.com/user-attachments/assets/135fd4e6-c10a-48dd-ba02-54ef3a63f496)
 
 Each turn:
 
