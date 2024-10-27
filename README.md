@@ -224,8 +224,8 @@ Pixabay: AI generated images<br/>
 https://pixabay.com/vectors/search/ai/<br/>
 
 Duckduckgo<br/>
-https://duckduckgo.com/?t=ffab&q=html+formatter&ia=answer
-Formatted html mapges through this tool.
+https://duckduckgo.com/?t=ffab&q=html+formatter&ia=answer<br/>
+Formatted html pages through this tool.
 
 
 
