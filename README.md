@@ -109,10 +109,11 @@ Features<br/>
 * On page laod the game starts for the user<br/>
 
 * Game Page:<br/>
-* The tiles are dynamically injected into the grid-container using JavaScript.<br/>
-* The shuffle button restarts the game.<br/>
 * A game-container contains the game board, moves counter, and timer.<br/>
 * Tiles are created, shuffled, and flipped using flipTile and checkForMatch functions.<br/>
+* The tiles are dynamically injected into the grid-container using JavaScript.<br/>
+* The shuffle button restarts the game.<br/>
+* Set matched tiles to visibility: hidden instead of removing the flip class.<br/>
 * Each tile needs two sides: the front (image) and the back (which will show initially).<br/>
 * Single back tile image and and array of 10 front tile variation pairs.<br/>
 * A timer counts minutes and seconds.<br/>
@@ -123,9 +124,7 @@ Features<br/>
 * Game logic: If all tiles are matched, the game shows a "You have won!" message & ff the player runs out of moves, it shows "You have run out of moves!".<br/>
 
 
-
-
-Frameworks, Libraries and Programs Used<br/>
+Technologies used<br/>
 Languages: HTML, CSS, Javascript<br/>
 
 HTML5<br/>
@@ -137,7 +136,7 @@ https://en.wikipedia.org/wiki/CSS
 Javascript<br/>
 https://www.javascript.com/
 
-Programs:<br/>
+Frameworks, Libraries and Programs Used<br/>
 VS desktop<br/>
 https://code.visualstudio.com/download
 
@@ -172,6 +171,8 @@ Google fonts<br/>
 https://fonts.google.com/
 
 Testing<br/>
+User stories<br/>
+
 Code valildation<br/>
 The W3C Html Markup Validator and W3C CSS Validator services were used to validate all pages of the project in order to ensure there were no syntax errors.
 
@@ -201,19 +202,16 @@ Game Page<br/>
 
 
 Deployment<br/>
-Errors fixed after deployment:<br/>
-* 404 error - Checked the Browser Console for Errors: Look for any errors in the JavaScript that might prevent the grid from rendering and double-checked that the paths to images were correct.<br/>
-* Corrected the gameIntitialising from the startGame button, to be from page laod instead<br/>
-* 
-
-
-
-
 Github pages & Libraries<br/>
 https://nw-0712.github.io/nw-project2/
 
-Resources<br/>
-https://stackoverflow.com/
+Credits<br/>
+https://stackoverflow.com/<br/>
+CSS-Tricks and W3Schools were consulted on a regular basis for inspiration and sometimes to be able to better understand the code being implement.<br/>
+https://pixabay.com/vectors/search/ai/<br/>
+Pixabay: AI generated images<br/>
+
+
 
 
 
