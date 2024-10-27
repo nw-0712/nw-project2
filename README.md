@@ -1,5 +1,5 @@
-![image](https://github.com/user-attachments/assets/7e4cebf4-ce72-4995-85f9-48d53f3edffb)
 
+![resp-removebg-preview](https://github.com/user-attachments/assets/fb160023-789d-4ba6-83b3-d97e55566c90)
 
 
 Welcome Users,
@@ -13,11 +13,11 @@ This is a browser-based memory match game is done in HTML, CSS, and JavaScript. 
 How It Works<br/>
 If you're unfamiliar with the game, the rules are very simple; flip over two hidden cards at a time to locate the ones that match!
 
-The game board consists of ten themed space and alien graphical cards that are arranged randonmy in a grid style layout. The deck is made up of ten different pairs of cards, each with different fun vector and AI geneated style graphics on the one side (back side) and one default spaceship graphic on the front side of the card. 
-![resp-removebg-preview](https://github.com/user-attachments/assets/71f55b02-3a4d-4a45-9506-2e4570e5fe76)
+The game board consists of ten themed space and alien graphical cards that are arranged randonmy in a grid style layout. The deck is made up of ten different pairs of cards, each with different fun vector and AI geneated style graphics on the one side (back side) and one default spaceship graphic on the front side of the card.<br/> 
 
+![image](https://github.com/user-attachments/assets/7e4cebf4-ce72-4995-85f9-48d53f3edffb)
 
-Each turn:
+Each turn:<br/>
 
 * A player flips one card over to reveal its underlying graphic card
 * The player then turns over a second card, trying to find the corresponding card with the same graphic card
