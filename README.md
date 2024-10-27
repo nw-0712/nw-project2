@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/4154f29b-6953-43f2-98c7-96d43509aad7)
+![image](https://github.com/user-attachments/assets/7e4cebf4-ce72-4995-85f9-48d53f3edffb)
 
 
 
@@ -23,29 +23,38 @@ If the cards match, both cards stay flipped over
 If the cards do not match, both cards are returned to their initial hidden state
 There is a timer that counts down on the intitation of the game when the user starts the game
 The game has a 'moves' counter that counts the amount of moves by the gamer, to try help with focus and
-Notifications are displayed in the notification section.
 The restart button restarts the game.
 
 
 CONTENTS:
-* User experience (ux)<br/>
+*User experience (ux)*<br/>
 * Project goals<br/>
 * Epics & user stories<br/>
 * Colours<br/>
 * Typography (fonts)<br/>
 * Wireframes<br/>
+
+*Features*<br/>
 * Home page<br/>
 * Game page<br/>
+
+*Technologies used*<br/>
 * Frameworks and Libraries<br/>
 * Programs<br/>
 * Languages<br/>
-* Testing<br/>
+
+*Testing*<br/>
 * User stories<br/>
 * Code validation<br/>
 * Accessibility & scores<br/>
 * Delpoyment<br/>
 
+*Credits*<br/>
+
+User Experience<br/>
+
 Home Page<br/>
+![image](https://github.com/user-attachments/assets/0a02b6f4-6905-4ea4-863c-80b306414977)
 
 
 Game page<br/>
@@ -54,7 +63,6 @@ Game page<br/>
 ![image](https://github.com/user-attachments/assets/3ce84aa5-5b67-4091-963f-a8e2edbb10a0)
 
 
-User experience (ux)<br/>
 The game must offer the ability to be rendered with different sizes of the grid layout of 10 different pairs of graphic game tiles<br/>
 The player has to be able to flip the tiles with the mouse or keyboard.<br/>
 The player must only be able to flip two tiles face up at a time.<br/>
@@ -63,7 +71,6 @@ After an appropriate time, tiles facing up and not matching must be flipped face
 The positions, or rather the graphics, of the tiles in the grid must be randomized before each game round.<br/>
 The game must count how many attempts the player has made to find matching tiles and present the number of attempts when the game round is over.<br/>
 After a game round is over, the user must be allowed to restart the new game round without reloading the page.
-
 
 
 Project Goals
@@ -76,7 +83,7 @@ Project Goals
 * Implement Front-End interactivity, using core JavaScript, JavaScript libraries or frameworks.<br/>
 
 
-Epics & user stories<br/>
+User stories<br/>
 * As a user I want the ability to click the 'Start Game' button and be tkaen to the game page<br/>
 * As a user I want the ability to interact with the tiles in the grid layout and be able to click on tiles to see if there is a mtach or no match<br/>
 * As a user I want the ability to to see how many moves I have left in the game<br/> 
@@ -94,6 +101,27 @@ Subheading & body copy: Font used: Roboto<br/>
 Wireframes<br/>
 ![image](https://github.com/user-attachments/assets/a311a1ec-d0fc-4044-bfb5-9ee120787fa4)
 ![image](https://github.com/user-attachments/assets/c7b6ca2f-c8fb-458c-92ee-ddc8fc0477bf)
+
+
+Features<br/>
+* Home page:
+* Startgame button directs suer to next screen which is the game screen.<br/>
+* On page laod the game starts for the user<br/>
+
+* Game Page:<br/>
+* The tiles are dynamically injected into the grid-container using JavaScript.<br/>
+* The shuffle button restarts the game.<br/>
+* A game-container contains the game board, moves counter, and timer.<br/>
+* Tiles are created, shuffled, and flipped using flipTile and checkForMatch functions.<br/>
+* Each tile needs two sides: the front (image) and the back (which will show initially).<br/>
+* Single back tile image and and array of 10 front tile variation pairs.<br/>
+* A timer counts minutes and seconds.<br/>
+* The game tracks moves and declares if the player wins or runs out of moves.<br/>
+* All tiles start with a common default back image<br/>
+* Each tile has an event listener attached to handle the click, which flips the tile and checks for matches.<br/>
+* The game updates the moves left and displays appropriate notifications (e.g., "You have won!" or "You have run out of moves") directly into the DOM.<br/>
+* Game logic: If all tiles are matched, the game shows a "You have won!" message & ff the player runs out of moves, it shows "You have run out of moves!".<br/>
+
 
 
 
@@ -144,7 +172,6 @@ Google fonts<br/>
 https://fonts.google.com/
 
 Testing<br/>
-
 Code valildation<br/>
 The W3C Html Markup Validator and W3C CSS Validator services were used to validate all pages of the project in order to ensure there were no syntax errors.
 
@@ -174,6 +201,14 @@ Game Page<br/>
 
 
 Deployment<br/>
+Errors fixed after deployment:<br/>
+* 404 error - Checked the Browser Console for Errors: Look for any errors in the JavaScript that might prevent the grid from rendering and double-checked that the paths to images were correct.<br/>
+* Corrected the gameIntitialising from the startGame button, to be from page laod instead<br/>
+* 
+
+
+
+
 Github pages & Libraries<br/>
 https://nw-0712.github.io/nw-project2/
 
