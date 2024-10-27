@@ -1,4 +1,4 @@
-
+![image](https://github.com/user-attachments/assets/4154f29b-6953-43f2-98c7-96d43509aad7)
 
 
 
@@ -46,7 +46,7 @@ CONTENTS:
 * Delpoyment<br/>
 
 Home Page<br/>
-![image](https://github.com/user-attachments/assets/80926149-0e57-4247-a67a-35a42c53de91)
+
 
 Game page<br/>
 ![image](https://github.com/user-attachments/assets/3ce84aa5-5b67-4091-963f-a8e2edbb10a0)
@@ -157,6 +157,9 @@ HTML<br/>
 CSS<br/>
 ![image](https://github.com/user-attachments/assets/4358a52f-d349-4767-96a5-5b92879d910c)
 
+Javascript<br/>
+
+
 Accessibility & scores<br/>
 Used Lighthouse in Chrome DevTools to confirm accessibility used in throughout the website are easy to read and accessible.
 
@@ -175,9 +178,5 @@ https://nw-0712.github.io/nw-project2/
 Resources<br/>
 https://stackoverflow.com/
 
-
-Image libraries<br/>
-Unsplash<br/>
-Freepix
 
 
