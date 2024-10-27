@@ -8,22 +8,22 @@ Welcome Users,
 Match the space alien tiles and improve your memory<br/>
 
 OVERVIEW<br/>
-This is a memory match game is done in HTML, CSS, and JavaScript. It's a browser-based card matching game, that consists of space-alien cards and the user matching the various 18 card pairs, to improve memory and concentration. The objective is to try and match the pairs in a ceratin amount of time.
+This is a browser-based memory match game is done in HTML, CSS, and JavaScript. It consists of 10 pairs of matching space-alien cards and the user matching the various 10 card pairs, to improve memory and concentration. The objective is to try and match the pairs in a certain amount of time, via a timer and counter.
 
 How It Works<br/>
 If you're unfamiliar with the game, the rules are very simple; flip over two hidden cards at a time to locate the ones that match!
 
-The game board consists of eighteen themed space and alien graphical cards that are arranged randonmy in a grid style layout. The deck is made up of eighteen different pairs of cards, each with different fun retor style graphics on the one side (back side) and one graphic on the frnt side of the card. 
+The game board consists of ten themed space and alien graphical cards that are arranged randonmy in a grid style layout. The deck is made up of ten different pairs of cards, each with different fun vector and AI geneated style graphics on the one side (back side) and one default spaceship graphic on the front side of the card. 
 
 Each turn:
 
-A player flips one card over to reveal its underlying graphic card
-The player then turns over a second card, trying to find the corresponding card with the same graphic card
-If the cards match, both cards stay flipped over
-If the cards do not match, both cards are returned to their initial hidden state
-There is a timer that counts down on the intitation of the game when the user starts the game
-The game has a 'moves' counter that counts the amount of moves by the gamer, to try help with focus and
-The restart button restarts the game.
+* A player flips one card over to reveal its underlying graphic card
+* The player then turns over a second card, trying to find the corresponding card with the same graphic card
+* If the cards match, both cards stay flipped over
+* If the cards do not match, both cards are returned to their initial hidden state
+* There is a timer that counts down on the intitation of the game when the user starts the game
+* The game has a 'moves' counter that counts the amount of moves by the gamer, to try help with focus and
+* The restart button restarts the game.
 
 
 CONTENTS:
