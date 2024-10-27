@@ -161,7 +161,7 @@ body {
   }
 
   #home-screen h4 {
-    font-size: 2rem; /* Increased for clarity */
+    font-size: 2rem; /* Increased for visibility */
     margin: 20px 0;
   }
 
@@ -208,6 +208,7 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   margin: 20px auto; 
   overflow: hidden;
+  position: relative;
 }
 
 /* Game Info */
@@ -252,7 +253,7 @@ body {
   background-repeat: no-repeat;
   perspective: 1000px; /* For 3D flip */
   cursor: pointer;
-  transition: transform 0.5s;
+  transition: transform 0.6s;
   position: relative;
 }
 
@@ -269,7 +270,6 @@ body {
   width: 110%;
   height: 100%;
   backface-visibility: hidden;
-  transition: transform 0.6s; /* Smooth transition */
   border-radius: 15px;
 }
 
@@ -277,13 +277,11 @@ body {
   background-image: url('assets/images/tileBacks.jpg');
   background-size: cover;
   transform: rotateY(180deg);
-  position: absolute;
 }
 
 .tile-Front {
   background-size: cover;
   background-position: center;
-  position: absolute;
 }
 
 .tile.flip .tile-inner {

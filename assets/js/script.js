@@ -7,16 +7,15 @@ const timerElement = document.getElementById('timer');
 const gridContainer = document.getElementById('grid-container');
 const restartButton = document.getElementById('restart-btn');
 
+
 // Variables for game logic//
-let tiles = [];
+let tiles; //declaring tiles here//
 let movesLeft = 30;
-let moves = 0;
-let lockBoard = false;
-let matchedTiles = 0;
 let timer;
 let secondsElapsed = 0;
+let lockBoard = false;
 let hasWon = false;
-let hasFlippedTile = false;
+
 
 // Timer logic//
 function startTimer() {
@@ -43,7 +42,6 @@ function shuffleArray(array) {
 // Initialize game//
 function initializeGame() {
     gridContainer.innerHTML = '';
-    tiles = [];
     movesLeft = 30;
     secondsElapsed = 0;
     hasWon = false;
@@ -63,43 +61,40 @@ function initializeGame() {
 
     shuffleArray(allTiles);
 
-// Create tile elements//
-    for (let i = 0; i < allTiles.length; i++) {
+ // Create tile elements//
+ allTiles.forEach(image => {
         const tile = document.createElement('div');
         tile.classList.add('tile');
 
-// Front and back tiles//
         const tileInner = document.createElement('div');
         tileInner.classList.add('tile-inner');
 
         const tileFront = document.createElement('div');
         tileFront.classList.add('tile-Front');
-        tileFront.style.backgroundImage = `url(${allTiles[i]})`;
+        tileFront.style.backgroundImage = `url(${image})`;
 
         const tileBack = document.createElement('div');
         tileBack.classList.add('tile-Back');
-        tileBack.style.backgroundImage = `url('assets/images/tileBacks.jpg')`; // back image//
 
         tileInner.appendChild(tileFront);
         tileInner.appendChild(tileBack);
         tile.appendChild(tileInner);
 
-        tile.dataset.flipped = 'false';
         tile.addEventListener('click', () => flipTile(tile));
-
         gridContainer.appendChild(tile);
-        tiles.push(tile);
-    }
+    });
+
+    // Assigned the newly created tiles to the tiles variable//
+    tiles = document.querySelectorAll('.tile');
 }
 
 // Tile flip logic//
 function flipTile(tile) {
-    if (tile.dataset.flipped === 'true' || hasWon || movesLeft <= 0 || lockBoard) return;
+    if (lockBoard || tile.classList.contains('flip') || hasWon || movesLeft <= 0) return;
 
-    tile.querySelector('.tile-inner').classList.add('flip');
-    tile.dataset.flipped = 'true';
+    tile.classList.add('flip');
+    const flippedTiles = Array.from(gridContainer.querySelectorAll('.tile.flip:not(.matched)'));
 
-    const flippedTiles = tiles.filter(t => t.dataset.flipped === 'true' && !t.classList.contains('matched'));
     if (flippedTiles.length === 2) {
         lockBoard = true;
         checkForMatch(flippedTiles);
@@ -107,64 +102,51 @@ function flipTile(tile) {
 }
 
 // Check for matches//
-function checkForMatch(flippedTiles) {
-    const [tile1, tile2] = flippedTiles;
+function checkForMatch([tile1, tile2]) {
     movesLeft--;
     movesLeftElement.textContent = `Moves Left: ${movesLeft}`;
 
-    if (tile1.querySelector('.tile-Front').style.backgroundImage === tile2.querySelector('.tile-Front').style.backgroundImage) {
-        setTimeout(() => {
+    const isMatch = tile1.querySelector('.tile-Front').style.backgroundImage === tile2.querySelector('.tile-Front').style.backgroundImage;
+
+    setTimeout(() => {
+        if (isMatch) {
             tile1.classList.add('matched');
             tile2.classList.add('matched');
-            tile1.style.visibility = 'hidden';
-            tile2.style.visibility = 'hidden';
-            lockBoard = false;
             checkForWin();
-        }, 800);
-    } else {
-        setTimeout(() => {
-            tile1.querySelector('.tile-inner').classList.remove('flip');
-            tile2.querySelector('.tile-inner').classList.remove('flip');
-            tile1.dataset.flipped = 'false';
-            tile2.dataset.flipped = 'false';
-            lockBoard = false;
-        }, 1000);
-    }
+        } else {
+            tile1.classList.remove('flip');
+            tile2.classList.remove('flip');
+        }
+        lockBoard = false;
+    }, 800);
 
-    checkForLoss();
-}
-
-// Check win condition//
-function checkForWin() {
-    if (tiles.every(tile => tile.classList.contains('matched'))) {
-        hasWon = true;
-        stopTimer();
-        alert("You've won!");
-    }
-}
-
-// Check loss condition//
-function checkForLoss() {
     if (movesLeft <= 0 && !hasWon) {
         stopTimer();
         alert("Game Over! You've run out of moves.");
     }
 }
 
+// Check win condition//
+function checkForWin() {
+    if (Array.from(gridContainer.querySelectorAll('.tile')).every(tile => tile.classList.contains('matched'))) {
+        hasWon = true;
+        stopTimer();
+        alert("You've won!");
+    }
+}
+
 // Start and restart game//
 function startGame() {
-    initializeGame();
-    startTimer();
+initializeGame();
+startTimer();
 }
 
 startGameBtn.addEventListener('click', startGame);
-
-// Restart game section//
 restartButton.addEventListener('click', () => {
-    hasWon = false;
-    stopTimer();
-    initializeGame();
-    startTimer();
+hasWon = false;
+stopTimer();
+initializeGame();
+startTimer();
 });
 
 startGame();
