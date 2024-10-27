@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/6a65e2a8-fcd5-4659-a4f8-681535c5f86f)
+
 
 
 
@@ -129,6 +129,9 @@ https://fontawesome.com/
 Freepix<br/>
 https://www.freepik.com/
 
+Pixabay<br/>
+https://pixabay.com/vectors/search/ai/
+
 Chromedevtools<br/>
 https://developer.chrome.com/docs/devtools
 
@@ -149,7 +152,7 @@ HTML<br/>
 
 Game page<br/>
 HTML<br/>
-![image](https://github.com/user-attachments/assets/c3cbc780-d223-4c10-abeb-e31c07eba5b9)
+![image](https://github.com/user-attachments/assets/24ee0564-4031-406d-a2c3-570672f1f2a1)
 
 CSS<br/>
 ![image](https://github.com/user-attachments/assets/4358a52f-d349-4767-96a5-5b92879d910c)
