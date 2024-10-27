@@ -63,14 +63,14 @@ Game page<br/>
 ![image](https://github.com/user-attachments/assets/3ce84aa5-5b67-4091-963f-a8e2edbb10a0)
 
 
-The game must offer the ability to be rendered with different sizes of the grid layout of 10 different pairs of graphic game tiles<br/>
-The player has to be able to flip the tiles with the mouse or keyboard.<br/>
-The player must only be able to flip two tiles face up at a time.<br/>
-After a suitable time, matching tiles that face up must not have a visible representation in the grid.<br/>
-After an appropriate time, tiles facing up and not matching must be flipped face down.<br/>
-The positions, or rather the graphics, of the tiles in the grid must be randomized before each game round.<br/>
-The game must count how many attempts the player has made to find matching tiles and present the number of attempts when the game round is over.<br/>
-After a game round is over, the user must be allowed to restart the new game round without reloading the page.
+* The game must offer the ability to be rendered with different sizes of the grid layout of 10 different pairs of graphic game tiles<br/>
+* The player has to be able to flip the tiles with the mouse or keyboard.<br/>
+* The player must only be able to flip two tiles face up at a time.<br/>
+* After a suitable time, matching tiles that face up must not have a visible representation in the grid.<br/>
+* After an appropriate time, tiles facing up and not matching must be flipped face down.<br/>
+* The positions, or rather the graphics, of the tiles in the grid must be randomized before each game round.<br/>
+* The game must count how many attempts the player has made to find matching tiles and present the number of attempts when the game round is over.<br/>
+* After a game round is over, the user must be allowed to restart the new game round without reloading the page.
 
 
 Project Goals
@@ -208,8 +208,13 @@ https://nw-0712.github.io/nw-project2/
 Credits<br/>
 https://stackoverflow.com/<br/>
 CSS-Tricks and W3Schools were consulted on a regular basis for inspiration and sometimes to be able to better understand the code being implement.<br/>
-https://pixabay.com/vectors/search/ai/<br/>
+
 Pixabay: AI generated images<br/>
+https://pixabay.com/vectors/search/ai/<br/>
+
+Duckduckgo<br/>
+https://duckduckgo.com/?t=ffab&q=html+formatter&ia=answer
+Formatted html mapges through this tool.
 
 
 
