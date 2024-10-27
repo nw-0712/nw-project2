@@ -33,13 +33,14 @@ body {
   background-size: cover;
   background-position: center;
   background-image: url('../images/homeScreenImage.jpg');
-  height: 100vh;
-  width: 100%;
+  height: 100vh; /* Full height of the viewport */
+  width: 100%;/* Full width */
   display: flex;
-  justify-content: center;
+  justify-content: center;/* Center horizontally */
   align-items: center;
-  text-align: center;
-  position: relative;
+  text-align: center;/* Center text inside */
+  position: relative;/* Ensure proper positioning for any absolute elements inside */
+  padding: 0 10px; /* Padding to keep text from screen edges */
 }
 
 #home-screen .full-bleed {
@@ -50,21 +51,25 @@ body {
 /* Content Home screen styles */
 
 #home-screen .content {
-  min-width: 600px;
-  padding: 20px;
+  padding: 10px;
   color: white;
+  text-align: center;
+  max-width: 90%;
+  overflow-wrap: break-word;
 }
 
+/* Home screen heading styles */
 #home-screen h1 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   font-family: "Agdasima", sans-serif;
 }
 
 #home-screen h4 {
   font-size: 1rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-family: "Roboto", sans-serif;
+  margin-bottom: 1rem; /* Adjust spacing under h4 */
 }
 
 
@@ -79,7 +84,7 @@ body {
 }
 
 #start-game {
-  margin-top: 45%;
+  margin-top: 2rem; /* Adds space between h4 and the Start Game button */
   padding: 10px 18px;
   font-size: 16px;
   cursor: pointer;
@@ -97,23 +102,35 @@ body {
 /* -----------Home Screen Media Queries for responsiveness---------- */
 
 /* Small phone screens media queries*/
-@media (min-width: 360px) and (max-width: 575px) {
+@media (min-width: 360px) and (max-width: 576px) {
 
-#home-screen h1 {
-  font-size: 2rem; /* Font size for small screens */
-  margin: 10px 0; /* Margin for spacing */
-  word-wrap: break-word; /* Allow words to wrap to the next line */
-}
+  #home-screen {
+    background-size: contain;/* Ensures full image fits in viewport */
+    background-position: center center; 
+  }
+
+  #home-screen .content {
+    width: 100%; /* Limits width to fit text within screen */
+    padding: 0 15px;/* padding for content */
+  }
+
+  #home-screen h1 {
+  font-size: 0.5rem; /* Font size for small screens */
+  margin-bottom: 0.3rem;
+  }
 
   #home-screen h4 {
-    font-size: 1.3rem; /* Increased for clarity */
-    margin: 5px 0;
+    font-size: 0.2rem; /* Increased for clarity */
+    margin-bottom: 10px;
   }
 
   #home-screen #start-btn {
     font-size: 14px; /* Adjusted button font size */
     padding: 10px 20px; /* Adjusted padding for smaller screens */
-    margin-top: 50%;
+  }
+
+  #start-game {
+    margin-top: 2.5rem;
   }
 }
 
@@ -132,11 +149,20 @@ body {
   #home-screen #start-btn {
     font-size: 18px; /* Adjusted button font size */
     padding: 12px 24px; /* Adjusted padding for medium screens */
+    margin-top: 60%;
+  }
+
+  #start-game {
+    margin-top: 2.5rem;
   }
 }
 
 /* Medium ipad and laptop screens media queries */
 @media (min-width: 768px) and (max-width: 991px) {
+  #home-screen {
+    height: 100vh;
+  }
+
   #home-screen h1 {
     font-size: 3rem; /* Increased for visibility */
     margin: 20px 0;
@@ -150,11 +176,21 @@ body {
   #home-screen #start-btn {
     font-size: 22px; /* Adjusted button font size */
     padding: 15px 30px; /* Adjusted padding for medium screens */
+    margin-top: 2.5rem; 
+  }
+
+  #start-game {
+    margin-top: 2.5rem;
   }
 }
 
 /* Medium iPad and laptop screens media queries */
 @media (min-width: 992px) {
+  #home-screen {
+    height: 100vh;
+    padding: 0 20px;
+  }
+
   #home-screen h1 {
     font-size: 4.5rem; /* Adjusted for larger screens */
     margin: 25px 0;
@@ -165,32 +201,50 @@ body {
     margin: 20px 0;
   }
 
-  #home-screen #start-btn {
+ #start-game.btn {
     font-size: 26px; /* Adjusted button font size */
     padding: 18px 30px; /* Adjusted padding for larger screens */
+    margin-top: 2.5rem; 
+  }
+
+  #start-game {
+  margin-top: 2.5rem;
   }
 }
 
 /* Large laptop screens media queries */
 @media (min-width: 1200px) { 
+  #home-screen {
+    height: 100vh;
+    padding: 0 20px;
+  }
+
   #home-screen h1 {
-    font-size: 7rem; /* Larger size for bigger screens */
-    margin: 30px 0;
+    font-size: 8.5rem; /* Larger size for bigger screens */
+    margin-bottom: 1.8rem;
+  }
+
+  #home-screen .content {
+    max-width: 50%;
+    padding: 20px;
   }
 
   #home-screen h4 {
-    font-size: 3rem; /* Increased for visibility */
-    margin: 25px 0;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
   }
 
   #home-screen #start-btn {
     font-size: 35px; /* Larger button size */
     padding: 25px 40px; /* Adjusted padding for larger buttons */
+    margin-top: 50%;
   }
+
   #start-game {
     padding: 15px 30px; /* Increased padding for larger screens */
     font-size: 1.5rem;   /* Increased font size for better readability */
-    margin-top: 30%;     /* Adjusted margin to center the button better */
+    margin-top: 16rem;     /* Adjusted margin to center the button better */
   }
 }
 
@@ -199,8 +253,8 @@ body {
 /* Game Container */
 .game-container {
   text-align: center;
-  width: 100%;
-  max-width: 888px; /* Adjusted max width */
+  width: 90%;
+  max-width: 700px; /* Adjusted max width */
   margin: 0 auto;
   padding: 20px; /* Added padding for aesthetics */
   background-color: white;
@@ -463,25 +517,26 @@ body {
 /* ----Large laptop screens -------*/
 @media (min-width: 1200px) {
   .game-info h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
   
   .game-info h4 {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 
-  .tile {
-      width: 130px; /* Larger tile size */
-      height: 130px; 
+  .grid-container .tile img {
+    height: 100%;
+    width: 100%;
   }
-
   .grid-container {
       grid-template-columns: repeat(5, 1fr); /* Adjusting for large screens */
       gap: 20px; /* Increased gap for larger screens */
   }
+
   .game-container {
-    padding: 30px; /* Increased padding for large laptops */
-    max-width: 980px; /* Constrained width for centering on larger screens */
+      max-width: 800px;
+    padding: 40px;
+    border-radius: 10px;
   }
 
   #restart-btn {
