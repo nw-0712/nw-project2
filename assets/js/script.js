@@ -1,5 +1,4 @@
 // DOM elements//
-const startGameBtn = document.getElementById('start-game');
 const homeScreen = document.getElementById('home-screen');
 const gameScreen = document.getElementById('game-screen');
 const movesLeftElement = document.getElementById('moves-left');
@@ -9,11 +8,13 @@ const restartButton = document.getElementById('restart-btn');
 
 
 // Variables for game logic//
-let tiles; //declaring tiles here//
+let tiles = [];
+let firstTile, secondTile;
 let movesLeft = 30;
 let timer;
 let secondsElapsed = 0;
 let lockBoard = false;
+let matchedTiles = 0;
 let hasWon = false;
 
 
@@ -41,14 +42,19 @@ function shuffleArray(array) {
 
 // Initialize game//
 function initializeGame() {
-    gridContainer.innerHTML = '';
+    gridContainer.innerHTML = ''; // Clear grid for fresh start//
+    tiles = [];
+    firstTile = null;
+    secondTile = null;
     movesLeft = 30;
     secondsElapsed = 0;
+    matchedTiles = 0;
     hasWon = false;
 
     movesLeftElement.textContent = `Moves Left: ${movesLeft}`;
     timerElement.textContent = 'Time: 00:00';
 
+// List of all tile images (pairs)//
     const allTiles = [
         'assets/images/tile1.png', 'assets/images/tile2.png', 'assets/images/tile3.jpg', 
         'assets/images/tile4.jpg', 'assets/images/tile5.jpeg', 'assets/images/tile6.png', 
@@ -63,90 +69,122 @@ function initializeGame() {
 
  // Create tile elements//
  allTiles.forEach(image => {
-        const tile = document.createElement('div');
-        tile.classList.add('tile');
+    const tile = document.createElement('div');
+    tile.classList.add('tile');
 
-        const tileInner = document.createElement('div');
-        tileInner.classList.add('tile-inner');
+    // Front and back tile divs//
+    const tileInner = document.createElement('div');
+    tileInner.classList.add('tile-inner');
 
-        const tileFront = document.createElement('div');
-        tileFront.classList.add('tile-Front');
-        tileFront.style.backgroundImage = `url(${image})`;
+    const tileFront = document.createElement('div');
+    tileFront.classList.add('tile-Front');
+    tileFront.style.backgroundImage = `url(${image})`;
 
-        const tileBack = document.createElement('div');
-        tileBack.classList.add('tile-Back');
+    const tileBack = document.createElement('div');
+    tileBack.classList.add('tile-Back');
+    tileBack.style.backgroundImage = 'url("assets/images/tileBacks.jpg")';
 
-        tileInner.appendChild(tileFront);
-        tileInner.appendChild(tileBack);
-        tile.appendChild(tileInner);
+    // Appended elements to create the structure//
+    tileInner.appendChild(tileFront);
+    tileInner.appendChild(tileBack);
+    tile.appendChild(tileInner);
 
-        tile.addEventListener('click', () => flipTile(tile));
-        gridContainer.appendChild(tile);
+    // Added click event for flipping//
+    tile.addEventListener('click', () => flipTile(tile));
+
+    // Appended tile to grid and to tiles array//
+    gridContainer.appendChild(tile);
+    tiles.push(tile);
     });
-
-    // Assigned the newly created tiles to the tiles variable//
-    tiles = document.querySelectorAll('.tile');
 }
 
 // Tile flip logic//
 function flipTile(tile) {
-    if (lockBoard || tile.classList.contains('flip') || hasWon || movesLeft <= 0) return;
+    if (lockBoard || tile === firstTile || hasWon) return;
 
-    tile.classList.add('flip');
-    const flippedTiles = Array.from(gridContainer.querySelectorAll('.tile.flip:not(.matched)'));
-
-    if (flippedTiles.length === 2) {
-        lockBoard = true;
-        checkForMatch(flippedTiles);
+    tile.classList.add('flipped');
+    
+    if (!firstTile) {
+        firstTile = tile;
+        return;
     }
+
+    secondTile = tile;
+    lockBoard = true;
+
+    checkForMatch();
 }
 
+
 // Check for matches//
-function checkForMatch([tile1, tile2]) {
+function checkForMatch() {
+    const firstImage = firstTile.querySelector('.tile-Front').style.backgroundImage;
+    const secondImage = secondTile.querySelector('.tile-Front').style.backgroundImage;
+
+    if (firstImage === secondImage) {
+        disableTiles();
+        matchedTiles++;
+        checkWinCondition();
+    } else {
+        unflipTiles();
+    }
+
     movesLeft--;
     movesLeftElement.textContent = `Moves Left: ${movesLeft}`;
 
-    const isMatch = tile1.querySelector('.tile-Front').style.backgroundImage === tile2.querySelector('.tile-Front').style.backgroundImage;
-
-    setTimeout(() => {
-        if (isMatch) {
-            tile1.classList.add('matched');
-            tile2.classList.add('matched');
-            checkForWin();
-        } else {
-            tile1.classList.remove('flip');
-            tile2.classList.remove('flip');
-        }
-        lockBoard = false;
-    }, 800);
-
-    if (movesLeft <= 0 && !hasWon) {
-        stopTimer();
-        alert("Game Over! You've run out of moves.");
+    if (movesLeft === 0 && !hasWon) {
+        endGame(false);
     }
 }
 
+// Disable tiles when matched//
+function disableTiles() {
+    firstTile.removeEventListener('click', flipTile);
+    secondTile.removeEventListener('click', flipTile);
+    resetSelection();
+}
+
+// Unflip tiles if they don't match//
+function unflipTiles() {
+    setTimeout(() => {
+        firstTile.classList.remove('flipped');
+        secondTile.classList.remove('flipped');
+        resetSelection();
+    }, 1000);
+}
+
+// Reset tile selection//
+function resetSelection() {
+    [firstTile, secondTile, lockBoard] = [null, null, false];
+}
+
 // Check win condition//
-function checkForWin() {
-    if (Array.from(gridContainer.querySelectorAll('.tile')).every(tile => tile.classList.contains('matched'))) {
-        hasWon = true;
-        stopTimer();
-        alert("You've won!");
+function checkWinCondition() {
+    if (matchedTiles === tiles.length / 2) {
+        endGame(true);
     }
+}
+
+// End game function//
+function endGame(isWin) {
+    hasWon = true;
+    stopTimer();
+    alert(isWin ? 'Congratulations! You won!' : 'Game Over! You ran out of moves.');
 }
 
 // Start and restart game//
 function startGame() {
-initializeGame();
-startTimer();
+    initializeGame();
+    startTimer();
 }
 
-startGameBtn.addEventListener('click', startGame);
-restartButton.addEventListener('click', () => {
-hasWon = false;
-stopTimer();
-initializeGame();
-startTimer();
-});
+// Run startGame on page load//
+document.addEventListener('DOMContentLoaded', startGame);
 
-startGame();
+// Restart button functionality//
+restartButton.addEventListener('click', () => {
+    hasWon = false;
+    stopTimer();
+    initializeGame();
+    startTimer();
+});
