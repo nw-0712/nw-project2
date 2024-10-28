@@ -178,7 +178,12 @@ Google fonts<br/>
 https://fonts.google.com/
 
 Testing<br/>
-User stories<br/>
+Once tested, the following adjustments:
+* Removed Hardcoded Tiles: The previous hardcoded <div class="tile"> elements have been removed from the HTML to make cards to be generated dynamically through the JavaScript initializeGame function.
+* Removed duplicates: The new array makes sure that each tile appears exactly twice to form pairs.
+* Revised list card list: to ensures I had exactly 10 unique card images, which will be duplicated to create 10 pairs for the game.
+* Once deployed I had to adjust the home screen elements for the min-width media query 1200px.
+* After running JS through Jshint result - 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz) and added /* jshint esversion: 6 */.
 
 Chrome DevTools<br/>
 https://developer.chrome.com/docs/devtools/<br/>
