@@ -58,12 +58,14 @@ Credits<br/>
 User Experience<br/>
 Home Page<br/>
 Home page created to introduce the memory match game and create interest in the game.<br/>
-Once the user clicks on the start-game button they get directed to the next screen which is the game screen and on page-load, the game is intitated.<br/>
-The user can at any time click on the restart-game button and restart the game which will refresh the cards, the timer and the counter.<br/>
+
 ![image](https://github.com/user-attachments/assets/0a02b6f4-6905-4ea4-863c-80b306414977)
 
 
 Game page<br/>
+Once the user clicks on the start-game button they get directed to the next screen which is the game screen and on page-load, the game is intitated.<br/>
+The user can at any time click on the restart-game button and restart the game which will refresh the cards, the timer and the counter.<br/>
+
 ![image](https://github.com/user-attachments/assets/57694752-afc3-43e1-9f68-1c6e354f236c)
 
 ![image](https://github.com/user-attachments/assets/3ce84aa5-5b67-4091-963f-a8e2edbb10a0)
