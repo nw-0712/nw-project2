@@ -108,8 +108,12 @@ Wireframes<br/>
 
 Features<br/>
 * Home page:
-* Startgame button directs suer to next screen which is the game screen.<br/>
+* Start-game button directs user to the next screen which is the game screen.<br/>
+![image](https://github.com/user-attachments/assets/d50a7a58-a7ff-40df-9be2-6c4c2ca8cd7b)
+
 * On page laod the game starts for the user<br/>
+![image](https://github.com/user-attachments/assets/74b51b98-4e79-4c4d-9202-25b5ef92cda1)
+
 
 * Game Page:<br/>
 * A game-container contains the game board, moves counter, and timer.<br/>
