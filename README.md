@@ -26,7 +26,7 @@ Each turn:<br/>
 * If the cards do not match, both cards are returned to their initial hidden state
 * There is a timer that counts down on the intitation of the game when the user starts the game
 * The game has a 'moves' counter that counts the amount of moves by the gamer, to try help with focus 
-* The restart button restarts the game and acrds are randonly shuffled.
+* The restart button restarts the game and cards are randomly shuffled.
 
 
 **CONTENTS:**<br/>
