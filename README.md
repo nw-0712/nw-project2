@@ -68,7 +68,8 @@ The user sees the default card grid layout with repeat spaceship image<br/>
 The user clicks on card and will start game of matching and able to match the pairs<br/>
 The user can at any time click on the restart-game button and restart the game which will refresh the cards, the timer and the counter.<br/>
 
-![image](https://github.com/user-attachments/assets/57694752-afc3-43e1-9f68-1c6e354f236c)
+![image](https://github.com/user-attachments/assets/9924e863-e601-4438-a080-adb071146ec5)
+
 
 ![image](https://github.com/user-attachments/assets/3ce84aa5-5b67-4091-963f-a8e2edbb10a0)
 
