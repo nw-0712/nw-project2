@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 // DOM elements//
 const startGameBtn = document.getElementById('start-game');
 const homeScreen = document.getElementById('home-screen');
@@ -17,6 +19,7 @@ let secondsElapsed = 0;
 let lockBoard = false;
 let matchedTiles = 0;
 let hasWon = false;
+let isFirstMove = true;  // To track the first move//
 
 
 // Timer logic//
@@ -49,6 +52,7 @@ function initializeGame() {
     secondsElapsed = 0;
     matchedTiles = 0;
     hasWon = false;
+    isFirstMove = true;  // Reset first move//
 
     movesLeftElement.textContent = `Moves Left: ${movesLeft}`;
     timerElement.textContent = 'Time: 00:00';
@@ -105,6 +109,12 @@ tile.appendChild(tileInner);
 function flipTile(tile) {
     if (lockBoard || tile.classList.contains('flip') || hasWon || movesLeft <= 0) return;
 
+// Start timer on first move//
+    if (isFirstMove) {
+        startTimer();
+        isFirstMove = false;
+    }
+
     tile.classList.add('flip');
 
     const flippedTiles = tiles.filter(t => t.classList.contains('flip') && !t.classList.contains('matched'));
@@ -154,38 +164,27 @@ function checkForWin() {
     }
 }
 
+// Start game function//
+function startGame() {
+    initializeGame(); // Set up game board and initial state//
+}
+
 // Reset tile selection//
 function resetGame() {
-    tiles.forEach(tile => {
-        tile.classList.remove('flip', 'matched');
-    });
-    movesLeft = 30;  // Reset moves
-    movesLeftElement.textContent = `Moves Left: ${movesLeft}`;
+    stopTimer();       // Stop the current timer//
+    lockBoard = false; // Reset the board lock//
+    initializeGame();  // Reinitialize the game board //
 }
 
 // End game logic//
 function endGame(message) {
     stopTimer();
     alert(message);
-    // Optionally reset the game state //
-    resetGame();
+    resetGame(); // reset the game state //
 }
 
-// Start and restart game//
-function startGame() {
-    initializeGame();
-    startTimer();
-}
-
-// Initialise game on page load//
+/// Start game on page load
 document.addEventListener('DOMContentLoaded', startGame);
 
-
-// Event listeners for start game on page load & restart button//
-startGameBtn.addEventListener('click', startGame);
-restartButton.addEventListener('click', () => {
-    hasWon = false;
-    stopTimer();
-    initializeGame();
-    startTimer();
-});
+// Event listeners for restart button
+restartButton.addEventListener('click', resetGame);
