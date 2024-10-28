@@ -189,6 +189,7 @@ https://ui.dev/amiresponsive<br/>
 Am I Responsive? was used to check responsiveness of the site pages across different devices.<br/>
 Responsive Design Checker was used to check responsiveness of the site pages on different screen sizes.
 
+
 Code valildation<br/>
 The W3C Html Markup Validator and W3C CSS Validator services were used to validate all pages of the project in order to ensure there were no syntax errors.
 
@@ -203,7 +204,9 @@ HTML<br/>
 CSS<br/>
 ![image](https://github.com/user-attachments/assets/4358a52f-d349-4767-96a5-5b92879d910c)
 
+Jshint validator<br/>
 Javascript<br/>
+![image](https://github.com/user-attachments/assets/2b5dfd23-2719-4010-a0f2-3fe0a4d8732d)
 
 
 Accessibility & scores<br/>
