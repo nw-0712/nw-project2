@@ -138,6 +138,8 @@ Features<br/>
 * Each tile has an event listener attached to handle the click, which flips the tile and checks for matches.<br/>
 * The game updates the moves left and displays appropriate notifications (e.g., "You have won!" or "You have run out of moves") directly into the DOM.<br/>
 * Game logic: If all tiles are matched, the game shows a "You have won!" message & ff the player runs out of moves, it shows "You have run out of moves!".<br/>
+* Two notifications, one for "you have run otu of moves" and "you have won!"<br/>
+![image](https://github.com/user-attachments/assets/4538de35-da59-4b0f-8576-9c75c55a26f8)
 
 
 Technologies used<br/>
@@ -193,6 +195,7 @@ Once tested, the following adjustments:
 * Revised list card list: to ensures I had exactly 10 unique card images, which will be duplicated to create 10 pairs for the game.
 * Once deployed I had to adjust the home screen elements for the min-width media query 1200px.
 * After running JS through Jshint result - 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz) and added /* jshint esversion: 6 */.
+* Changed the behaviour so game timer does not immediately start at the restart game function, but when the firstClick event happens.
 
 Chrome DevTools<br/>
 https://developer.chrome.com/docs/devtools/<br/>
