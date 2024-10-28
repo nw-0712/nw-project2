@@ -70,9 +70,8 @@ The user can at any time click on the restart-game button and restart the game w
 
 ![image](https://github.com/user-attachments/assets/9924e863-e601-4438-a080-adb071146ec5)
 
+![image](https://github.com/user-attachments/assets/709a2554-6d48-4328-ae7c-f1fe6e947dc2)
 
-
-![Uploading image.png…]()
 
 
 * The game must offer the ability to be rendered with different sizes of the grid layout of 10 different pairs of graphic game tiles<br/>
