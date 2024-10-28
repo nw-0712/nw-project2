@@ -68,9 +68,8 @@ The user sees the default card grid layout with repeat spaceship image<br/>
 The user clicks on card and will start game of matching and able to match the pairs<br/>
 The user can at any time click on the restart-game button and restart the game which will refresh the cards, the timer and the counter.<br/>
 
-![image](https://github.com/user-attachments/assets/9924e863-e601-4438-a080-adb071146ec5)
 
-![image](https://github.com/user-attachments/assets/709a2554-6d48-4328-ae7c-f1fe6e947dc2)
+![image](https://github.com/user-attachments/assets/9924e863-e601-4438-a080-adb071146ec5)
 
 
 
@@ -121,7 +120,7 @@ Features<br/>
 ![image](https://github.com/user-attachments/assets/d50a7a58-a7ff-40df-9be2-6c4c2ca8cd7b)
 
 * On page laod the game starts for the user<br/>
-![image](https://github.com/user-attachments/assets/74b51b98-4e79-4c4d-9202-25b5ef92cda1)
+![image](https://github.com/user-attachments/assets/709a2554-6d48-4328-ae7c-f1fe6e947dc2)
 
 
 * Game Page:<br/>
@@ -139,6 +138,7 @@ Features<br/>
 * The game updates the moves left and displays appropriate notifications (e.g., "You have won!" or "You have run out of moves") directly into the DOM.<br/>
 * Game logic: If all tiles are matched, the game shows a "You have won!" message & ff the player runs out of moves, it shows "You have run out of moves!".<br/>
 * Two notifications, one for "you have run otu of moves" and "you have won!"<br/>
+
 ![image](https://github.com/user-attachments/assets/4538de35-da59-4b0f-8576-9c75c55a26f8)
 
 
