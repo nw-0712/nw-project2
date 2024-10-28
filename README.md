@@ -29,7 +29,7 @@ Each turn:<br/>
 * The restart button restarts the game and acrds are randonly shuffled.
 
 
-CONTENTS:<br/>
+**CONTENTS:**<br/>
 User experience (ux)<br/>
 * Project goals<br/>
 * Epics & user stories<br/>
