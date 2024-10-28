@@ -82,7 +82,7 @@ The user can at any time click on the restart-game button and restart the game w
 * The positions, or rather the graphics, of the tiles in the grid must be randomized before each game round.<br/>
 * The game must count how many attempts the player has made to find matching tiles and present the number of attempts when the game round is over.<br/>
 * After a game round is over, the user must be allowed to restart the new game round without reloading the page.
-* When clicking on the reset-Game button, it resets movesLeft, secondsElapsed, matchedTiles, and other game-related variables to their initial states. This function is called before initializeGame() and startTimer() in the restart button function.
+* When clicking on the reset-Game button, it resets movesLeft, secondsElapsed, matchedTiles, and other game-related variables to their initial states. This function is called before initializeGame and startTimer in the restart button function.
 
 
 Project Goals
