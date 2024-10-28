@@ -64,6 +64,8 @@ Home page created to introduce the memory match game and create interest in the 
 
 Game page<br/>
 Once the user clicks on the start-game button they get directed to the next screen which is the game screen and on page-load, the game is intitated.<br/>
+The user sees the default card grid layout with repeat spaceship image<br/>
+The user clicks on card and will start game of matching and able to match the pairs<br/>
 The user can at any time click on the restart-game button and restart the game which will refresh the cards, the timer and the counter.<br/>
 
 ![image](https://github.com/user-attachments/assets/57694752-afc3-43e1-9f68-1c6e354f236c)
