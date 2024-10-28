@@ -220,7 +220,8 @@ CSS<br/>
 
 Jshint validator<br/>
 Javascript<br/>
-![image](https://github.com/user-attachments/assets/2b5dfd23-2719-4010-a0f2-3fe0a4d8732d)
+![image](https://github.com/user-attachments/assets/8e931cce-4cc0-4fb3-8ae6-ccc76c5e5448)
+
 
 
 Accessibility & scores<br/>
