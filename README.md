@@ -14,7 +14,7 @@ This is a browser-based memory match game is done in HTML, CSS, and JavaScript. 
 How It Works<br/>
 If you're unfamiliar with the game, the rules are very simple; flip over two hidden cards at a time to locate the ones that match!
 
-The game board consists of ten themed space and alien graphical cards that are arranged randonmy (and shuffled at restart) in a grid style layout. The deck is made up of ten different pairs of cards, each with different fun vector and AI geneated style graphics. The back-side has default spaceship graphicand front-side of card has 10 different images.<br/> 
+The game board consists of ten themed space and alien graphical cards that are arranged randonmy (and shuffled at restart) in a grid style layout. The deck is made up of ten different pairs of cards, each with different fun vector and AI generated style graphics. The back-side has default astronaut graphic and front-side of card has 10 different images.<br/> 
 
 ![image](https://github.com/user-attachments/assets/7e4cebf4-ce72-4995-85f9-48d53f3edffb)
 
@@ -24,12 +24,12 @@ Each turn:<br/>
 * The player then turns over a second card, trying to find the corresponding card with the same graphic card
 * If the cards match, both cards stay flipped over
 * If the cards do not match, both cards are returned to their initial hidden state
-* There is a timer that counts down on the intitation of the game when the user starts the game
+* There is a timer that counts down on the initiation of the game when the user starts the game
 * The game has a 'moves' counter that counts the amount of moves by the gamer, to try help with focus 
-* The restart button restarts the game and acrds are randonly shuffled.
+* The restart button restarts the game and cards are randomly shuffled.
 
 
-CONTENTS:<br/>
+**CONTENTS:**<br/>
 User experience (ux)<br/>
 * Project goals<br/>
 * Epics & user stories<br/>
@@ -50,7 +50,7 @@ Testing<br/>
 * User stories<br/>
 * Code validation<br/>
 * Accessibility & scores<br/>
-* Delpoyment<br/>
+* Deployment<br/>
 
 Credits<br/>
 
@@ -68,9 +68,11 @@ The user sees the default card grid layout with repeat spaceship image<br/>
 The user clicks on card and will start game of matching and able to match the pairs<br/>
 The user can at any time click on the restart-game button and restart the game which will refresh the cards, the timer and the counter.<br/>
 
-![image](https://github.com/user-attachments/assets/57694752-afc3-43e1-9f68-1c6e354f236c)
 
-![image](https://github.com/user-attachments/assets/3ce84aa5-5b67-4091-963f-a8e2edbb10a0)
+![image](https://github.com/user-attachments/assets/9924e863-e601-4438-a080-adb071146ec5)
+
+![image](https://github.com/user-attachments/assets/4639e620-bde6-4270-8328-f44b34bba606)
+
 
 
 * The game must offer the ability to be rendered with different sizes of the grid layout of 10 different pairs of graphic game tiles<br/>
@@ -81,6 +83,7 @@ The user can at any time click on the restart-game button and restart the game w
 * The positions, or rather the graphics, of the tiles in the grid must be randomized before each game round.<br/>
 * The game must count how many attempts the player has made to find matching tiles and present the number of attempts when the game round is over.<br/>
 * After a game round is over, the user must be allowed to restart the new game round without reloading the page.
+* When clicking on the reset-Game button, it resets movesLeft, secondsElapsed, matchedTiles, and other game-related variables to their initial states. This function is called before initializeGame and startTimer in the restart button function.
 
 
 Project Goals
@@ -119,7 +122,7 @@ Features<br/>
 ![image](https://github.com/user-attachments/assets/d50a7a58-a7ff-40df-9be2-6c4c2ca8cd7b)
 
 * On page laod the game starts for the user<br/>
-![image](https://github.com/user-attachments/assets/74b51b98-4e79-4c4d-9202-25b5ef92cda1)
+![image](https://github.com/user-attachments/assets/709a2554-6d48-4328-ae7c-f1fe6e947dc2)
 
 
 * Game Page:<br/>
@@ -136,6 +139,9 @@ Features<br/>
 * Each tile has an event listener attached to handle the click, which flips the tile and checks for matches.<br/>
 * The game updates the moves left and displays appropriate notifications (e.g., "You have won!" or "You have run out of moves") directly into the DOM.<br/>
 * Game logic: If all tiles are matched, the game shows a "You have won!" message & ff the player runs out of moves, it shows "You have run out of moves!".<br/>
+* Two notifications, one for "you have run otu of moves" and "you have won!"<br/>
+
+![image](https://github.com/user-attachments/assets/4538de35-da59-4b0f-8576-9c75c55a26f8)
 
 
 Technologies used<br/>
@@ -191,6 +197,7 @@ Once tested, the following adjustments:
 * Revised list card list: to ensures I had exactly 10 unique card images, which will be duplicated to create 10 pairs for the game.
 * Once deployed I had to adjust the home screen elements for the min-width media query 1200px.
 * After running JS through Jshint result - 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz) and added /* jshint esversion: 6 */.
+* Changed the behaviour so game timer does not immediately start at the restart game function, but when the firstClick event happens.
 
 Chrome DevTools<br/>
 https://developer.chrome.com/docs/devtools/<br/>
@@ -218,7 +225,8 @@ CSS<br/>
 
 Jshint validator<br/>
 Javascript<br/>
-![image](https://github.com/user-attachments/assets/2b5dfd23-2719-4010-a0f2-3fe0a4d8732d)
+![image](https://github.com/user-attachments/assets/8e931cce-4cc0-4fb3-8ae6-ccc76c5e5448)
+
 
 
 Accessibility & scores<br/>
