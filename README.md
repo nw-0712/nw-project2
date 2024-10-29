@@ -2,7 +2,7 @@
 
 ![RES](https://github.com/user-attachments/assets/5330e692-740d-45a6-9550-e92907a2f0c0)
 
-Visit the deployed ebsite here: [https://nw-0712.github.io/nw-project2/](https://nw-0712.github.io/nw-project2/)
+Visit the deployed website here: [https://nw-0712.github.io/nw-project2/](https://nw-0712.github.io/nw-project2/)
 
 
 
@@ -124,6 +124,7 @@ Features<br/>
 * Start-game button directs user to the next screen which is the game screen.<br/>
 ![image](https://github.com/user-attachments/assets/d50a7a58-a7ff-40df-9be2-6c4c2ca8cd7b)
 
+
 * On page laod the game starts for the user<br/>
 ![image](https://github.com/user-attachments/assets/709a2554-6d48-4328-ae7c-f1fe6e947dc2)
 
@@ -144,7 +145,9 @@ Features<br/>
 * Game logic: If all tiles are matched, the game shows a "You have won!" message & ff the player runs out of moves, it shows "You have run out of moves!".<br/>
 * Two notifications, one for "you have run otu of moves" and "you have won!"<br/>
 
+
 ![image](https://github.com/user-attachments/assets/4538de35-da59-4b0f-8576-9c75c55a26f8)
+
 
 
 Technologies used<br/>
@@ -208,7 +211,7 @@ Chrome DevTools was used during the development process to test, explore and mod
 Responsiveness<br/>
 https://ui.dev/amiresponsive<br/>
 Am I Responsive? was used to check responsiveness of the site pages across different devices.<br/>
-Responsive Design Checker was used to check responsiveness of the site pages on different screen sizes.
+Responsive Design Checker was used to check responsiveness of the site pages on different screen sizes.<br/>
 
 
 Code valildation<br/>
@@ -221,7 +224,7 @@ Game page<br/>
 HTML<br/>
 ![image](https://github.com/user-attachments/assets/24ee0564-4031-406d-a2c3-570672f1f2a1)
 
-W3C CSS Validator<br/>
+CSS<br/>
 The W3C Markup Validator and W3C CSS Validator services were used to validate in order to ensure there were no syntax errors.<br/>
 W3C Markup Validator returned a warning about:  Non-space characters found without seeing a doctype first. Expected <!DOCTYPE html>. To fix this error, I made sure to add the <!DOCTYPE html> declaration at the very top of HTML file, like.
 ![image](https://github.com/user-attachments/assets/a6f876db-c1fa-4b2f-bd5a-1bcabe4a43c4)
@@ -247,6 +250,7 @@ Github pages & Libraries<br/>
 https://nw-0712.github.io/nw-project2/
 
 Chrome DevTools was used to test responsiveness in different screen sizes during the development process.
+https://developer.chrome.com/docs/devtools/
 
 Credits<br/>
 https://stackoverflow.com/<br/>
