@@ -1,3 +1,4 @@
+
 /* --------- Global style ----------*/
 * {
     margin: 0;
@@ -403,11 +404,13 @@ body {
   text-align: center; /* Center-align for small screens */
 }
 
+
 /* Grid container adjustments for tile layout */
 .grid-container {
+  gap: 15px; /* Slightly increase gap */
   grid-template-columns: repeat(4, 1fr); /* columns for small screens */
-  gap: 6px;  /* Compact tile gap */
 }
+
 .game-container {
   padding: 10px; /* Adjusted padding for small screens */
 }
@@ -528,12 +531,13 @@ body {
     width: 100%;
   }
   .grid-container {
-      grid-template-columns: repeat(5, 1fr); /* Adjusting for large screens */
-      gap: 20px; /* Increased gap for larger screens */
+    grid-template-columns: repeat(5, 1fr); /* Adjusting for large screens */
+    gap: 20px; /* Increased gap for larger screens */
+    padding: 0 20px; /* Add padding to prevent overflow */
   }
 
   .game-container {
-      max-width: 800px;
+    max-width: 800px;
     padding: 40px;
     border-radius: 10px;
   }
