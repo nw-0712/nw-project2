@@ -2,6 +2,9 @@
 
 ![RES](https://github.com/user-attachments/assets/5330e692-740d-45a6-9550-e92907a2f0c0)
 
+Visit the deployed ebsite here: [https://nw-0712.github.io/nw-project2/](https://nw-0712.github.io/nw-project2/)
+
+
 
 Welcome Users,
 
@@ -192,12 +195,11 @@ https://fonts.google.com/
 
 Testing<br/>
 Once tested, the following adjustments:
-* Removed Hardcoded Tiles: The previous hardcoded <div class="tile"> elements have been removed from the HTML to make cards to be generated dynamically through the JavaScript initializeGame function.
+* Removed Hardcoded Tiles: The previous hardcoded tile elements have been removed from the HTML to make cards to be generated dynamically through the JavaScript initializeGame function.
 * Removed duplicates: The new array makes sure that each tile appears exactly twice to form pairs.
 * Revised list card list: to ensures I had exactly 10 unique card images, which will be duplicated to create 10 pairs for the game.
 * Once deployed I had to adjust the home screen elements for the min-width media query 1200px.
-* After running JS through Jshint result - 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz) and added /* jshint esversion: 6 */.
-* Changed the behaviour so game timer does not immediately start at the restart game function, but when the firstClick event happens.
+* Changed the behaviour so game timer so it does not immediately start at the click action of restart game function, but when the firstClick event happens.
 
 Chrome DevTools<br/>
 https://developer.chrome.com/docs/devtools/<br/>
@@ -210,7 +212,6 @@ Responsive Design Checker was used to check responsiveness of the site pages on 
 
 
 Code valildation<br/>
-The W3C Html Markup Validator and W3C CSS Validator services were used to validate all pages of the project in order to ensure there were no syntax errors.
 
 Home page:<br/>
 HTML<br/>
@@ -220,14 +221,15 @@ Game page<br/>
 HTML<br/>
 ![image](https://github.com/user-attachments/assets/24ee0564-4031-406d-a2c3-570672f1f2a1)
 
-CSS<br/>
-![image](https://github.com/user-attachments/assets/4358a52f-d349-4767-96a5-5b92879d910c)
+W3C CSS Validator<br/>
+The W3C Markup Validator and W3C CSS Validator services were used to validate in order to ensure there were no syntax errors.<br/>
+W3C Markup Validator returned a warning about:  Non-space characters found without seeing a doctype first. Expected <!DOCTYPE html>. To fix this error, I made sure to add the <!DOCTYPE html> declaration at the very top of HTML file, like.
+![image](https://github.com/user-attachments/assets/a6f876db-c1fa-4b2f-bd5a-1bcabe4a43c4)
 
 Jshint validator<br/>
-Javascript<br/>
-![image](https://github.com/user-attachments/assets/8e931cce-4cc0-4fb3-8ae6-ccc76c5e5448)
-
-
+[https://jshint.com/](https://jshint.com/)
+The JSHints JavaScript Code Quality Tool was used validate the site's JavaScript code.
+JSHints found no errors on the site's JavaScript code.<br/>
 
 Accessibility & scores<br/>
 Used Lighthouse in Chrome DevTools to confirm accessibility used in throughout the website are easy to read and accessible.
