@@ -270,6 +270,9 @@ Duckduckgo<br/>
 https://duckduckgo.com/?t=ffab&q=html+formatter&ia=answer<br/>
 Formatted html pages through this tool.
 
+Code:<br/>
+The code to apply the full screen background was found at CSS-Tricks.<br/>
+https://css-tricks.com/
 
 
 
