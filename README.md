@@ -100,12 +100,15 @@ The user can at any time click on the restart-game button and restart the game w
 
 
 **User stories**<br/>
-* As a user I want the ability to click the 'Start Game' button and be tkaen to the game page<br/>
-* As a user I want the ability to interact with the tiles in the grid layout and be able to click on tiles to see if there is a mtach or no match<br/>
+* As a user I want the ability to click the 'Start Game' button and be directed to the game page<br/>
+* As a user I want the ability to interact with the cards in the grid layout and be able to click on tiles to see if there is a match or no match<br/>
 * As a user I want the ability to to see how many moves I have left in the game<br/> 
-* As a user I want the ability to see the amount of time left via the timer on the tiop of the grid layout<br/>
-* As a user I want the ability to restart the game if I run out of time or run out of moves<br/>
-* As a user I want the ability to clcik the 'Restart' button and have the game refesh<br/>
+* As a user I want the ability to see the amount of time is left via the timer on the top of the grid layout<br/>
+* As a user I want the ability to restart the game if I run out of time or run out of moves, by clicking on the 'restart game' button<br/>
+* As a user I want the ability to click the 'Restart' button and have the game restart the game and refesh the cards with a shuffle mechanism<br/>
+* As a user I want the ability to intialise the game upon page loading<br/>
+* As a user I want the ability to get a notification that I have run out of moves<br/>
+* As a user I want the ability to get a notification that I have run out of time<br/>
 
 **Colours**<br/>
 ![image](https://github.com/user-attachments/assets/1665923a-a440-41da-8f09-25209eaaa519)
@@ -131,19 +134,19 @@ Subheading & body copy: Font used: Roboto<br/>
 
 * Game Page:<br/>
 * A game-container contains the game board, moves counter, and timer.<br/>
-* Tiles are created, shuffled, and flipped using flipTile and checkForMatch functions.<br/>
+* Cards are created, shuffled, and flipped using flipTile and checkForMatch functions.<br/>
 * The tiles are dynamically injected into the grid-container using JavaScript.<br/>
-* The shuffle button restarts the game.<br/>
-* Set matched tiles to visibility: hidden instead of removing the flip class.<br/>
-* Each tile needs two sides: the front (image) and the back (which will show initially).<br/>
-* Single back tile image and and array of 10 front tile variation pairs.<br/>
+* The restart button restarts the game.<br/>
+* Set matched cards to visibility: hidden instead of removing the flip class.<br/>
+* Each card has two sides: the front (image) and the back (which will show initially).<br/>
+* Single back card image and and array of 10 front card variation pairs.<br/>
 * A timer counts minutes and seconds.<br/>
 * The game tracks moves and declares if the player wins or runs out of moves.<br/>
-* All tiles start with a common default back image<br/>
-* Each tile has an event listener attached to handle the click, which flips the tile and checks for matches.<br/>
+* All cards start with a common default back image<br/>
+* Each card has an event listener attached to handle the click, which flips the cards and checks for matches.<br/>
 * The game updates the moves left and displays appropriate notifications (e.g., "You have won!" or "You have run out of moves") directly into the DOM.<br/>
-* Game logic: If all tiles are matched, the game shows a "You have won!" message & ff the player runs out of moves, it shows "You have run out of moves!".<br/>
-* Two notifications, one for "you have run otu of moves" and "you have won!"<br/>
+* Game logic: If all cards are matched, the game shows a "You have won!" message & if the player runs out of moves, it shows "You have run out of moves!".<br/>
+* Two notifications, one for "you have run out of moves" and "you have won!"<br/>
 
 
 ![image](https://github.com/user-attachments/assets/4538de35-da59-4b0f-8576-9c75c55a26f8)
@@ -200,12 +203,12 @@ Google fonts<br/>
 https://fonts.google.com/
 
 **Testing**<br/>
-Once tested, the following adjustments:<br/>
-* Removed Hardcoded Tiles: The previous hardcoded tile elements have been removed from the HTML to make cards to be generated dynamically through the JavaScript initializeGame function.
-* Removed duplicates: The new array makes sure that each tile appears exactly twice to form pairs.
+Through testing in devtools, I made some adjustments:<br/>
+* Removed Hardcoded Tiles: The previous hardcoded card elements have been removed from the HTML to make cards to be generated dynamically through the JavaScript initializeGame function.
+* Removed duplicates: The new array makes sure that each card appears exactly twice to form pairs.
 * Revised list card list: to ensures I had exactly 10 unique card images, which will be duplicated to create 10 pairs for the game.
 * Once deployed I had to adjust the home screen elements for the min-width media query 1200px.
-* Changed the behaviour so game timer so it does not immediately start at the click action of restart game function, but when the firstClick event happens.
+* Changed the behaviour so the game timer does not immediately start at the click action of restart game function, but when the firstClick event happens.
 
 Chrome DevTools<br/>
 https://developer.chrome.com/docs/devtools/<br/>
@@ -229,7 +232,7 @@ HTML<br/>
 
 CSS<br/>
 The W3C Markup Validator and W3C CSS Validator services were used to validate in order to ensure there were no syntax errors.<br/>
-W3C Markup Validator returned a warning about:  Non-space characters found without seeing a doctype first. Expected <!DOCTYPE html>. To fix this error, I made sure to add the <!DOCTYPE html> declaration at the very top of HTML file, like.
+W3C Markup Validator returned no warnings or errors.<br/>
 ![image](https://github.com/user-attachments/assets/a6f876db-c1fa-4b2f-bd5a-1bcabe4a43c4)
 
 Javascript<br/>
@@ -238,7 +241,7 @@ The JSHints JavaScript Code Quality Tool was used validate the site's JavaScript
 JSHints found no errors on the site's JavaScript code.<br/>
 
 **Accessibility & scores**<br/>
-Used Lighthouse in Chrome DevTools to confirm accessibility used in throughout the website are easy to read and accessible.
+Used Lighthouse in Chrome DevTools to confirm accessibility used in throughout the website are easy to read and accessible.<br/>
 
 Home page<br/>
 ![image](https://github.com/user-attachments/assets/f31b539d-8599-4c8d-91e1-c8d4bb09d5c5)
@@ -252,7 +255,7 @@ Game Page<br/>
 Github pages & Libraries<br/>
 https://nw-0712.github.io/nw-project2/
 
-Chrome DevTools was used to test responsiveness in different screen sizes during the development process.
+Chrome DevTools was used to test responsiveness in different screen sizes during the development process.<br/>
 https://developer.chrome.com/docs/devtools/
 
 **Credits**<br/>
