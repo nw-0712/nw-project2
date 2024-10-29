@@ -11,7 +11,7 @@ Welcome Users,
 **SPACE ALIEN MEMORY MATCH GAME**<br/>
 Match the space alien tiles and improve your memory<br/>
 
-*OVERVIEW*<br/>
+**OVERVIEW**<br/>
 This is a browser-based memory match game is done in HTML, CSS, and JavaScript. It consists of 10 pairs of matching space-alien cards and the user matching the various 10 card pairs, to improve memory and concentration. The objective is to try and match the pairs in a certain amount of time, via a timer and counter.
 
 How It Works<br/>
@@ -58,7 +58,7 @@ Testing<br/>
 Credits<br/>
 
 
-User Experience<br/>
+**User Experience**<br/>
 Home Page<br/>
 Home page created to introduce the memory match game and create interest in the game.<br/>
 
@@ -89,7 +89,7 @@ The user can at any time click on the restart-game button and restart the game w
 * When clicking on the reset-Game button, it resets movesLeft, secondsElapsed, matchedTiles, and other game-related variables to their initial states. This function is called before initializeGame and startTimer in the restart button function.
 
 
-Project Goals
+**Project Goals**<br/>
 * Bring your own idea(s) to life, based on providing value to users to address a specific real or imagined need.<br/>
 * Use the relevant project assessment criteria as a guide to the minimum required functionality.<br/>
 * Test a front-end web application through the development, implementation and deployment stages<br/>
@@ -99,7 +99,7 @@ Project Goals
 * Implement Front-End interactivity, using core JavaScript, JavaScript libraries or frameworks.<br/>
 
 
-User stories<br/>
+**User stories**<br/>
 * As a user I want the ability to click the 'Start Game' button and be tkaen to the game page<br/>
 * As a user I want the ability to interact with the tiles in the grid layout and be able to click on tiles to see if there is a mtach or no match<br/>
 * As a user I want the ability to to see how many moves I have left in the game<br/> 
@@ -107,19 +107,19 @@ User stories<br/>
 * As a user I want the ability to restart the game if I run out of time or run out of moves<br/>
 * As a user I want the ability to clcik the 'Restart' button and have the game refesh<br/>
 
-Colours<br/>
+**Colours**<br/>
 ![image](https://github.com/user-attachments/assets/1665923a-a440-41da-8f09-25209eaaa519)
 
-Typography<br/>
+**Typography**<br/>
 Headings: Font used: Agdasima<br/>
 Subheading & body copy: Font used: Roboto<br/>
 
-Wireframes<br/>
+**Wireframes**<br/>
 ![image](https://github.com/user-attachments/assets/a311a1ec-d0fc-4044-bfb5-9ee120787fa4)
 ![image](https://github.com/user-attachments/assets/c7b6ca2f-c8fb-458c-92ee-ddc8fc0477bf)
 
 
-Features<br/>
+**Features**<br/>
 * Home page:
 * Start-game button directs user to the next screen which is the game screen.<br/>
 ![image](https://github.com/user-attachments/assets/d50a7a58-a7ff-40df-9be2-6c4c2ca8cd7b)
@@ -150,7 +150,7 @@ Features<br/>
 
 
 
-Technologies used<br/>
+**Technologies used**<br/>
 Languages: HTML, CSS, Javascript<br/>
 
 HTML5<br/>
@@ -162,7 +162,7 @@ https://en.wikipedia.org/wiki/CSS
 Javascript<br/>
 https://www.javascript.com/
 
-Frameworks, Libraries and Programs Used<br/>
+**Frameworks, Libraries and Programs Used**<br/>
 VS desktop<br/>
 https://code.visualstudio.com/download
 
@@ -181,6 +181,9 @@ https://validator.w3.org/
 Font Awesome<br/>
 https://fontawesome.com/
 
+Jshint<br/>
+https://jshint.com/
+
 Freepix<br/>
 https://www.freepik.com/
 
@@ -196,8 +199,8 @@ https://ui.dev/amiresponsive
 Google fonts<br/>
 https://fonts.google.com/
 
-Testing<br/>
-Once tested, the following adjustments:
+**Testing**<br/>
+Once tested, the following adjustments:<br/>
 * Removed Hardcoded Tiles: The previous hardcoded tile elements have been removed from the HTML to make cards to be generated dynamically through the JavaScript initializeGame function.
 * Removed duplicates: The new array makes sure that each tile appears exactly twice to form pairs.
 * Revised list card list: to ensures I had exactly 10 unique card images, which will be duplicated to create 10 pairs for the game.
@@ -214,9 +217,9 @@ Am I Responsive? was used to check responsiveness of the site pages across diffe
 Responsive Design Checker was used to check responsiveness of the site pages on different screen sizes.<br/>
 
 
-Code valildation<br/>
+**Code valildation**<br/>
 
-Home page:<br/>
+Home page<br/>
 HTML<br/>
 ![image](https://github.com/user-attachments/assets/494ccd30-d297-457f-8342-1d407b87357b)
 
@@ -229,12 +232,12 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate in
 W3C Markup Validator returned a warning about:  Non-space characters found without seeing a doctype first. Expected <!DOCTYPE html>. To fix this error, I made sure to add the <!DOCTYPE html> declaration at the very top of HTML file, like.
 ![image](https://github.com/user-attachments/assets/a6f876db-c1fa-4b2f-bd5a-1bcabe4a43c4)
 
-Jshint validator<br/>
+Javascript<br/>
 [https://jshint.com/](https://jshint.com/)
 The JSHints JavaScript Code Quality Tool was used validate the site's JavaScript code.
 JSHints found no errors on the site's JavaScript code.<br/>
 
-Accessibility & scores<br/>
+**Accessibility & scores**<br/>
 Used Lighthouse in Chrome DevTools to confirm accessibility used in throughout the website are easy to read and accessible.
 
 Home page<br/>
@@ -245,19 +248,20 @@ Game Page<br/>
 ![image](https://github.com/user-attachments/assets/c9e04a79-be1b-4c66-8a8a-a828b6bbaea1)
 
 
-Deployment<br/>
+**Deployment**<br/>
 Github pages & Libraries<br/>
 https://nw-0712.github.io/nw-project2/
 
 Chrome DevTools was used to test responsiveness in different screen sizes during the development process.
 https://developer.chrome.com/docs/devtools/
 
-Credits<br/>
+**Credits**<br/>
 https://stackoverflow.com/<br/>
 CSS-Tricks and W3Schools were consulted on a regular basis for inspiration and sometimes to be able to better understand the code being implement.<br/>
 
 Pixabay: AI generated images<br/>
 https://pixabay.com/vectors/search/ai/<br/>
+AI generated images.<br/>
 
 Duckduckgo<br/>
 https://duckduckgo.com/?t=ffab&q=html+formatter&ia=answer<br/>
